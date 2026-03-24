@@ -2,6 +2,7 @@
 import { SEO } from "astro-seo";
 import Footer from "@/components/footer.astro";
 import Navbar from "@/components/navbar/navbar.astro";
+import { siteConfig } from "@/config/site";
 import "@fontsource-variable/inter/index.css";
 import "@fontsource-variable/bricolage-grotesque";
 import "../styles/global.css";
@@ -20,8 +21,8 @@ const resolvedImageWithDomain = new URL(
 const { title } = Astro.props;
 
 const makeTitle = title
-  ? title + " | " + "Astroship"
-  : "Astroship - Starter Template for Astro with Tailwind CSS";
+  ? title + siteConfig.titleSeparator + siteConfig.name
+  : siteConfig.name;
 ---
 
 <!doctype html>
@@ -35,22 +36,20 @@ const makeTitle = title
     <!-- <link rel="preload" as="image" href={src} alt="Hero" /> -->
     <SEO
       title={makeTitle}
-      description="Astroship is a starter website template for Astro built with TailwindCSS."
+      description={siteConfig.description}
       canonical={canonicalURL}
       twitter={{
-        creator: "@surjithctly",
-        site: "@web3templates",
         card: "summary_large_image",
       }}
       openGraph={{
         basic: {
           url: canonicalURL,
           type: "website",
-          title: `Astroship - Starter Template for Astro`,
+          title: siteConfig.name,
           image: resolvedImageWithDomain,
         },
         image: {
-          alt: "Astroship Homepage Screenshot",
+          alt: `${siteConfig.name} homepage preview`,
         },
       }}
     />
