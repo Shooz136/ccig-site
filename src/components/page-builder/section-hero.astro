@@ -1,0 +1,48 @@
+---
+import Link from "@/components/ui/link.astro";
+import RichText from "@/components/page-builder/rich-text.astro";
+
+const {
+  eyebrow,
+  headline,
+  body,
+  primaryCtaLabel,
+  primaryCtaHref,
+  secondaryCtaLabel,
+  secondaryCtaHref,
+} = Astro.props;
+---
+
+<section class="mx-auto max-w-5xl py-14 text-center">
+  {eyebrow && (
+    <p class="mb-4 text-sm font-semibold uppercase tracking-[0.24em] text-slate-500">
+      {eyebrow}
+    </p>
+  )}
+  <h1 class="text-5xl font-bold tracking-tight text-gray-900 lg:text-7xl">
+    {headline}
+  </h1>
+  {body && (
+    <RichText
+      content={body}
+      class="mx-auto mt-6 max-w-3xl text-slate-600 prose-p:text-xl prose-p:leading-relaxed"
+    />
+  )}
+  {(primaryCtaLabel || secondaryCtaLabel) && (
+    <div class="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
+      {primaryCtaLabel && primaryCtaHref && (
+        <Link href={primaryCtaHref} class="flex items-center justify-center">
+          {primaryCtaLabel}
+        </Link>
+      )}
+      {secondaryCtaLabel && secondaryCtaHref && (
+        <Link
+          href={secondaryCtaHref}
+          style="outline"
+          class="flex items-center justify-center">
+          {secondaryCtaLabel}
+        </Link>
+      )}
+    </div>
+  )}
+</section>

@@ -1,0 +1,22 @@
+---
+import RichText from "@/components/page-builder/rich-text.astro";
+
+const { title, body, align = "left" } = Astro.props;
+---
+
+<section
+  class:list={[
+    "mx-auto max-w-4xl py-10",
+    align === "center" && "text-center",
+  ]}>
+  <h2 class="text-3xl font-bold tracking-tight text-gray-900 lg:text-4xl">
+    {title}
+  </h2>
+  <RichText
+    content={body}
+    class:list={[
+      "mt-5 text-slate-600",
+      align === "center" && "mx-auto",
+    ]}
+  />
+</section>

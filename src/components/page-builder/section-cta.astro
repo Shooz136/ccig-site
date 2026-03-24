@@ -1,0 +1,23 @@
+---
+import Link from "@/components/ui/link.astro";
+import RichText from "@/components/page-builder/rich-text.astro";
+
+const { title, body, buttonLabel, buttonHref } = Astro.props;
+---
+
+<section class="py-12">
+  <div class="mx-auto max-w-5xl rounded-3xl bg-black px-8 py-12 text-center md:px-16">
+    <h2 class="text-3xl font-bold tracking-tight text-white lg:text-5xl">
+      {title}
+    </h2>
+    <RichText
+      content={body}
+      class="mx-auto mt-5 max-w-2xl text-slate-300 prose-p:text-lg prose-p:leading-relaxed prose-strong:text-white prose-a:text-white"
+    />
+    <div class="mt-8 flex justify-center">
+      <Link href={buttonHref} style="inverted">
+        {buttonLabel}
+      </Link>
+    </div>
+  </div>
+</section>

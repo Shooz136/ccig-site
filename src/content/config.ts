@@ -39,6 +39,43 @@ const pagesCollection = defineCollection({
     navLabel: z.string().optional(),
     showInNav: z.boolean().default(true),
     navOrder: z.number().default(100),
+    sections: z.array(
+      z.discriminatedUnion("type", [
+        z.object({
+          type: z.literal("hero"),
+          eyebrow: z.string().default(""),
+          headline: z.string(),
+          body: z.string().default(""),
+          primaryCtaLabel: z.string().default(""),
+          primaryCtaHref: z.string().default(""),
+          secondaryCtaLabel: z.string().default(""),
+          secondaryCtaHref: z.string().default(""),
+        }),
+        z.object({
+          type: z.literal("text"),
+          title: z.string(),
+          body: z.string().default(""),
+          align: z.enum(["left", "center"]).default("left"),
+        }),
+        z.object({
+          type: z.literal("image_text"),
+          title: z.string(),
+          body: z.string().default(""),
+          image: z.object({
+            src: z.string(),
+            alt: z.string(),
+          }),
+          imageSide: z.enum(["left", "right"]).default("right"),
+        }),
+        z.object({
+          type: z.literal("cta"),
+          title: z.string(),
+          body: z.string().default(""),
+          buttonLabel: z.string(),
+          buttonHref: z.string(),
+        }),
+      ])
+    ).default([]),
   }),
 });
 

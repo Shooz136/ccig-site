@@ -1,0 +1,9 @@
+---
+const { content, class: className } = Astro.props;
+---
+
+{
+  content && (
+    <div class:list={["prose prose-lg max-w-none", className]} set:html={content} />
+  )
+}

@@ -62,4 +62,6 @@ The `blog` collection intentionally excludes `src/content/blog/kitchensink.mdx` 
 
 Nested files inside `src/content/pages` become nested URLs and dropdown navigation items. For example, `src/content/pages/solutions/implementation.md` renders at `/solutions/implementation`.
 
-The `pages` and `blog` body fields now use Pages CMS's `rich-text` editor for a more WYSIWYG editing experience. The homepage and other Astro component-driven sections are still code-defined; if you want those editable too, the next step is a block-based page builder collection.
+The `blog` collection uses Pages CMS's `rich-text` editor. The `pages` collection now uses a block-based section builder with `hero`, `text`, `image_text`, and `cta` blocks so non-technical editors can assemble pages without editing Astro templates directly.
+
+The homepage and other Astro component-driven sections are still code-defined. If you want those editable too, the next step is to move the homepage onto the same block-based page-builder model.

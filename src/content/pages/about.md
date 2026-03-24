@@ -5,21 +5,45 @@ description: Learn more about the team, the site, and how we approach marketing-
 navLabel: About
 showInNav: true
 navOrder: 20
+sections:
+  - type: hero
+    eyebrow: About Us
+    headline: A simple publishing workflow for a non-technical team
+    body: >
+      <p>This site is built to keep content updates simple. The structure stays
+      fast and maintainable, while day-to-day editing can happen through Pages CMS
+      instead of hand-editing Astro files.</p>
+    primaryCtaLabel: Contact Us
+    primaryCtaHref: /contact
+    secondaryCtaLabel: Explore Solutions
+    secondaryCtaHref: /solutions
+  - type: text
+    title: What this setup is optimized for
+    align: left
+    body: >
+      <p>It works well for marketing sites, service pages, campaign pages, and
+      editorial content that needs to stay organized in Git.</p>
+      <ul>
+        <li>Fast Astro builds and static hosting</li>
+        <li>Nested pages for grouped content</li>
+        <li>Blog publishing through content collections</li>
+        <li>Guided editing through structured CMS fields</li>
+      </ul>
+  - type: image_text
+    title: Structured enough to stay clean
+    body: >
+      <p>Instead of editing full page templates, editors can work with predefined
+      sections. That keeps the site more consistent and reduces the risk of layout
+      mistakes.</p>
+    image:
+      src: /opengraph.jpg
+      alt: Preview image for the site
+    imageSide: right
+  - type: cta
+    title: Need a new page or section?
+    body: >
+      <p>The system is designed so new content can be added without rebuilding the
+      site structure by hand every time.</p>
+    buttonLabel: Start a Conversation
+    buttonHref: /contact
 ---
-
-We build fast, maintainable marketing sites with Astro and a Git-based content workflow.
-
-## What this site is for
-
-This project is set up as a lightweight publishing system for landing pages, content pages, and blog posts. The goal is to keep the frontend simple while making updates easy through version-controlled content.
-
-## How we work
-
-- Astro for static rendering and performance
-- Markdown content collections for pages and blog entries
-- Cloudflare Pages for deployment
-- Pages CMS for editorial updates without rebuilding the site structure by hand
-
-## Team
-
-We keep the implementation intentionally lean so content updates can move quickly without a heavy CMS or a large application layer.

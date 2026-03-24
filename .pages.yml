@@ -40,11 +40,99 @@ content:
       - name: navOrder
         label: Navigation Order
         type: number
-      - name: body
-        label: Body
-        type: rich-text
-        options:
-          path: pages
+      - name: sections
+        label: Page Sections
+        type: block
+        list: true
+        blockKey: type
+        blocks:
+          - name: hero
+            label: Hero
+            fields:
+              - name: eyebrow
+                label: Eyebrow
+                type: string
+              - name: headline
+                label: Headline
+                type: string
+              - name: body
+                label: Body
+                type: rich-text
+                options:
+                  path: pages
+              - name: primaryCtaLabel
+                label: Primary Button Label
+                type: string
+              - name: primaryCtaHref
+                label: Primary Button Link
+                type: string
+              - name: secondaryCtaLabel
+                label: Secondary Button Label
+                type: string
+              - name: secondaryCtaHref
+                label: Secondary Button Link
+                type: string
+          - name: text
+            label: Text Section
+            fields:
+              - name: title
+                label: Title
+                type: string
+              - name: body
+                label: Body
+                type: rich-text
+                options:
+                  path: pages
+              - name: align
+                label: Alignment
+                type: select
+                options:
+                  values: [left, center]
+          - name: image_text
+            label: Image + Text
+            fields:
+              - name: title
+                label: Title
+                type: string
+              - name: body
+                label: Body
+                type: rich-text
+                options:
+                  path: pages
+              - name: image
+                label: Image
+                type: object
+                fields:
+                  - name: src
+                    label: Image
+                    type: image
+                    options:
+                      path: pages
+                  - name: alt
+                    label: Alt Text
+                    type: string
+              - name: imageSide
+                label: Image Side
+                type: select
+                options:
+                  values: [left, right]
+          - name: cta
+            label: CTA
+            fields:
+              - name: title
+                label: Title
+                type: string
+              - name: body
+                label: Body
+                type: rich-text
+                options:
+                  path: pages
+              - name: buttonLabel
+                label: Button Label
+                type: string
+              - name: buttonHref
+                label: Button Link
+                type: string
 
   - name: blog
     label: Blog Posts

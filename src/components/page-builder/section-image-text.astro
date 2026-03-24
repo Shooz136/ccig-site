@@ -1,0 +1,28 @@
+---
+import RichText from "@/components/page-builder/rich-text.astro";
+
+const { title, body, image, imageSide = "right" } = Astro.props;
+---
+
+<section class="mx-auto max-w-5xl py-12">
+  <div
+    class:list={[
+      "grid items-center gap-10 lg:grid-cols-2",
+      imageSide === "left" && "lg:[&>*:first-child]:order-2 lg:[&>*:last-child]:order-1",
+    ]}>
+    <div>
+      <h2 class="text-3xl font-bold tracking-tight text-gray-900 lg:text-4xl">
+        {title}
+      </h2>
+      <RichText content={body} class="mt-5 text-slate-600" />
+    </div>
+    <div>
+      <img
+        src={image.src}
+        alt={image.alt}
+        loading="lazy"
+        class="h-full w-full rounded-2xl object-cover shadow-sm"
+      />
+    </div>
+  </div>
+</section>
