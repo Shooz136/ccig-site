@@ -1,0 +1,106 @@
+media:
+  input: public/uploads
+  output: /uploads
+  path: ""
+
+content:
+  - name: blog
+    label: Blog Posts
+    type: collection
+    path: src/content/blog
+    format: yaml-frontmatter
+    subfolders: false
+    filename: "{primary}.md"
+    exclude:
+      - kitchensink.mdx
+    view:
+      primary: title
+      fields: [title, publishDate, category, author, draft]
+      sort: [publishDate, title]
+      default:
+        sort: publishDate
+        order: desc
+      search: [title, snippet, category, author, tags]
+    fields:
+      - name: draft
+        label: Draft
+        type: boolean
+      - name: title
+        label: Title
+        type: string
+      - name: snippet
+        label: Snippet
+        type: text
+        options:
+          rows: 3
+      - name: image
+        label: Hero Image
+        type: object
+        fields:
+          - name: src
+            label: Image
+            type: image
+            options:
+              path: blog
+          - name: alt
+            label: Alt Text
+            type: string
+      - name: publishDate
+        label: Publish Date
+        type: date
+      - name: author
+        label: Author
+        type: string
+      - name: category
+        label: Category
+        type: string
+      - name: tags
+        label: Tags
+        type: text
+        list: true
+      - name: body
+        label: Body
+        type: code
+        options:
+          language: markdown
+
+  - name: team
+    label: Team Members
+    type: collection
+    path: src/content/team
+    format: yaml-frontmatter
+    subfolders: false
+    filename: "{primary}.md"
+    view:
+      primary: name
+      fields: [name, title, publishDate, draft]
+      sort: [publishDate, name]
+      default:
+        sort: publishDate
+        order: desc
+      search: [name, title]
+    fields:
+      - name: draft
+        label: Draft
+        type: boolean
+      - name: name
+        label: Name
+        type: string
+      - name: title
+        label: Job Title
+        type: string
+      - name: avatar
+        label: Avatar
+        type: object
+        fields:
+          - name: src
+            label: Image
+            type: image
+            options:
+              path: team
+          - name: alt
+            label: Alt Text
+            type: string
+      - name: publishDate
+        label: Publish Date
+        type: date

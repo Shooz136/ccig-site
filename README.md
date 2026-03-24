@@ -48,3 +48,13 @@ PUBLIC_SITE_URL=https://testing-static-site.pages.dev
 - `astro.config.mjs` falls back to `https://testing-static-site.pages.dev` if `PUBLIC_SITE_URL` is not set.
 - `src/pages/robots.txt.ts` generates `robots.txt` dynamically from the configured site URL.
 - The upstream Astroship demo URLs and promotional links were removed so they do not leak into production SEO or navigation.
+
+## Pages CMS
+
+This repo now includes a starter Pages CMS config in `.pages.yml`.
+
+- `blog` maps to `src/content/blog`
+- `team` maps to `src/content/team`
+- uploaded media goes to `public/uploads`
+
+The `blog` collection intentionally excludes `src/content/blog/kitchensink.mdx` because it contains MDX-specific imports and components that are safer to maintain manually than through a CMS editor.
