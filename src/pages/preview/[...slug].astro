@@ -1,0 +1,40 @@
+---
+import { getCollection, getEntry } from "astro:content";
+import Container from "@/components/container.astro";
+import Layout from "@/layouts/Layout.astro";
+import PageSections from "@/components/page-builder/page-sections.astro";
+import { isValidPreviewRequest } from "@/lib/preview";
+
+export async function getStaticPaths() {
+  const pages = await getCollection("pages");
+
+  return pages.map((entry) => ({
+    params: { slug: entry.slug },
+  }));
+}
+
+const { slug } = Astro.params;
+
+if (!slug) {
+  return Astro.redirect("/");
+}
+
+if (!isValidPreviewRequest(Astro.url)) {
+  return new Response("Not found", { status: 404 });
+}
+
+const entry = await getEntry("pages", slug);
+
+if (!entry) {
+  return new Response("Not found", { status: 404 });
+}
+---
+
+<Layout
+  title={`${entry.data.title} Preview`}
+  description={entry.data.description}
+  preview={true}>
+  <Container>
+    <PageSections sections={entry.data.sections} />
+  </Container>
+</Layout>

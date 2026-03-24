@@ -10,6 +10,7 @@ import "../styles/global.css";
 export interface Props {
   title: string;
   description?: string;
+  preview?: boolean;
 }
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
@@ -19,7 +20,7 @@ const resolvedImageWithDomain = new URL(
   Astro.site
 ).toString();
 
-const { title, description = siteConfig.description } = Astro.props;
+const { title, description = siteConfig.description, preview = false } = Astro.props;
 
 const makeTitle = title
   ? title + siteConfig.titleSeparator + siteConfig.name
@@ -56,6 +57,13 @@ const makeTitle = title
     />
   </head>
   <body>
+    {
+      preview && (
+        <div class="bg-amber-100 px-4 py-2 text-center text-sm font-medium text-amber-900">
+          Preview mode. This page is being viewed through a preview URL.
+        </div>
+      )
+    }
     <Navbar />
     <slot />
     <Footer />

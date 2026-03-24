@@ -43,6 +43,12 @@ If you do not have a custom domain yet, you can use your Pages hostname instead:
 PUBLIC_SITE_URL=https://testing-static-site.pages.dev
 ```
 
+For lightweight draft previews on the live site, also set:
+
+```bash
+PREVIEW_TOKEN=choose-a-long-random-string
+```
+
 ## Notes
 
 - `astro.config.mjs` falls back to `https://testing-static-site.pages.dev` if `PUBLIC_SITE_URL` is not set.
@@ -64,3 +70,13 @@ Nested files inside `src/content/pages` become nested URLs and dropdown navigati
 
 The `blog` collection uses Pages CMS's `rich-text` editor. The `pages` collection now uses a block-based section builder with `hero`, `text`, `image_text`, and `cta` blocks so non-technical editors can assemble pages without editing Astro templates directly.
 The homepage now reads from `src/content/pages/home.md`, using the same block-based system as the rest of the editable pages. Additional homepage-focused blocks currently include `feature_grid` and `logo_cloud`.
+
+## Draft Preview URLs
+
+Draft entries are still excluded from normal page and blog routes. For lightweight previewing on the live site, use tokenized preview URLs:
+
+- pages: `/preview/about?token=YOUR_PREVIEW_TOKEN`
+- nested pages: `/preview/solutions/implementation?token=YOUR_PREVIEW_TOKEN`
+- blog posts: `/preview/blog/complete-guide-fullstack-development?token=YOUR_PREVIEW_TOKEN`
+
+These preview routes only render when the `token` query param matches `PREVIEW_TOKEN`.
