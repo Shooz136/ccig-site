@@ -1,17 +1,18 @@
 ---
+import { getEntry } from "astro:content";
 import Container from "@/components/container.astro";
-import Cta from "@/components/cta.astro";
-import Features from "@/components/features.astro";
-import Hero from "@/components/hero.astro";
-import Logos from "@/components/logos.astro";
 import Layout from "@/layouts/Layout.astro";
+import PageSections from "@/components/page-builder/page-sections.astro";
+
+const home = await getEntry("pages", "home");
+
+if (!home) {
+  throw new Error('Missing "home" entry in src/content/pages/home.md');
+}
 ---
 
-<Layout title="">
+<Layout title="" description={home.data.description}>
   <Container>
-    <Hero />
-    <Features />
-    <Logos />
-    <Cta />
+    <PageSections sections={home.data.sections} />
   </Container>
 </Layout>

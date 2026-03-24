@@ -1,0 +1,37 @@
+---
+import RichText from "@/components/page-builder/rich-text.astro";
+import { Icon } from "astro-icon/components";
+
+const { title, body, features = [] } = Astro.props;
+---
+
+<section class="py-12">
+  <div class="mx-auto max-w-5xl">
+    <div class="max-w-3xl">
+      <h2 class="text-4xl font-bold tracking-tight text-gray-900 lg:text-5xl">
+        {title}
+      </h2>
+      <RichText content={body} class="mt-4 text-slate-600" />
+    </div>
+
+    <div class="mt-14 grid gap-12 sm:grid-cols-2 md:grid-cols-3">
+      {
+        features.map((feature) => (
+          <div class="flex items-start gap-4">
+            <div class="mt-1 h-8 w-8 shrink-0 rounded-full bg-black p-2">
+              <Icon class="text-white" name={feature.icon} />
+            </div>
+            <div>
+              <h3 class="text-lg font-semibold text-gray-900">
+                {feature.title}
+              </h3>
+              <p class="mt-2 leading-relaxed text-slate-500">
+                {feature.description}
+              </p>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

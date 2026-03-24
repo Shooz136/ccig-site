@@ -2,13 +2,12 @@
 import { getCollection } from "astro:content";
 import Container from "@/components/container.astro";
 import Layout from "@/layouts/Layout.astro";
-import SectionCta from "@/components/page-builder/section-cta.astro";
-import SectionHero from "@/components/page-builder/section-hero.astro";
-import SectionImageText from "@/components/page-builder/section-image-text.astro";
-import SectionText from "@/components/page-builder/section-text.astro";
+import PageSections from "@/components/page-builder/page-sections.astro";
 
 export async function getStaticPaths() {
-  const pages = await getCollection("pages", ({ data }) => !data.draft);
+  const pages = (await getCollection("pages", ({ data }) => !data.draft)).filter(
+    (entry) => entry.slug !== "home"
+  );
 
   return pages.map((entry) => ({
     params: { slug: entry.slug },
@@ -21,26 +20,6 @@ const { entry } = Astro.props;
 
 <Layout title={entry.data.title} description={entry.data.description}>
   <Container>
-    {
-      entry.data.sections.map((section) => {
-        if (section.type === "hero") {
-          return <SectionHero {...section} />;
-        }
-
-        if (section.type === "text") {
-          return <SectionText {...section} />;
-        }
-
-        if (section.type === "image_text") {
-          return <SectionImageText {...section} />;
-        }
-
-        if (section.type === "cta") {
-          return <SectionCta {...section} />;
-        }
-
-        return null;
-      })
-    }
+    <PageSections sections={entry.data.sections} />
   </Container>
 </Layout>

@@ -74,6 +74,28 @@ const pagesCollection = defineCollection({
           buttonLabel: z.string(),
           buttonHref: z.string(),
         }),
+        z.object({
+          type: z.literal("feature_grid"),
+          title: z.string(),
+          body: z.string().default(""),
+          features: z.array(
+            z.object({
+              title: z.string(),
+              description: z.string(),
+              icon: z.string(),
+            })
+          ).default([]),
+        }),
+        z.object({
+          type: z.literal("logo_cloud"),
+          title: z.string(),
+          logos: z.array(
+            z.object({
+              icon: z.string(),
+              label: z.string().default(""),
+            })
+          ).default([]),
+        }),
       ])
     ).default([]),
   }),
