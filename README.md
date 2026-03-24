@@ -61,3 +61,5 @@ This repo now includes a starter Pages CMS config in `.pages.yml`.
 The `blog` collection intentionally excludes `src/content/blog/kitchensink.mdx` because it contains MDX-specific imports and components that are safer to maintain manually than through a CMS editor.
 
 Nested files inside `src/content/pages` become nested URLs and dropdown navigation items. For example, `src/content/pages/solutions/implementation.md` renders at `/solutions/implementation`.
+
+The `pages` and `blog` body fields now use Pages CMS's `rich-text` editor for a more WYSIWYG editing experience. The homepage and other Astro component-driven sections are still code-defined; if you want those editable too, the next step is a block-based page builder collection.
