@@ -1,29 +1,61 @@
 ---
+import { getCollection } from "astro:content";
 import Container from "@/components/container.astro";
 import { siteConfig } from "@/config/site";
-import Link from "@/components/ui/link.astro";
 import Dropdown from "./dropdown.astro";
 import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
 
-const menuitems = [
-  {
-    title: "Features",
-    path: "#",
-    children: [
-      { title: "Action", path: "/" },
-      { title: "Another action", path: "#" },
-      { title: "Dropdown Submenu", path: "#" },
-      { title: "404 Page", path: "/404" },
-    ],
-  },
-  {
-    title: "Pricing",
-    path: "/pricing",
-  },
-  {
-    title: "About",
-    path: "/about",
-  },
+const navPages = await getCollection("pages", ({ data }) => {
+  return !data.draft && data.showInNav;
+});
+
+const sortPages = (a, b) => {
+  if (a.data.navOrder !== b.data.navOrder) {
+    return a.data.navOrder - b.data.navOrder;
+  }
+
+  return a.data.title.localeCompare(b.data.title);
+};
+
+const childPagesByParent = new Map();
+
+for (const page of navPages) {
+  if (!page.slug.includes("/")) {
+    continue;
+  }
+
+  const parentSlug = page.slug.split("/").slice(0, -1).join("/");
+  const siblings = childPagesByParent.get(parentSlug) || [];
+  siblings.push(page);
+  childPagesByParent.set(parentSlug, siblings);
+}
+
+const menuitems = navPages
+  .filter((page) => !page.slug.includes("/"))
+  .sort(sortPages)
+  .map((page) => {
+    const childItems = (childPagesByParent.get(page.slug) || [])
+      .sort(sortPages)
+      .map((childPage) => ({
+        title: childPage.data.navLabel || childPage.data.title,
+        path: `/${childPage.slug}`,
+      }));
+
+    if (childItems.length > 0) {
+      return {
+        title: page.data.navLabel || page.data.title,
+        path: `/${page.slug}`,
+        children: [{ title: "Overview", path: `/${page.slug}` }, ...childItems],
+      };
+    }
+
+    return {
+      title: page.data.navLabel || page.data.title,
+      path: `/${page.slug}`,
+    };
+  });
+
+menuitems.push(
   {
     title: "Blog",
     path: "/blog",
@@ -31,8 +63,8 @@ const menuitems = [
   {
     title: "Contact",
     path: "/contact",
-  },
-];
+  }
+);
 ---
 
 <Container>
@@ -77,17 +109,7 @@ const menuitems = [
             ))
           }
         </ul>
-        <div class="lg:hidden flex items-center mt-3 gap-4">
-          <Link href="#" style="muted" block size="md">Log in</Link>
-          <Link href="#" size="md" block>Sign up</Link>
-        </div>
       </MenuItems>
     </Astronav>
-    <div>
-      <div class="hidden lg:flex items-center gap-4">
-        <a href="#">Log in</a>
-        <Link href="#" size="md">Sign up</Link>
-      </div>
-    </div>
   </header>
 </Container>

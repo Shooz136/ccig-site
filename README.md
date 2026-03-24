@@ -55,6 +55,9 @@ This repo now includes a starter Pages CMS config in `.pages.yml`.
 
 - `blog` maps to `src/content/blog`
 - `team` maps to `src/content/team`
+- `pages` maps to `src/content/pages`
 - uploaded media goes to `public/uploads`
 
 The `blog` collection intentionally excludes `src/content/blog/kitchensink.mdx` because it contains MDX-specific imports and components that are safer to maintain manually than through a CMS editor.
+
+Nested files inside `src/content/pages` become nested URLs and dropdown navigation items. For example, `src/content/pages/solutions/implementation.md` renders at `/solutions/implementation`.
