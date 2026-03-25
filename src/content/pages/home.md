@@ -15,8 +15,10 @@ sections:
     image:
       src: /uploads/1920px-Sunset_in_Clarion,_PA.jpg
       alt: Sunset in Clarion, Pennsylvania.
+    primaryCtaLabel: Request Assistance
+    secondaryCtaLabel: "Learn More "
   - type: feature_grid
-    title: 🐾 NEED HELP WITH OUTDOOR CATS
+    title: NEED HELP WITH OUTDOOR CATS?
     body: >-
       **If you’re seeing outdoor or stray cats on your property, we’re here to
       help using a humane, proven approach called Trap-Neuter-Return (TNR).**
@@ -52,12 +54,11 @@ sections:
         description: "After a short recovery period, the cat is returned to the same
           outdoor location where it was found. "
         icon: bx:bxs-bot
-      - title: Room to expand
-        description: Add more block types later if the editorial workflow grows beyond
-          the basics.
+      - title: "Stay Involved "
+        description: After the cat is returned, you can continue to stay involved with
+          the group in a variety of ways!
         icon: bx:bxs-user
   - type: logo_cloud
-    title: Works with your technologies
     logos:
       - icon: simple-icons:react
         label: React
