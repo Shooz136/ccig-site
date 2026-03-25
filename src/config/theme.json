@@ -1,7 +1,7 @@
 {
   "headingFont": "helvetica",
   "bodyFont": "bricolage",
-  "bannerHeadlineSize": "md",
+  "bannerHeadlineSize": "sm",
   "background": "#fffff",
   "foreground": "#0c2863",
   "card": "#AB7537",
