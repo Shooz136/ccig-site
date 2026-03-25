@@ -1,12 +1,11 @@
 ---
 draft: false
-title: "Resources "
-navLabel: "Learn more about TNR "
+title: Resources
+navLabel: "Resources "
 showInNav: true
 navOrder: 30
 sections:
   - type: hero
-    eyebrow: "Learn more about TNR "
     headline: "Trap-Neuter- Return "
     body: >-
       # Welcome to StackEdit!
