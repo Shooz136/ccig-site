@@ -27,8 +27,8 @@ sections:
     align: left
   - type: cta
     title: Add more child pages whenever you need them
-    body: Any nested file under `src/content/pages/solutions/` becomes a sub-page
+    body: Any nested file under `src/content/pages/GetInvolved/` becomes a sub-page
       and shows up in the dropdown navigation.
     buttonLabel: View Example Child Page
-    buttonHref: /solutions/implementation
+    buttonHref: /GetInvolved/implementation
 ---

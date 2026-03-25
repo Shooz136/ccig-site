@@ -12,6 +12,10 @@ content:
     subfolders: true
     filename: "{primary}.md"
     view:
+      layout: tree
+      node:
+        filename: index.md
+        hideDirs: all
       primary: title
       fields: [title, navLabel, navOrder, showInNav, draft]
       sort: [navOrder, title]

@@ -14,6 +14,7 @@ sections:
     secondaryCtaLabel: Contact Us
     secondaryCtaHref: /solutions
   - type: text
+    title: Overview
     body: |-
       Best for a single landing page or small brochure site.
 

@@ -11,8 +11,8 @@ sections:
     headline: Implementation pages can live under a parent section
     body: This page exists to prove the nested routing and dropdown navigation
       pattern. It is authored as content, not as a custom Astro route.
-    primaryCtaLabel: Back to Solutions
-    primaryCtaHref: /solutions
+    primaryCtaLabel: Back to Get Involved
+    primaryCtaHref: /GetInvolved
     secondaryCtaLabel: Contact Us
     secondaryCtaHref: /contact
   - type: text

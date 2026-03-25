@@ -2,6 +2,7 @@
 import { getCollection } from "astro:content";
 import Container from "@/components/container.astro";
 import { siteConfig } from "@/config/site";
+import { normalizePageSlug } from "@/lib/pages";
 import Dropdown from "./dropdown.astro";
 import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
 
@@ -20,38 +21,41 @@ const sortPages = (a, b) => {
 const childPagesByParent = new Map();
 
 for (const page of navPages) {
-  if (!page.slug.includes("/")) {
+  const normalizedSlug = normalizePageSlug(page.slug);
+
+  if (!normalizedSlug.includes("/")) {
     continue;
   }
 
-  const parentSlug = page.slug.split("/").slice(0, -1).join("/");
+  const parentSlug = normalizedSlug.split("/").slice(0, -1).join("/");
   const siblings = childPagesByParent.get(parentSlug) || [];
-  siblings.push(page);
+  siblings.push({ ...page, normalizedSlug });
   childPagesByParent.set(parentSlug, siblings);
 }
 
 const menuitems = navPages
-  .filter((page) => !page.slug.includes("/"))
+  .map((page) => ({ ...page, normalizedSlug: normalizePageSlug(page.slug) }))
+  .filter((page) => page.normalizedSlug && !page.normalizedSlug.includes("/"))
   .sort(sortPages)
   .map((page) => {
-    const childItems = (childPagesByParent.get(page.slug) || [])
+    const childItems = (childPagesByParent.get(page.normalizedSlug) || [])
       .sort(sortPages)
       .map((childPage) => ({
         title: childPage.data.navLabel || childPage.data.title,
-        path: `/${childPage.slug}`,
+        path: `/${childPage.normalizedSlug}`,
       }));
 
     if (childItems.length > 0) {
       return {
         title: page.data.navLabel || page.data.title,
-        path: `/${page.slug}`,
-        children: [{ title: "Overview", path: `/${page.slug}` }, ...childItems],
+        path: `/${page.normalizedSlug}`,
+        children: [{ title: "Overview", path: `/${page.normalizedSlug}` }, ...childItems],
       };
     }
 
     return {
       title: page.data.navLabel || page.data.title,
-      path: `/${page.slug}`,
+      path: `/${page.normalizedSlug}`,
     };
   });
 
