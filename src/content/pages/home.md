@@ -16,7 +16,9 @@ sections:
       src: /uploads/1920px-Sunset_in_Clarion,_PA.jpg
       alt: Sunset in Clarion, Pennsylvania.
     primaryCtaLabel: Request Assistance
+    primaryCtaHref: Google.com
     secondaryCtaLabel: "Learn More "
+    secondaryCtaHref: google.com
   - type: feature_grid
     title: NEED HELP WITH OUTDOOR CATS?
     body: >-
