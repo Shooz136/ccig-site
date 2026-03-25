@@ -29,7 +29,6 @@ sections:
       - title: "Complete the Form "
         description: Complete our simple request form so we can learn more about you and
           the cats you need assistance with
-        icon: bx:bxs-file-find
       - title: We Contact You
         description: >
           After completing the request form, a volunteer will reach out to learn
@@ -38,7 +37,6 @@ sections:
       - title: Humane Trapping
         description: Our trained volunteers safely trap the cat or cats using humane
           equipment
-        icon: bx:bxs-window-alt
       - title: Spay/Neuter & Vaccination
         description: |
           Each cat is transported to a veterinary clinic where they are:
@@ -49,19 +47,16 @@ sections:
 
 
           Ear-tipped (a small, painless mark showing the cat has been sterilized
-        icon: bx:bxs-data
       - title: Recovery & Return
         description: "After a short recovery period, the cat is returned to the same
           outdoor location where it was found. "
-        icon: bx:bxs-bot
       - title: "Stay Involved "
         description: After the cat is returned, you can continue to stay involved with
           the group in a variety of ways!
-        icon: bx:bxs-user
   - type: cta
     title: Be Part of the Solution
     body: Humane change happens when communities work together. Join us in improving
-      life for both cats and residents across Clarion County.
-    buttonLabel: Learn how you can get involved
-    buttonHref: /contact
+      life for both cats and residents throughout our Borough
+    buttonLabel: Learn How you Can Get Involved
+    buttonHref: /Get-Involved
 ---
