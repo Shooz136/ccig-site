@@ -14,12 +14,12 @@ content:
         label: Heading Font
         type: select
         options:
-          values: [bricolage, inter, system]
+          values: [bricolage, inter, system, helvetica, arial, georgia, times, garamond, palatino, trebuchet, verdana, tahoma, courier]
       - name: bodyFont
         label: Body Font
         type: select
         options:
-          values: [inter, bricolage, system]
+          values: [inter, bricolage, system, helvetica, arial, georgia, times, garamond, palatino, trebuchet, verdana, tahoma, courier]
       - name: background
         label: Background Color
         type: string
