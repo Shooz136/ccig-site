@@ -13,8 +13,10 @@ sections:
     body: "Mission and Vision "
     primaryCtaLabel: Contact Us
     primaryCtaHref: /contact
+    primaryCtaStyle: primary
     secondaryCtaLabel: Explore Solutions
     secondaryCtaHref: /solutions
+    secondaryCtaStyle: primary
   - type: text
     title: More About Us
     body: >-
@@ -41,10 +43,4 @@ sections:
       src: /opengraph.jpg
       alt: Preview image for the site
     imageSide: right
-  - type: cta
-    title: Need a new page or section?
-    body: The system is designed so new content can be added without rebuilding the
-      site structure by hand every time.
-    buttonLabel: Start a Conversation
-    buttonHref: /contact
 ---
