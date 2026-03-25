@@ -59,6 +59,7 @@ PREVIEW_TOKEN=choose-a-long-random-string
 
 This repo now includes a starter Pages CMS config in `.pages.yml`.
 
+- `site` maps to `src/config/site.json`
 - `theme` maps to `src/config/theme.json`
 - `blog` maps to `src/content/blog`
 - `team` maps to `src/content/team`

@@ -4,6 +4,24 @@ media:
   path: ""
 
 content:
+  - name: site
+    label: Site Settings
+    type: file
+    path: src/config/site.json
+    format: json
+    fields:
+      - name: name
+        label: Site Name
+        type: string
+      - name: description
+        label: Site Description
+        type: text
+        options:
+          rows: 3
+      - name: titleSeparator
+        label: Title Separator
+        type: string
+
   - name: theme
     label: Theme
     type: file

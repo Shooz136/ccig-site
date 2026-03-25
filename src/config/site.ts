@@ -1,5 +1,3 @@
-export const siteConfig = {
-  name: "Testing Static Site",
-  description: "A marketing site built with Astro and deployed on Cloudflare Pages.",
-  titleSeparator: " | ",
-};
+import siteSettings from "@/config/site.json";
+
+export const siteConfig = siteSettings;
