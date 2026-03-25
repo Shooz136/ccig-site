@@ -1,9 +1,9 @@
 {
   "headingFont": "trebuchet",
   "bodyFont": "georgia",
-  "background": "#18691d",
-  "foreground": "#1f2937",
-  "card": "#f4efe5",
+  "background": "#fffff",
+  "foreground": "#0c2863",
+  "card": "#AB7537",
   "cardForeground": "#1f2937",
   "popover": "#18691d",
   "popoverForeground": "#1f2937",
