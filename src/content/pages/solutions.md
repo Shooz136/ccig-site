@@ -2,7 +2,7 @@
 draft: false
 title: Get Involved
 description: "[Placeholder]"
-navLabel: Solutions
+navLabel: "Get Involved "
 showInNav: true
 navOrder: 10
 sections:
