@@ -58,26 +58,10 @@ sections:
         description: After the cat is returned, you can continue to stay involved with
           the group in a variety of ways!
         icon: bx:bxs-user
-  - type: logo_cloud
-    title: "Placeholder "
-    logos:
-      - icon: simple-icons:react
-        label: React
-      - icon: simple-icons:svelte
-        label: Svelte
-      - icon: simple-icons:astro
-        label: Astro
-      - icon: simple-icons:tailwindcss
-        label: Tailwind CSS
-      - icon: simple-icons:alpinedotjs
-        label: Alpine.js
-      - icon: simple-icons:vercel
-        label: Vercel
   - type: cta
-    title: Want this customized around your actual business?
-    body: The current structure is a strong CMS-friendly baseline. From here we can
-      replace the placeholder copy, expand the block library, and tune the
-      content model around your real site.
-    buttonLabel: Start Here
+    title: Be Part of the Solution
+    body: Humane change happens when communities work together. Join us in improving
+      life for both cats and residents across Clarion County.
+    buttonLabel: Learn how you can get involved
     buttonHref: /contact
 ---
