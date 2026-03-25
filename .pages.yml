@@ -13,14 +13,17 @@ content:
       - name: name
         label: Site Name
         type: string
+        required: true
       - name: description
         label: Site Description
         type: text
+        required: true
         options:
           rows: 3
       - name: titleSeparator
         label: Title Separator
         type: string
+        required: true
 
   - name: theme
     label: Theme
@@ -31,69 +34,89 @@ content:
       - name: headingFont
         label: Heading Font
         type: select
+        required: true
         options:
           values: [bricolage, inter, system, helvetica, arial, georgia, times, garamond, palatino, trebuchet, verdana, tahoma, courier]
       - name: bodyFont
         label: Body Font
         type: select
+        required: true
         options:
           values: [inter, bricolage, system, helvetica, arial, georgia, times, garamond, palatino, trebuchet, verdana, tahoma, courier]
       - name: bannerHeadlineSize
         label: Banner Headline Size
         type: select
+        required: true
         options:
           values: [sm, md, lg, xl, 2xl]
       - name: background
         label: Background Color
         type: string
+        required: true
       - name: foreground
         label: Foreground Color
         type: string
+        required: true
       - name: card
         label: Card Color
         type: string
+        required: true
       - name: cardForeground
         label: Card Foreground
         type: string
+        required: true
       - name: popover
         label: Popover Color
         type: string
+        required: true
       - name: popoverForeground
         label: Popover Foreground
         type: string
+        required: true
       - name: primary
         label: Primary Color
         type: string
+        required: true
       - name: primaryForeground
         label: Primary Foreground
         type: string
+        required: true
       - name: secondary
         label: Secondary Color
         type: string
+        required: true
       - name: secondaryForeground
         label: Secondary Foreground
         type: string
+        required: true
       - name: muted
         label: Muted Color
         type: string
+        required: true
       - name: mutedForeground
         label: Muted Foreground
         type: string
+        required: true
       - name: accent
         label: Accent Color
         type: string
+        required: true
       - name: accentForeground
         label: Accent Foreground
         type: string
+        required: true
       - name: border
         label: Border Color
         type: string
+        required: true
       - name: input
         label: Input Border
         type: string
+        required: true
       - name: ring
         label: Focus Ring
         type: string
+        required: true
 
   - name: pages
     label: Pages
@@ -118,9 +141,11 @@ content:
       - name: draft
         label: Draft
         type: boolean
+        required: true
       - name: title
         label: Title
         type: string
+        required: true
       - name: description
         label: Description
         type: text
@@ -132,13 +157,16 @@ content:
       - name: showInNav
         label: Show In Navigation
         type: boolean
+        required: true
       - name: navOrder
         label: Navigation Order
         type: number
+        required: true
       - name: sections
         label: Page Sections
         type: block
         list: true
+        required: true
         blockKey: type
         blocks:
           - name: hero
@@ -150,6 +178,7 @@ content:
               - name: headline
                 label: Headline
                 type: string
+                required: true
               - name: body
                 label: Body
                 type: rich-text
@@ -176,6 +205,7 @@ content:
               - name: headline
                 label: Headline
                 type: string
+                required: true
               - name: body
                 label: Body
                 type: rich-text
@@ -184,15 +214,18 @@ content:
               - name: image
                 label: Background Image
                 type: object
+                required: true
                 fields:
                   - name: src
                     label: Image
                     type: image
+                    required: true
                     options:
                       path: pages
                   - name: alt
                     label: Alt Text
                     type: string
+                    required: true
               - name: primaryCtaLabel
                 label: Primary Button Label
                 type: string
@@ -211,6 +244,7 @@ content:
               - name: title
                 label: Title
                 type: string
+                required: true
               - name: body
                 label: Body
                 type: rich-text
@@ -227,6 +261,7 @@ content:
               - name: title
                 label: Title
                 type: string
+                required: true
               - name: body
                 label: Body
                 type: rich-text
@@ -235,18 +270,22 @@ content:
               - name: image
                 label: Image
                 type: object
+                required: true
                 fields:
                   - name: src
                     label: Image
                     type: image
+                    required: true
                     options:
                       path: pages
                   - name: alt
                     label: Alt Text
                     type: string
+                    required: true
               - name: imageSide
                 label: Image Side
                 type: select
+                required: true
                 options:
                   values: [left, right]
           - name: cta
@@ -255,6 +294,7 @@ content:
               - name: title
                 label: Title
                 type: string
+                required: true
               - name: body
                 label: Body
                 type: rich-text
@@ -263,15 +303,18 @@ content:
               - name: buttonLabel
                 label: Button Label
                 type: string
+                required: true
               - name: buttonHref
                 label: Button Link
                 type: string
+                required: true
           - name: feature_grid
             label: Feature Grid
             fields:
               - name: title
                 label: Title
                 type: string
+                required: true
               - name: body
                 label: Body
                 type: rich-text
@@ -285,9 +328,11 @@ content:
                   - name: title
                     label: Title
                     type: string
+                    required: true
                   - name: description
                     label: Description
                     type: text
+                    required: true
                   - name: stepNumber
                     label: Step Number
                     type: number
@@ -302,14 +347,17 @@ content:
               - name: title
                 label: Title
                 type: string
+                required: true
               - name: logos
                 label: Logos
                 type: object
                 list: true
+                required: true
                 fields:
                   - name: icon
                     label: Icon Name
                     type: string
+                    required: true
                     help: "Use Iconify names like bx:cat, bxs:church, simple-icons:astro, or uil:home."
                   - name: label
                     label: Label
@@ -336,42 +384,53 @@ content:
       - name: draft
         label: Draft
         type: boolean
+        required: true
       - name: title
         label: Title
         type: string
+        required: true
       - name: snippet
         label: Snippet
         type: text
+        required: true
         options:
           rows: 3
       - name: image
         label: Hero Image
         type: object
+        required: true
         fields:
           - name: src
             label: Image
             type: image
+            required: true
             options:
               path: blog
           - name: alt
             label: Alt Text
             type: string
+            required: true
       - name: publishDate
         label: Publish Date
         type: date
+        required: true
       - name: author
         label: Author
         type: string
+        required: true
       - name: category
         label: Category
         type: string
+        required: true
       - name: tags
         label: Tags
         type: text
         list: true
+        required: true
       - name: body
         label: Body
         type: rich-text
+        required: true
         options:
           path: blog
 
@@ -394,24 +453,31 @@ content:
       - name: draft
         label: Draft
         type: boolean
+        required: true
       - name: name
         label: Name
         type: string
+        required: true
       - name: title
         label: Job Title
         type: string
+        required: true
       - name: avatar
         label: Avatar
         type: object
+        required: true
         fields:
           - name: src
             label: Image
             type: image
+            required: true
             options:
               path: team
           - name: alt
             label: Alt Text
             type: string
+            required: true
       - name: publishDate
         label: Publish Date
         type: date
+        required: true

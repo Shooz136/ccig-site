@@ -58,7 +58,7 @@ const pagesCollection = defineCollection({
           body: z.string().default(""),
           image: z.object({
             src: z.string(),
-            alt: z.string().default(""),
+            alt: z.string(),
           }),
           primaryCtaLabel: z.string().default(""),
           primaryCtaHref: z.string().default(""),
