@@ -1,6 +1,6 @@
 ---
 draft: false
-title: Content Operations
+title: "Volunteer "
 description: Example nested page for editorial workflow and publishing structure.
 navLabel: Content Operations
 showInNav: true
@@ -9,19 +9,17 @@ sections:
   - type: hero
     eyebrow: Editorial Workflow
     headline: Content operations without a heavyweight CMS
-    body: >
-      <p>This example page is aimed at the publishing side of the site: creating
-      pages, keeping navigation clean, and making updates easier for editors.</p>
+    body: "This example page is aimed at the publishing side of the site: creating
+      pages, keeping navigation clean, and making updates easier for editors."
     primaryCtaLabel: Explore Pricing
     primaryCtaHref: /pricing
     secondaryCtaLabel: Contact Us
     secondaryCtaHref: /contact
   - type: image_text
     title: Structured editing reduces friction
-    body: >
-      <p>Editors can work through labeled section forms instead of editing page
+    body: Editors can work through labeled section forms instead of editing page
       templates directly. That makes the workflow more approachable and more
-      repeatable.</p>
+      repeatable.
     image:
       src: /opengraph.jpg
       alt: Preview image for the site
