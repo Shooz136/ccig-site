@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@astrojs/markdown-remark':
+    specifier: 6.3.0
+    version: 6.3.0
   '@astrojs/mdx':
     specifier: ^4.2.0
     version: 4.2.0(astro@5.5.2)
