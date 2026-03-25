@@ -144,6 +144,44 @@ content:
               - name: secondaryCtaHref
                 label: Secondary Button Link
                 type: string
+          - name: full_width_banner
+            label: Full Width Banner
+            fields:
+              - name: eyebrow
+                label: Eyebrow
+                type: string
+              - name: headline
+                label: Headline
+                type: string
+              - name: body
+                label: Body
+                type: rich-text
+                options:
+                  path: pages
+              - name: image
+                label: Background Image
+                type: object
+                fields:
+                  - name: src
+                    label: Image
+                    type: image
+                    options:
+                      path: pages
+                  - name: alt
+                    label: Alt Text
+                    type: string
+              - name: primaryCtaLabel
+                label: Primary Button Label
+                type: string
+              - name: primaryCtaHref
+                label: Primary Button Link
+                type: string
+              - name: secondaryCtaLabel
+                label: Secondary Button Label
+                type: string
+              - name: secondaryCtaHref
+                label: Secondary Button Link
+                type: string
           - name: text
             label: Text Section
             fields:

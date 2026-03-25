@@ -1,6 +1,7 @@
 ---
 import SectionCta from "@/components/page-builder/section-cta.astro";
 import SectionFeatureGrid from "@/components/page-builder/section-feature-grid.astro";
+import SectionFullWidthBanner from "@/components/page-builder/section-full-width-banner.astro";
 import SectionHero from "@/components/page-builder/section-hero.astro";
 import SectionImageText from "@/components/page-builder/section-image-text.astro";
 import SectionLogoCloud from "@/components/page-builder/section-logo-cloud.astro";
@@ -13,6 +14,10 @@ const { sections = [] } = Astro.props;
   sections.map((section) => {
     if (section.type === "hero") {
       return <SectionHero {...section} />;
+    }
+
+    if (section.type === "full_width_banner") {
+      return <SectionFullWidthBanner {...section} />;
     }
 
     if (section.type === "text") {

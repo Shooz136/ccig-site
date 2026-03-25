@@ -6,12 +6,15 @@ navLabel: Home
 showInNav: false
 navOrder: 0
 sections:
-  - type: hero
+  - type: full_width_banner
     eyebrow: "Clarion Cat Initiative Group "
     headline: Compassionate Solutions for Community Cats, Built by Our Community
     body: "**Clarion Cat Initiative Group is a volunteer-led Trap-Neuter-Return
       (TNR) program working to humanely reduce outdoor cat overpopulation while
       improving the lives of cats and the communities they call home.**"
+    image:
+      src: /opengraph.jpg
+      alt: Full-width banner placeholder image.
     primaryCtaLabel: Contact Us
     primaryCtaHref: /contact
     secondaryCtaLabel: Learn More

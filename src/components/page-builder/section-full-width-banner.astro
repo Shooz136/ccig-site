@@ -1,0 +1,65 @@
+---
+import Link from "@/components/ui/link.astro";
+import RichText from "@/components/page-builder/rich-text.astro";
+
+const {
+  eyebrow,
+  headline,
+  body,
+  image,
+  primaryCtaLabel,
+  primaryCtaHref,
+  secondaryCtaLabel,
+  secondaryCtaHref,
+} = Astro.props;
+---
+
+<section
+  class="relative left-1/2 w-screen -translate-x-1/2 overflow-hidden bg-primary text-primary-foreground">
+  <div class="absolute inset-0">
+    <img
+      src={image.src}
+      alt={image.alt}
+      class="h-full w-full object-cover"
+      loading="eager"
+    />
+    <div class="absolute inset-0 bg-[color-mix(in_srgb,var(--foreground)_66%,transparent)]" />
+    <div class="absolute inset-0 bg-[linear-gradient(180deg,color-mix(in_srgb,var(--foreground)_36%,transparent),color-mix(in_srgb,var(--foreground)_72%,transparent))]" />
+  </div>
+
+  <div class="relative mx-auto flex min-h-[34rem] max-w-6xl items-center px-6 py-20 sm:px-10 lg:min-h-[42rem] lg:px-12">
+    <div class="max-w-4xl">
+      {eyebrow && (
+        <p class="mb-5 text-sm font-semibold uppercase tracking-[0.28em] text-accent-foreground">
+          {eyebrow}
+        </p>
+      )}
+      <h1 class="max-w-4xl text-5xl font-bold uppercase tracking-tight text-primary-foreground sm:text-6xl lg:text-7xl">
+        {headline}
+      </h1>
+      {body && (
+        <RichText
+          content={body}
+          class="mt-6 max-w-3xl text-[color-mix(in_srgb,var(--primary-foreground)_84%,transparent)] prose-invert prose-p:text-lg prose-p:leading-relaxed prose-strong:text-primary-foreground prose-a:text-accent-foreground"
+        />
+      )}
+      {(primaryCtaLabel || secondaryCtaLabel) && (
+        <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+          {primaryCtaLabel && primaryCtaHref && (
+            <Link href={primaryCtaHref} class="justify-center sm:justify-start">
+              {primaryCtaLabel}
+            </Link>
+          )}
+          {secondaryCtaLabel && secondaryCtaHref && (
+            <Link
+              href={secondaryCtaHref}
+              style="outline"
+              class="justify-center border-white/60 bg-white/10 text-primary-foreground hover:bg-white/20 sm:justify-start">
+              {secondaryCtaLabel}
+            </Link>
+          )}
+        </div>
+      )}
+    </div>
+  </div>
+</section>

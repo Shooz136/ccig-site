@@ -52,6 +52,20 @@ const pagesCollection = defineCollection({
           secondaryCtaHref: z.string().default(""),
         }),
         z.object({
+          type: z.literal("full_width_banner"),
+          eyebrow: z.string().default(""),
+          headline: z.string(),
+          body: z.string().default(""),
+          image: z.object({
+            src: z.string(),
+            alt: z.string().default(""),
+          }),
+          primaryCtaLabel: z.string().default(""),
+          primaryCtaHref: z.string().default(""),
+          secondaryCtaLabel: z.string().default(""),
+          secondaryCtaHref: z.string().default(""),
+        }),
+        z.object({
           type: z.literal("text"),
           title: z.string(),
           body: z.string().default(""),
