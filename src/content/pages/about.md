@@ -8,8 +8,8 @@ showInNav: true
 navOrder: 20
 sections:
   - type: hero
-    eyebrow: Compassionate Solutions for Community Cats, Built by Our Community
-    headline: Who are we?
+    eyebrow: Who are We?
+    headline: Compassionate Solutions for Community Cats, Built by Our Community
     body: >-
       **The Clarion Cat Initiative Group exists to promote humane,
       community-based solutions for outdoor and stray cats through
@@ -24,43 +24,25 @@ sections:
 
 
       **Our purpose is not simply to respond to problems but to build long-term
-      solutions that benefit animals, residents, and the community as a whole**
+      solutions that benefit animals, residents, and the community as a whole.**
     primaryCtaLabel: "Request Assistance "
     primaryCtaHref: /contact
     primaryCtaStyle: primary
     secondaryCtaLabel: "Get Involved "
     secondaryCtaHref: /solutions
     secondaryCtaStyle: primary
-  - type: text
-    title: More About Us
-    body: >-
-      It works well for marketing sites, service pages, campaign pages, and
-      editorial content that needs to stay organized in Git.
-
-
-      - Fast Astro builds and static hosting
-
-      - Nested pages for grouped content
-
-      - Blog publishing through content collections
-
-      - Guided editing through structured CMS fields
-
-
-      &nbsp;
-    align: left
   - type: feature_grid
     title: How We Help
     body: "**The Clarion Cat Initiative Group supports residents through humane cat
-      management solutions.**"
+      management solutions**"
     features:
-      - title: "TNR Assistance "
+      - title: "🐈 TNR Assistance "
         description: Support for trapping and getting outdoor cats spayed or neutered
       - title: 📚 Community Education
         description: Resources to help residents understand community cats and humane
           solutions
-      - title: Caregiver Support
+      - title: 🤝 Caregiver Support
         description: Information and tools for people caring for outdoor cats
-      - title: Community Collaboration
+      - title: 🏡 Community Collaboration
         description: Working with local residents and partners to create long-term solutions
 ---
