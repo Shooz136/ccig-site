@@ -29,14 +29,17 @@ sections:
       - title: "Complete the Form "
         description: Complete our simple request form so we can learn more about you and
           the cats you need assistance with
+        stepNumber: 1
       - title: We Contact You
         description: >
           After completing the request form, a volunteer will reach out to learn
           more about the cats, answer questions, and schedule next steps.
+        stepNumber: 2
         icon: bx:bxs-briefcase
       - title: Humane Trapping
         description: Our trained volunteers safely trap the cat or cats using humane
           equipment
+        stepNumber: 3
       - title: Spay/Neuter & Vaccination
         description: |
           Each cat is transported to a veterinary clinic where they are:
@@ -47,12 +50,15 @@ sections:
 
 
           Ear-tipped (a small, painless mark showing the cat has been sterilized
+        stepNumber: 4
       - title: Recovery & Return
         description: "After a short recovery period, the cat is returned to the same
           outdoor location where it was found. "
+        stepNumber: 5
       - title: "Stay Involved "
         description: After the cat is returned, you can continue to stay involved with
           the group in a variety of ways!
+        stepNumber: 6
   - type: cta
     title: Be Part of the Solution
     body: Humane change happens when communities work together. Join us in improving
