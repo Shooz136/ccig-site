@@ -6,9 +6,9 @@ navLabel: "Get Involved "
 showInNav: true
 navOrder: 10
 sections:
-  - type: hero
+  - type: full_width_banner
     eyebrow: "You Can Make a Difference "
-    headline: "Get Involved "
+    headline: "Explore the Ways You Can Get Involved "
     body: >-
       The Clarion Cat Initiative Group is powered entirely by volunteers and
       community support. Every trapped cat, every surgery, and every successful
@@ -18,11 +18,14 @@ sections:
 
       Whether you can give your time, resources, or simply help spread
       awareness, there is a place for everyone to get involved
-    primaryCtaLabel: Contact Us
-    primaryCtaHref: /contact
-    primaryCtaStyle: inverted
-    secondaryCtaLabel: Read About Us
-    secondaryCtaHref: /about
+    image:
+      src: /uploads/IMG_6179.jpeg
+      alt: "Two cats "
+    primaryCtaLabel: "Make a Donation "
+    primaryCtaHref: google.com
+    primaryCtaStyle: primary
+    secondaryCtaLabel: "Sign Up to Volunteer "
+    secondaryCtaHref: google.com
     secondaryCtaStyle: muted
   - type: text
     title: Volunteer with us
@@ -46,12 +49,6 @@ sections:
 
 
       Even a few hours of help can make a meaningful difference.
-
-
-      👉 Volunteer With Us →
-
-
-      &nbsp;
     align: left
   - type: cta
     title: "Donate "
@@ -76,11 +73,8 @@ sections:
 
       Every contribution helps prevent future litters and improves the health
       and safety of both cats and neighborhoods.
-
-
-      👉 Donate →
-    buttonLabel: View Example Child Page
-    buttonHref: /get-involved/implementation
+    buttonLabel: "Make a Financial Donate "
+    buttonHref: Google.com
     buttonStyle: outline
   - type: text
     title: "Donate Supplies "
@@ -123,13 +117,28 @@ sections:
 
       If you’re unsure whether an item is helpful, feel free to contact us
       before donating.
+  - type: text
+    title: "Support Humane Solutions "
+    body: >-
+      You can help even if you’re unable to volunteer or donate.
 
 
-      &nbsp;
+      Sharing accurate information about community cats and humane solutions
+      helps reduce misunderstandings and builds support for long-term change.
 
 
-      Button:
+      You can help by:
 
 
-      👉 View Supply Donation Details / Contact Us →
+      - Sharing our resources on social media
+
+      - Talking with neighbors about TNR
+
+      - Connecting us with community partners
+
+      - Encouraging humane solutions in local conversations
+
+
+      Small actions help create lasting impact.
+    align: left
 ---
