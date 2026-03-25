@@ -29,8 +29,19 @@ const fontStacks = {
     '"Courier New", Courier, monospace'
 } as const;
 
+const bannerHeadlineSizes = {
+  sm: "clamp(2.5rem, 5vw, 4rem)",
+  md: "clamp(3rem, 6vw, 4.75rem)",
+  lg: "clamp(3.5rem, 7vw, 5.5rem)",
+  xl: "clamp(4rem, 8vw, 6.5rem)",
+  "2xl": "clamp(4.5rem, 9vw, 7.5rem)",
+} as const;
+
 export const theme = {
   ...themeSettings,
   headingFontStack: fontStacks[themeSettings.headingFont] || fontStacks.bricolage,
-  bodyFontStack: fontStacks[themeSettings.bodyFont] || fontStacks.inter
+  bodyFontStack: fontStacks[themeSettings.bodyFont] || fontStacks.inter,
+  bannerHeadlineFontSize:
+    bannerHeadlineSizes[themeSettings.bannerHeadlineSize] ||
+    bannerHeadlineSizes.xl,
 };

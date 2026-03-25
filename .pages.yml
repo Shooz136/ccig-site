@@ -20,6 +20,11 @@ content:
         type: select
         options:
           values: [inter, bricolage, system, helvetica, arial, georgia, times, garamond, palatino, trebuchet, verdana, tahoma, courier]
+      - name: bannerHeadlineSize
+        label: Banner Headline Size
+        type: select
+        options:
+          values: [sm, md, lg, xl, 2xl]
       - name: background
         label: Background Color
         type: string
