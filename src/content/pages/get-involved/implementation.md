@@ -12,7 +12,7 @@ sections:
     body: This page exists to prove the nested routing and dropdown navigation
       pattern. It is authored as content, not as a custom Astro route.
     primaryCtaLabel: Back to Get Involved
-    primaryCtaHref: /GetInvolved
+    primaryCtaHref: /get-involved
     secondaryCtaLabel: Contact Us
     secondaryCtaHref: /contact
   - type: text
