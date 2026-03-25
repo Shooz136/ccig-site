@@ -4,28 +4,28 @@ import Link from "@/components/ui/link.astro";
 const { sponsor } = Astro.props;
 ---
 
-<article class="flex h-full flex-col rounded-3xl border border-border bg-card p-6">
+<article class="flex h-full flex-col rounded-3xl border border-border bg-background p-6 shadow-[0_20px_50px_-35px_rgba(15,23,42,0.35)]">
   <img
     src={sponsor.data.image.src}
     alt={sponsor.data.image.alt}
-    class="h-40 w-full rounded-2xl object-cover"
+    class="h-44 w-full rounded-2xl border border-border object-cover"
     loading="lazy"
   />
   <div class="mt-5">
-    <p class="text-xs font-semibold uppercase tracking-[0.22em] text-accent">
+    <p class="inline-flex w-fit rounded-full bg-secondary px-3 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.22em] text-accent">
       {sponsor.data.level}
     </p>
-    <h3 class="mt-2 text-2xl font-semibold leading-tight text-card-foreground">
+    <h3 class="mt-3 text-2xl font-semibold leading-tight text-foreground">
       {sponsor.data.name}
     </h3>
   </div>
-  <p class="mt-4 leading-relaxed text-muted-foreground">
+  <p class="mt-4 leading-relaxed text-foreground/78">
     {sponsor.data.description}
   </p>
   {
     sponsor.data.website && (
       <div class="mt-6">
-        <Link href={sponsor.data.website} style="outline" size="md">
+        <Link href={sponsor.data.website} style="primary" size="md">
           Visit Sponsor
         </Link>
       </div>
