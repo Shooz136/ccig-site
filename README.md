@@ -65,7 +65,7 @@ This repo now includes a starter Pages CMS config in `.pages.yml`.
 - `pages` maps to `src/content/pages`
 - uploaded media goes to `public/uploads`
 
-The theme file controls a small global token set for fonts and colors. It is meant for brand styling only, not layout changes.
+The theme file controls a semantic token set for fonts and colors. It is meant for brand styling only, not layout changes.
 The current font picker offers a curated list of common options, including Bricolage, Inter, System UI, Helvetica, Arial, Georgia, Times New Roman, Garamond, Palatino, Trebuchet MS, Verdana, Tahoma, and Courier New.
 
 The `blog` collection intentionally excludes `src/content/blog/kitchensink.mdx` because it contains MDX-specific imports and components that are safer to maintain manually than through a CMS editor.

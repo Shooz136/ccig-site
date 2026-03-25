@@ -8,24 +8,24 @@ const { title, body, features = [] } = Astro.props;
 <section class="py-12">
   <div class="mx-auto max-w-5xl">
     <div class="max-w-3xl">
-      <h2 class="text-4xl font-bold tracking-tight text-theme lg:text-5xl">
+      <h2 class="text-4xl font-bold tracking-tight text-foreground lg:text-5xl">
         {title}
       </h2>
-      <RichText content={body} class="mt-4 text-theme-muted" />
+      <RichText content={body} class="mt-4 text-muted-foreground" />
     </div>
 
     <div class="mt-14 grid gap-12 sm:grid-cols-2 md:grid-cols-3">
       {
         features.map((feature) => (
           <div class="flex items-start gap-4">
-            <div class="mt-1 h-8 w-8 shrink-0 rounded-full bg-theme-primary p-2">
-              <Icon class="text-theme-on-primary" name={feature.icon} />
+            <div class="mt-1 h-8 w-8 shrink-0 rounded-full bg-primary p-2">
+              <Icon class="text-primary-foreground" name={feature.icon} />
             </div>
             <div>
-              <h3 class="text-lg font-semibold text-theme">
+              <h3 class="text-lg font-semibold text-foreground">
                 {feature.title}
               </h3>
-              <p class="mt-2 leading-relaxed text-theme-muted">
+              <p class="mt-2 leading-relaxed text-muted-foreground">
                 {feature.description}
               </p>
             </div>

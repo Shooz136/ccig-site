@@ -76,10 +76,10 @@ menuitems.push(
     <Astronav>
       <div class="flex w-full lg:w-auto items-center justify-between">
         <a href="/" class="text-lg"
-          ><span class="font-bold text-theme">{siteConfig.name}</span>
+          ><span class="font-bold text-foreground">{siteConfig.name}</span>
         </a>
         <div class="block lg:hidden">
-          <MenuIcon class="w-4 h-4 text-theme" />
+          <MenuIcon class="w-4 h-4 text-foreground" />
         </div>
       </div>
       <MenuItems class="hidden w-full lg:w-auto mt-2 lg:flex lg:mt-0">
@@ -99,10 +99,10 @@ menuitems.push(
                   <li>
                     <a
                       href={item.path}
-                      class="flex lg:px-3 py-2 items-center text-theme-muted hover-text-theme">
+                      class="flex lg:px-3 py-2 items-center text-muted-foreground hover-text-foreground">
                       <span> {item.title}</span>
                       {item.badge && (
-                        <span class="ml-1 px-2 py-0.5 text-[10px] animate-pulse font-semibold uppercase text-theme-on-primary bg-theme-primary rounded-full">
+                        <span class="ml-1 px-2 py-0.5 text-[10px] animate-pulse font-semibold uppercase text-primary-foreground bg-primary rounded-full">
                           New
                         </span>
                       )}

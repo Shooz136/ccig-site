@@ -9,13 +9,13 @@ const { title, body, align = "left" } = Astro.props;
     "mx-auto max-w-4xl py-10",
     align === "center" && "text-center",
   ]}>
-  <h2 class="text-3xl font-bold tracking-tight text-theme lg:text-4xl">
+  <h2 class="text-3xl font-bold tracking-tight text-foreground lg:text-4xl">
     {title}
   </h2>
   <RichText
     content={body}
     class:list={[
-      "mt-5 text-theme-muted",
+      "mt-5 text-muted-foreground",
       align === "center" && "mx-auto",
     ]}
   />

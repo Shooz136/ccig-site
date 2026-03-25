@@ -6,7 +6,7 @@ const { content, class: className } = Astro.props;
   content && (
     <div
       class:list={[
-        "prose prose-lg max-w-none prose-headings:text-theme prose-p:text-inherit prose-li:text-inherit prose-strong:text-theme prose-a:text-[var(--theme-accent)] prose-code:text-theme",
+        "prose prose-lg max-w-none prose-headings:text-foreground prose-p:text-inherit prose-li:text-inherit prose-strong:text-foreground prose-a:text-[var(--accent)] prose-code:text-foreground",
         className,
       ]}
       set:html={content}

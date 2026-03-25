@@ -11,25 +11,34 @@
 
 @layer base {
   :root {
-    --theme-background: #fffdf8;
-    --theme-surface: #f4efe5;
-    --theme-text: #1f2937;
-    --theme-muted: #6b7280;
-    --theme-border: #d6d3d1;
-    --theme-primary: #155e75;
-    --theme-primary-foreground: #f8fafc;
-    --theme-accent: #d97706;
-    --theme-font-heading:
+    --background: #fffdf8;
+    --foreground: #1f2937;
+    --card: #f4efe5;
+    --card-foreground: #1f2937;
+    --popover: #fffdf8;
+    --popover-foreground: #1f2937;
+    --primary: #155e75;
+    --primary-foreground: #f8fafc;
+    --secondary: #f4efe5;
+    --secondary-foreground: #1f2937;
+    --muted: #f6f0e6;
+    --muted-foreground: #6b7280;
+    --accent: #d97706;
+    --accent-foreground: #fff7ed;
+    --border: #d6d3d1;
+    --input: #d6d3d1;
+    --ring: #155e75;
+    --font-heading:
       "Bricolage Grotesque Variable", "Inter Variable", Inter, ui-sans-serif,
       system-ui, sans-serif;
-    --theme-font-body:
+    --font-body:
       "Inter Variable", Inter, ui-sans-serif, system-ui, sans-serif;
   }
 
   body {
-    background: var(--theme-background);
-    color: var(--theme-text);
-    font-family: var(--theme-font-body);
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-body);
   }
 
   h1,
@@ -38,8 +47,8 @@
   h4,
   h5,
   h6 {
-    color: var(--theme-text);
-    font-family: var(--theme-font-heading);
+    color: var(--foreground);
+    font-family: var(--font-heading);
   }
 
   a {
@@ -61,56 +70,96 @@
   ::before,
   ::backdrop,
   ::file-selector-button {
-    border-color: var(--theme-border, currentColor);
+    border-color: var(--border, currentColor);
   }
 }
 
-@utility bg-theme {
-  background-color: var(--theme-background);
+@utility bg-background {
+  background-color: var(--background);
 }
 
-@utility bg-theme-surface {
-  background-color: var(--theme-surface);
+@utility bg-card {
+  background-color: var(--card);
 }
 
-@utility bg-theme-primary {
-  background-color: var(--theme-primary);
+@utility bg-popover {
+  background-color: var(--popover);
 }
 
-@utility text-theme {
-  color: var(--theme-text);
+@utility bg-primary {
+  background-color: var(--primary);
 }
 
-@utility text-theme-muted {
-  color: var(--theme-muted);
+@utility bg-secondary {
+  background-color: var(--secondary);
 }
 
-@utility text-theme-accent {
-  color: var(--theme-accent);
+@utility bg-muted {
+  background-color: var(--muted);
 }
 
-@utility text-theme-on-primary {
-  color: var(--theme-primary-foreground);
+@utility text-foreground {
+  color: var(--foreground);
 }
 
-@utility border-theme {
-  border-color: var(--theme-border);
+@utility text-card-foreground {
+  color: var(--card-foreground);
 }
 
-@utility hover-bg-theme-surface {
+@utility text-popover-foreground {
+  color: var(--popover-foreground);
+}
+
+@utility text-primary-foreground {
+  color: var(--primary-foreground);
+}
+
+@utility text-secondary-foreground {
+  color: var(--secondary-foreground);
+}
+
+@utility text-muted-foreground {
+  color: var(--muted-foreground);
+}
+
+@utility text-accent {
+  color: var(--accent);
+}
+
+@utility text-accent-foreground {
+  color: var(--accent-foreground);
+}
+
+@utility border-border {
+  border-color: var(--border);
+}
+
+@utility border-input {
+  border-color: var(--input);
+}
+
+@utility border-ring {
+  border-color: var(--ring);
+}
+
+@utility ring-ring {
+  --tw-ring-color: var(--ring);
+}
+
+@utility hover-bg-secondary {
   &:hover {
-    background-color: var(--theme-surface);
+    background-color: var(--secondary);
   }
 }
 
-@utility hover-bg-theme-primary {
+@utility hover-bg-primary {
   &:hover {
-    background-color: color-mix(in srgb, var(--theme-primary) 88%, black);
+    background-color: color-mix(in srgb, var(--primary) 88%, black);
   }
 }
 
-@utility hover-text-theme {
+@utility hover-text-foreground {
   &:hover {
-    color: var(--theme-text);
+    color: var(--foreground);
   }
 }

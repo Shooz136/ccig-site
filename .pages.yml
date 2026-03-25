@@ -23,26 +23,53 @@ content:
       - name: background
         label: Background Color
         type: string
-      - name: surface
-        label: Surface Color
+      - name: foreground
+        label: Foreground Color
         type: string
-      - name: text
-        label: Text Color
+      - name: card
+        label: Card Color
         type: string
-      - name: muted
-        label: Muted Text Color
+      - name: cardForeground
+        label: Card Foreground
         type: string
-      - name: border
-        label: Border Color
+      - name: popover
+        label: Popover Color
+        type: string
+      - name: popoverForeground
+        label: Popover Foreground
         type: string
       - name: primary
         label: Primary Color
         type: string
       - name: primaryForeground
-        label: Primary Text Color
+        label: Primary Foreground
+        type: string
+      - name: secondary
+        label: Secondary Color
+        type: string
+      - name: secondaryForeground
+        label: Secondary Foreground
+        type: string
+      - name: muted
+        label: Muted Color
+        type: string
+      - name: mutedForeground
+        label: Muted Foreground
         type: string
       - name: accent
         label: Accent Color
+        type: string
+      - name: accentForeground
+        label: Accent Foreground
+        type: string
+      - name: border
+        label: Border Color
+        type: string
+      - name: input
+        label: Input Border
+        type: string
+      - name: ring
+        label: Focus Ring
         type: string
 
   - name: pages

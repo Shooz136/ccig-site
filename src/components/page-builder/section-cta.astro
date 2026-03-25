@@ -6,13 +6,13 @@ const { title, body, buttonLabel, buttonHref } = Astro.props;
 ---
 
 <section class="py-12">
-  <div class="mx-auto max-w-5xl rounded-3xl bg-theme-primary px-8 py-12 text-center md:px-16">
-    <h2 class="text-3xl font-bold tracking-tight text-theme-on-primary lg:text-5xl">
+  <div class="mx-auto max-w-5xl rounded-3xl bg-primary px-8 py-12 text-center md:px-16">
+    <h2 class="text-3xl font-bold tracking-tight text-primary-foreground lg:text-5xl">
       {title}
     </h2>
     <RichText
       content={body}
-      class="mx-auto mt-5 max-w-2xl text-[color-mix(in_srgb,var(--theme-primary-foreground)_78%,transparent)] prose-p:text-lg prose-p:leading-relaxed prose-strong:text-theme-on-primary prose-a:text-theme-on-primary"
+      class="mx-auto mt-5 max-w-2xl text-[color-mix(in_srgb,var(--primary-foreground)_78%,transparent)] prose-p:text-lg prose-p:leading-relaxed prose-strong:text-primary-foreground prose-a:text-primary-foreground"
     />
     <div class="mt-8 flex justify-center">
       <Link href={buttonHref} style="inverted">

@@ -39,10 +39,10 @@ publishedBlogEntries.sort(function (a, b) {
                     height={600}
                     loading={index <= 2 ? "eager" : "lazy"}
                     decoding={index <= 2 ? "sync" : "async"}
-                    class="w-full rounded-md object-cover object-center bg-theme-surface"
+                    class="w-full rounded-md object-cover object-center bg-card"
                   />
                   <div>
-                    <span class="text-theme-accent uppercase tracking-wider text-sm font-medium">
+                    <span class="text-accent uppercase tracking-wider text-sm font-medium">
                       {blogPostEntry.data.category}
                     </span>
 
@@ -51,12 +51,12 @@ publishedBlogEntries.sort(function (a, b) {
                     </h2>
 
                     <div class="flex gap-2 mt-3">
-                      <span class="text-theme-muted">
+                      <span class="text-muted-foreground">
                         {blogPostEntry.data.author}
                       </span>
-                      <span class="text-theme-muted">• </span>
+                      <span class="text-muted-foreground">• </span>
                       <time
-                        class="text-theme-muted"
+                        class="text-muted-foreground"
                         datetime={blogPostEntry.data.publishDate.toISOString()}>
                         {blogPostEntry.data.publishDate.toDateString()}
                       </time>

@@ -31,7 +31,7 @@ const makeTitle = title
 <!doctype html>
 <html
   lang="en"
-  style={`--theme-background:${theme.background};--theme-surface:${theme.surface};--theme-text:${theme.text};--theme-muted:${theme.muted};--theme-border:${theme.border};--theme-primary:${theme.primary};--theme-primary-foreground:${theme.primaryForeground};--theme-accent:${theme.accent};--theme-font-heading:${theme.headingFontStack};--theme-font-body:${theme.bodyFontStack};`}>
+  style={`--background:${theme.background};--foreground:${theme.foreground};--card:${theme.card};--card-foreground:${theme.cardForeground};--popover:${theme.popover};--popover-foreground:${theme.popoverForeground};--primary:${theme.primary};--primary-foreground:${theme.primaryForeground};--secondary:${theme.secondary};--secondary-foreground:${theme.secondaryForeground};--muted:${theme.muted};--muted-foreground:${theme.mutedForeground};--accent:${theme.accent};--accent-foreground:${theme.accentForeground};--border:${theme.border};--input:${theme.input};--ring:${theme.ring};--font-heading:${theme.headingFontStack};--font-body:${theme.bodyFontStack};`}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -59,7 +59,7 @@ const makeTitle = title
       }}
     />
   </head>
-  <body class="bg-theme text-theme">
+  <body class="bg-background text-foreground">
     {
       preview && (
         <div class="bg-amber-100 px-4 py-2 text-center text-sm font-medium text-amber-900">

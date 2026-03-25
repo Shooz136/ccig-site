@@ -34,7 +34,7 @@ const { Content } = await entry.render();
 <Layout title={`${entry.data.title} Preview`} preview={true}>
   <Container>
     <div class="mx-auto mt-14 max-w-3xl">
-      <span class="text-theme-accent uppercase tracking-wider text-sm font-medium">
+      <span class="text-accent uppercase tracking-wider text-sm font-medium">
         {entry.data.category}
       </span>
       <h1
@@ -42,27 +42,27 @@ const { Content } = await entry.render();
         {entry.data.title}
       </h1>
       <div class="flex gap-2 mt-3 items-center flex-wrap md:flex-nowrap">
-        <span class="text-theme-muted">
+        <span class="text-muted-foreground">
           {entry.data.author}
         </span>
-        <span class="text-theme-muted">•</span>
+        <span class="text-muted-foreground">•</span>
         <time
-          class="text-theme-muted"
+          class="text-muted-foreground"
           datetime={entry.data.publishDate.toISOString()}>
           {entry.data.publishDate.toDateString()}
         </time>
-        <span class="text-theme-muted hidden md:block">•</span>
+        <span class="text-muted-foreground hidden md:block">•</span>
         <div class="w-full md:w-auto flex flex-wrap gap-3">
           {
             entry.data.tags.map((tag) => (
-              <span class="text-sm text-theme-muted">#{tag}</span>
+              <span class="text-sm text-muted-foreground">#{tag}</span>
             ))
           }
         </div>
       </div>
     </div>
 
-    <div class="mx-auto prose prose-lg mt-6 max-w-3xl prose-headings:text-theme prose-p:text-theme prose-li:text-theme prose-strong:text-theme prose-a:text-[var(--theme-accent)] prose-code:text-theme">
+    <div class="mx-auto prose prose-lg mt-6 max-w-3xl prose-headings:text-foreground prose-p:text-foreground prose-li:text-foreground prose-strong:text-foreground prose-a:text-[var(--accent)] prose-code:text-foreground">
       <Content />
     </div>
   </Container>
