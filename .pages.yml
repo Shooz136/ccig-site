@@ -273,6 +273,7 @@ content:
                   - name: icon
                     label: Icon Name
                     type: string
+                    help: "Use Iconify names like bx:cat, bxs:church, simple-icons:astro, or uil:home."
           - name: logo_cloud
             label: Logo Cloud
             fields:
@@ -287,6 +288,7 @@ content:
                   - name: icon
                     label: Icon Name
                     type: string
+                    help: "Use Iconify names like bx:cat, bxs:church, simple-icons:astro, or uil:home."
                   - name: label
                     label: Label
                     type: string
