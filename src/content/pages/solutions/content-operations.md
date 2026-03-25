@@ -2,7 +2,7 @@
 draft: false
 title: "Volunteer "
 description: Example nested page for editorial workflow and publishing structure.
-navLabel: Content Operations
+navLabel: "Volunteer "
 showInNav: true
 navOrder: 20
 sections:
