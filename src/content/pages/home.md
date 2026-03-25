@@ -21,16 +21,20 @@ sections:
 
       **When you submit a request for assistance, here’s what you can expect:**
     features:
-      - title: 1. We Contact You
+      - title: "Complete the Form "
+        description: Complete our simple request form so we can learn more about you and
+          the cats you need assistance with
+        icon: bx:bxs-file-find
+      - title: We Contact You
         description: >
           After completing the request form, a volunteer will reach out to learn
           more about the cats, answer questions, and schedule next steps.
         icon: bx:bxs-briefcase
-      - title: 2. Humane Trapping
+      - title: Humane Trapping
         description: Our trained volunteers safely trap the cat or cats using humane
           equipment
         icon: bx:bxs-window-alt
-      - title: 3. Spay/Neuter & Vaccination
+      - title: Spay/Neuter & Vaccination
         description: |
           Each cat is transported to a veterinary clinic where they are:
           Spayed or neutered
@@ -41,14 +45,10 @@ sections:
 
           Ear-tipped (a small, painless mark showing the cat has been sterilized
         icon: bx:bxs-data
-      - title: 4. Recovery & Return
-        description: After a short recovery period, the cat is returned to the same
-          outdoor location where it was found.
+      - title: Recovery & Return
+        description: "After a short recovery period, the cat is returned to the same
+          outdoor location where it was found. "
         icon: bx:bxs-bot
-      - title: Git-backed publishing
-        description: Content stays in the repository, which keeps changes auditable and
-          portable.
-        icon: bx:bxs-file-find
       - title: Room to expand
         description: Add more block types later if the editorial workflow grows beyond
           the basics.
