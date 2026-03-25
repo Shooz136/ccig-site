@@ -18,9 +18,15 @@ const { title, body, features = [] } = Astro.props;
       {
         features.map((feature) => (
           <div class="flex items-start gap-4">
-            <div class="mt-1 h-8 w-8 shrink-0 rounded-full bg-primary p-2">
-              <Icon class="text-primary-foreground" name={feature.icon} />
-            </div>
+            {(feature.stepNumber || feature.icon) && (
+              <div class="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary text-sm font-bold text-primary-foreground">
+                {feature.stepNumber ? (
+                  <span>{feature.stepNumber}</span>
+                ) : (
+                  <Icon class="h-5 w-5 text-primary-foreground" name={feature.icon} />
+                )}
+              </div>
+            )}
             <div>
               <h3 class="text-lg font-semibold text-foreground">
                 {feature.title}

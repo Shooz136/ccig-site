@@ -288,10 +288,14 @@ content:
                   - name: description
                     label: Description
                     type: text
+                  - name: stepNumber
+                    label: Step Number
+                    type: number
+                    help: "Optional. If provided, the card shows a numbered badge instead of an icon."
                   - name: icon
                     label: Icon Name
                     type: string
-                    help: "Use Iconify names like bx:cat, bxs:church, simple-icons:astro, or uil:home."
+                    help: "Optional. Use Iconify names like bx:cat, bxs:church, simple-icons:astro, or uil:home. Ignored when Step Number is set."
           - name: logo_cloud
             label: Logo Cloud
             fields:

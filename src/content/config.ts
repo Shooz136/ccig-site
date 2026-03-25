@@ -96,7 +96,8 @@ const pagesCollection = defineCollection({
             z.object({
               title: z.string(),
               description: z.string(),
-              icon: z.string(),
+              stepNumber: z.number().int().positive().optional(),
+              icon: z.string().default(""),
             })
           ).default([]),
         }),

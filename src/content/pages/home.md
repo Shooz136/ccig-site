@@ -14,6 +14,7 @@ sections:
       improving the lives of cats, residents, and the communities they call home
     image:
       src: /uploads/1920px-Sunset_in_Clarion,_PA.jpg
+      alt: Sunset in Clarion, Pennsylvania.
   - type: feature_grid
     title: 🐾 NEED HELP WITH OUTDOOR CATS
     body: >-
