@@ -8,13 +8,27 @@ showInNav: true
 navOrder: 20
 sections:
   - type: hero
-    eyebrow: About Us
+    eyebrow: Compassionate Solutions for Community Cats, Built by Our Community
     headline: Who are we?
-    body: "Mission and Vision "
-    primaryCtaLabel: Contact Us
+    body: >-
+      **The Clarion Cat Initiative Group exists to promote humane,
+      community-based solutions for outdoor and stray cats through
+      Trap-Neuter-Return (TNR), education, and collaboration.**
+
+
+      **We believe communities and cats thrive together when compassion is
+      paired with practical action. By preventing reproduction, improving
+      health, and supporting responsible caregiving, we work to reduce
+      suffering, stabilize cat populations, and create more peaceful
+      neighborhoods across Clarion County.**
+
+
+      **Our purpose is not simply to respond to problems but to build long-term
+      solutions that benefit animals, residents, and the community as a whole**
+    primaryCtaLabel: "Request Assistance "
     primaryCtaHref: /contact
     primaryCtaStyle: primary
-    secondaryCtaLabel: Explore Solutions
+    secondaryCtaLabel: "Get Involved "
     secondaryCtaHref: /solutions
     secondaryCtaStyle: primary
   - type: text
