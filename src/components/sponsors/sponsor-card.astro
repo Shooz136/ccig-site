@@ -1,0 +1,25 @@
+---
+const { sponsor } = Astro.props;
+---
+
+<article class="flex h-full flex-col rounded-3xl border border-border bg-card p-6">
+  <div class="flex items-center gap-4">
+    <img
+      src={sponsor.data.image.src}
+      alt={sponsor.data.image.alt}
+      class="h-16 w-16 rounded-2xl object-cover"
+      loading="lazy"
+    />
+    <div>
+      <p class="text-xs font-semibold uppercase tracking-[0.22em] text-accent">
+        {sponsor.data.level}
+      </p>
+      <h3 class="mt-1 text-xl font-semibold text-card-foreground">
+        {sponsor.data.name}
+      </h3>
+    </div>
+  </div>
+  <p class="mt-5 leading-relaxed text-muted-foreground">
+    {sponsor.data.description}
+  </p>
+</article>

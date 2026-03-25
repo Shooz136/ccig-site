@@ -32,6 +32,21 @@ const teamCollection = defineCollection({
 });
 
 const buttonStyleSchema = z.enum(["primary", "outline", "inverted", "muted"]);
+const sponsorLevelSchema = z.enum(["platinum", "gold", "silver", "bronze", "community"]);
+
+const sponsorsCollection = defineCollection({
+  schema: z.object({
+    draft: z.boolean().default(false),
+    name: z.string(),
+    description: z.string(),
+    level: sponsorLevelSchema,
+    sortOrder: z.number().default(100),
+    image: z.object({
+      src: z.string(),
+      alt: z.string(),
+    }),
+  }),
+});
 
 const pagesCollection = defineCollection({
   schema: z.object({
@@ -118,6 +133,12 @@ const pagesCollection = defineCollection({
             })
           ).default([]),
         }),
+        z.object({
+          type: z.literal("sponsor_list"),
+          title: z.string(),
+          body: z.string().default(""),
+          levels: z.array(sponsorLevelSchema).default([]),
+        }),
       ])
     ).default([]),
   }),
@@ -127,6 +148,7 @@ const pagesCollection = defineCollection({
 //    This key should match your collection directory name in "src/content"
 export const collections = {
   'blog': blogCollection,
+  'sponsors': sponsorsCollection,
   'team': teamCollection,
   'pages': pagesCollection,
 };

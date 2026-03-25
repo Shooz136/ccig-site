@@ -1,0 +1,25 @@
+---
+import SponsorCard from "@/components/sponsors/sponsor-card.astro";
+
+const { groups } = Astro.props;
+---
+
+<div class="space-y-16">
+  {
+    groups.map((group) => (
+      <section>
+        <div class="mb-6 flex items-center justify-between gap-4">
+          <h2 class="text-3xl font-bold tracking-tight text-foreground">
+            {group.label}
+          </h2>
+          <span class="text-sm font-medium uppercase tracking-[0.18em] text-muted-foreground">
+            {group.sponsors.length} sponsor{group.sponsors.length === 1 ? "" : "s"}
+          </span>
+        </div>
+        <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+          {group.sponsors.map((sponsor) => <SponsorCard sponsor={sponsor} />)}
+        </div>
+      </section>
+    ))
+  }
+</div>

@@ -1,0 +1,40 @@
+---
+import Container from "@/components/container.astro";
+import Layout from "@/layouts/Layout.astro";
+import SponsorGroups from "@/components/sponsors/sponsor-groups.astro";
+import { getPublishedSponsors, groupSponsorsByLevel } from "@/lib/sponsors";
+
+const sponsors = await getPublishedSponsors();
+const groups = groupSponsorsByLevel(sponsors);
+---
+
+<Layout
+  title="Sponsors"
+  description="Meet the organizations and businesses that support this work.">
+  <Container>
+    <section class="py-14">
+      <div class="mx-auto max-w-3xl">
+        <p class="text-sm font-semibold uppercase tracking-[0.24em] text-accent">
+          Sponsors
+        </p>
+        <h1 class="mt-4 text-5xl font-bold tracking-tight text-foreground lg:text-6xl">
+          The people and organizations helping make this mission possible
+        </h1>
+        <p class="mt-6 text-lg leading-relaxed text-muted-foreground">
+          This page is driven by the dedicated sponsors collection, so new sponsors can
+          be added once and reused anywhere across the site.
+        </p>
+      </div>
+
+      <div class="mt-14">
+        {
+          groups.length > 0 ? (
+            <SponsorGroups groups={groups} />
+          ) : (
+            <p class="text-muted-foreground">No sponsors have been published yet.</p>
+          )
+        }
+      </div>
+    </section>
+  </Container>
+</Layout>

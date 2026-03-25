@@ -118,6 +118,62 @@ content:
         type: string
         required: true
 
+  - name: sponsors
+    label: Sponsors
+    type: collection
+    path: src/content/sponsors
+    format: yaml-frontmatter
+    subfolders: false
+    filename: "{primary}.md"
+    view:
+      primary: name
+      fields: [name, level, sortOrder, draft]
+      sort: [sortOrder, name]
+      default:
+        sort: sortOrder
+        order: asc
+      search: [name, description, level]
+    fields:
+      - name: draft
+        label: Draft
+        type: boolean
+        required: true
+      - name: name
+        label: Name
+        type: string
+        required: true
+      - name: description
+        label: Short Description
+        type: text
+        required: true
+        options:
+          rows: 3
+      - name: level
+        label: Sponsor Level
+        type: select
+        required: true
+        options:
+          values: [platinum, gold, silver, bronze, community]
+      - name: sortOrder
+        label: Sort Order
+        type: number
+        required: true
+      - name: image
+        label: Sponsor Image
+        type: object
+        required: true
+        fields:
+          - name: src
+            label: Image
+            type: image
+            required: true
+            options:
+              path: sponsors
+          - name: alt
+            label: Alt Text
+            type: string
+            required: true
+
   - name: pages
     label: Pages
     type: collection
@@ -407,6 +463,25 @@ content:
                   - name: label
                     label: Label
                     type: string
+          - name: sponsor_list
+            label: Sponsor List
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: body
+                label: Body
+                type: rich-text
+                options:
+                  path: pages
+              - name: levels
+                label: Sponsor Levels
+                type: select
+                list: true
+                help: "Optional. Leave empty to show all sponsor levels."
+                options:
+                  values: [platinum, gold, silver, bronze, community]
 
   - name: blog
     label: Blog Posts
