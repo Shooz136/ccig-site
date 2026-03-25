@@ -67,4 +67,5 @@ sections:
       life for both cats and residents throughout our Borough
     buttonLabel: Learn How you Can Get Involved
     buttonHref: /Get-Involved
+    buttonStyle: inverted
 ---
