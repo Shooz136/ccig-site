@@ -192,6 +192,13 @@ content:
                 label: Primary Button Link
                 type: string
                 help: "Button renders only when both label and link are filled in."
+              - name: primaryCtaStyle
+                label: Primary Button Style
+                type: select
+                required: true
+                help: "Uses your current theme colors."
+                options:
+                  values: [primary, outline, inverted, muted]
               - name: secondaryCtaLabel
                 label: Secondary Button Label
                 type: string
@@ -200,6 +207,13 @@ content:
                 label: Secondary Button Link
                 type: string
                 help: "Button renders only when both label and link are filled in."
+              - name: secondaryCtaStyle
+                label: Secondary Button Style
+                type: select
+                required: true
+                help: "Uses your current theme colors."
+                options:
+                  values: [primary, outline, inverted, muted]
           - name: full_width_banner
             label: Full Width Banner
             fields:
@@ -238,6 +252,13 @@ content:
                 label: Primary Button Link
                 type: string
                 help: "Button renders only when both label and link are filled in."
+              - name: primaryCtaStyle
+                label: Primary Button Style
+                type: select
+                required: true
+                help: "Uses your current theme colors."
+                options:
+                  values: [primary, outline, inverted, muted]
               - name: secondaryCtaLabel
                 label: Secondary Button Label
                 type: string
@@ -246,6 +267,13 @@ content:
                 label: Secondary Button Link
                 type: string
                 help: "Button renders only when both label and link are filled in."
+              - name: secondaryCtaStyle
+                label: Secondary Button Style
+                type: select
+                required: true
+                help: "Uses your current theme colors."
+                options:
+                  values: [primary, outline, inverted, muted]
           - name: text
             label: Text Section
             fields:

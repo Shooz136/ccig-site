@@ -1,0 +1,37 @@
+---
+import Link from "@/components/ui/link.astro";
+
+interface ActionButton {
+  label?: string;
+  href?: string;
+  style?: "primary" | "outline" | "inverted" | "muted";
+  class?: string;
+}
+
+const {
+  buttons = [],
+  class: className,
+  alignClass = "",
+} = Astro.props as {
+  buttons?: ActionButton[];
+  class?: string;
+  alignClass?: string;
+};
+
+const visibleButtons = buttons.filter((button) => button?.label && button?.href);
+---
+
+{
+  visibleButtons.length > 0 && (
+    <div class:list={["flex flex-col gap-3 sm:flex-row", alignClass, className]}>
+      {visibleButtons.map((button) => (
+        <Link
+          href={button.href!}
+          style={button.style || "primary"}
+          class={button.class}>
+          {button.label}
+        </Link>
+      ))}
+    </div>
+  )
+}

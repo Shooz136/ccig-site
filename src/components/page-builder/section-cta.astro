@@ -1,5 +1,5 @@
 ---
-import Link from "@/components/ui/link.astro";
+import ActionButtons from "@/components/page-builder/action-buttons.astro";
 import RichText from "@/components/page-builder/rich-text.astro";
 
 const { title, body, buttonLabel, buttonHref, buttonStyle = "inverted" } = Astro.props;
@@ -14,10 +14,9 @@ const { title, body, buttonLabel, buttonHref, buttonStyle = "inverted" } = Astro
       content={body}
       class="mx-auto mt-5 max-w-2xl text-[color-mix(in_srgb,var(--primary-foreground)_78%,transparent)] prose-p:text-lg prose-p:leading-relaxed prose-strong:text-primary-foreground prose-a:text-primary-foreground"
     />
-    <div class="mt-8 flex justify-center">
-      <Link href={buttonHref} style={buttonStyle}>
-        {buttonLabel}
-      </Link>
-    </div>
+    <ActionButtons
+      class="mt-8 justify-center"
+      buttons={[{ label: buttonLabel, href: buttonHref, style: buttonStyle }]}
+    />
   </div>
 </section>

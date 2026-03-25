@@ -31,6 +31,8 @@ const teamCollection = defineCollection({
   }),
 });
 
+const buttonStyleSchema = z.enum(["primary", "outline", "inverted", "muted"]);
+
 const pagesCollection = defineCollection({
   schema: z.object({
     draft: z.boolean().default(false),
@@ -48,8 +50,10 @@ const pagesCollection = defineCollection({
           body: z.string().default(""),
           primaryCtaLabel: z.string().default(""),
           primaryCtaHref: z.string().default(""),
+          primaryCtaStyle: buttonStyleSchema.default("primary"),
           secondaryCtaLabel: z.string().default(""),
           secondaryCtaHref: z.string().default(""),
+          secondaryCtaStyle: buttonStyleSchema.default("outline"),
         }),
         z.object({
           type: z.literal("full_width_banner"),
@@ -62,8 +66,10 @@ const pagesCollection = defineCollection({
           }),
           primaryCtaLabel: z.string().default(""),
           primaryCtaHref: z.string().default(""),
+          primaryCtaStyle: buttonStyleSchema.default("primary"),
           secondaryCtaLabel: z.string().default(""),
           secondaryCtaHref: z.string().default(""),
+          secondaryCtaStyle: buttonStyleSchema.default("outline"),
         }),
         z.object({
           type: z.literal("text"),
@@ -87,7 +93,7 @@ const pagesCollection = defineCollection({
           body: z.string().default(""),
           buttonLabel: z.string(),
           buttonHref: z.string(),
-          buttonStyle: z.enum(["primary", "outline", "inverted", "muted"]).default("inverted"),
+          buttonStyle: buttonStyleSchema.default("inverted"),
         }),
         z.object({
           type: z.literal("feature_grid"),

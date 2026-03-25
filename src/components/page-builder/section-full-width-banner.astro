@@ -1,5 +1,5 @@
 ---
-import Link from "@/components/ui/link.astro";
+import ActionButtons from "@/components/page-builder/action-buttons.astro";
 import RichText from "@/components/page-builder/rich-text.astro";
 
 const {
@@ -9,8 +9,10 @@ const {
   image,
   primaryCtaLabel,
   primaryCtaHref,
+  primaryCtaStyle = "primary",
   secondaryCtaLabel,
   secondaryCtaHref,
+  secondaryCtaStyle = "outline",
 } = Astro.props;
 ---
 
@@ -43,23 +45,26 @@ const {
           class="mt-6 max-w-3xl text-[color-mix(in_srgb,var(--primary-foreground)_84%,transparent)] prose-invert prose-p:text-lg prose-p:leading-relaxed prose-strong:text-primary-foreground prose-a:text-accent-foreground"
         />
       )}
-      {(primaryCtaLabel || secondaryCtaLabel) && (
-        <div class="mt-8 flex flex-col gap-3 sm:flex-row">
-          {primaryCtaLabel && primaryCtaHref && (
-            <Link href={primaryCtaHref} class="justify-center sm:justify-start">
-              {primaryCtaLabel}
-            </Link>
-          )}
-          {secondaryCtaLabel && secondaryCtaHref && (
-            <Link
-              href={secondaryCtaHref}
-              style="outline"
-              class="justify-center border-white/60 bg-white/10 text-primary-foreground hover:bg-white/20 sm:justify-start">
-              {secondaryCtaLabel}
-            </Link>
-          )}
-        </div>
-      )}
+      <ActionButtons
+        class="mt-8"
+        buttons={[
+          {
+            label: primaryCtaLabel,
+            href: primaryCtaHref,
+            style: primaryCtaStyle,
+            class: "justify-center sm:justify-start",
+          },
+          {
+            label: secondaryCtaLabel,
+            href: secondaryCtaHref,
+            style: secondaryCtaStyle,
+            class:
+              secondaryCtaStyle === "outline"
+                ? "justify-center border-white/60 bg-white/10 text-primary-foreground hover:bg-white/20 sm:justify-start"
+                : "justify-center sm:justify-start",
+          },
+        ]}
+      />
     </div>
   </div>
 </section>
