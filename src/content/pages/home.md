@@ -17,8 +17,10 @@ sections:
       alt: Sunset in Clarion, Pennsylvania.
     primaryCtaLabel: Request Assistance
     primaryCtaHref: Google.com
+    primaryCtaStyle: inverted
     secondaryCtaLabel: "Learn More "
     secondaryCtaHref: google.com
+    secondaryCtaStyle: muted
   - type: feature_grid
     title: NEED HELP WITH OUTDOOR CATS?
     body: >-
@@ -67,5 +69,5 @@ sections:
       life for both cats and residents throughout our Borough
     buttonLabel: Learn How you Can Get Involved
     buttonHref: /Get-Involved
-    buttonStyle: inverted
+    buttonStyle: primary
 ---
