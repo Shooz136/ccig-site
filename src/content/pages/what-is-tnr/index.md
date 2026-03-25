@@ -1,7 +1,7 @@
 ---
 draft: false
-title: Learn More
-navLabel: Pricing
+title: "Resources "
+navLabel: "Learn more about TNR "
 showInNav: true
 navOrder: 30
 sections:
