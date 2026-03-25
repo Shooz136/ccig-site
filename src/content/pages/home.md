@@ -59,6 +59,7 @@ sections:
           the group in a variety of ways!
         icon: bx:bxs-user
   - type: logo_cloud
+    title: "Placeholder "
     logos:
       - icon: simple-icons:react
         label: React
