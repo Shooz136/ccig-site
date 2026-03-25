@@ -87,6 +87,7 @@ const pagesCollection = defineCollection({
           body: z.string().default(""),
           buttonLabel: z.string(),
           buttonHref: z.string(),
+          buttonStyle: z.enum(["primary", "outline", "inverted", "muted"]).default("inverted"),
         }),
         z.object({
           type: z.literal("feature_grid"),

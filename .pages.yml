@@ -187,15 +187,19 @@ content:
               - name: primaryCtaLabel
                 label: Primary Button Label
                 type: string
+                help: "Button renders only when both label and link are filled in."
               - name: primaryCtaHref
                 label: Primary Button Link
                 type: string
+                help: "Button renders only when both label and link are filled in."
               - name: secondaryCtaLabel
                 label: Secondary Button Label
                 type: string
+                help: "Button renders only when both label and link are filled in."
               - name: secondaryCtaHref
                 label: Secondary Button Link
                 type: string
+                help: "Button renders only when both label and link are filled in."
           - name: full_width_banner
             label: Full Width Banner
             fields:
@@ -229,15 +233,19 @@ content:
               - name: primaryCtaLabel
                 label: Primary Button Label
                 type: string
+                help: "Button renders only when both label and link are filled in."
               - name: primaryCtaHref
                 label: Primary Button Link
                 type: string
+                help: "Button renders only when both label and link are filled in."
               - name: secondaryCtaLabel
                 label: Secondary Button Label
                 type: string
+                help: "Button renders only when both label and link are filled in."
               - name: secondaryCtaHref
                 label: Secondary Button Link
                 type: string
+                help: "Button renders only when both label and link are filled in."
           - name: text
             label: Text Section
             fields:
@@ -304,10 +312,19 @@ content:
                 label: Button Label
                 type: string
                 required: true
+                help: "CTA button renders only when both the label and link are filled in."
               - name: buttonHref
                 label: Button Link
                 type: string
                 required: true
+                help: "CTA button renders only when both the label and link are filled in."
+              - name: buttonStyle
+                label: Button Style
+                type: select
+                required: true
+                help: "Uses your current theme colors. Choose the button look for this CTA."
+                options:
+                  values: [primary, outline, inverted, muted]
           - name: feature_grid
             label: Feature Grid
             fields:
