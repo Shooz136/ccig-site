@@ -50,32 +50,6 @@ sections:
 
       Even a few hours of help can make a meaningful difference.
     align: left
-  - type: cta
-    title: "Donate "
-    body: >-
-      Financial donations directly support our Trap-Neuter-Return efforts and
-      allow us to help more cats and communities.
-
-
-      Donations help cover:
-
-
-      - Spay and neuter surgeries
-
-      - Rabies vaccinations
-
-      - Medical care when needed
-
-      - Traps and humane equipment
-
-      - Food and recovery supplies
-
-
-      Every contribution helps prevent future litters and improves the health
-      and safety of both cats and neighborhoods.
-    buttonLabel: "Make a Financial Donate "
-    buttonHref: Google.com
-    buttonStyle: outline
   - type: text
     title: "Donate Supplies "
     body: >-
@@ -117,6 +91,26 @@ sections:
 
       If you’re unsure whether an item is helpful, feel free to contact us
       before donating.
+  - type: text
+    title: "Donate "
+    body: >-
+      Financial donations directly support our Trap-Neuter-Return efforts and
+      allow us to help more cats and communities.Donations help cover:- Spay and
+      neuter surgeries
+
+
+      - Rabies vaccinations
+
+
+      - Medical care when needed
+
+
+      - Traps and humane equipment
+
+
+      - Food and recovery suppliesEvery contribution helps prevent future
+      litters and improves the health and safety of both cats and neighborhoods.
+    align: left
   - type: text
     title: "Support Humane Solutions "
     body: >-
