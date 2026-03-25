@@ -41,6 +41,7 @@ const sponsorsCollection = defineCollection({
     description: z.string(),
     level: sponsorLevelSchema,
     sortOrder: z.number().default(100),
+    website: z.string().url().optional(),
     image: z.object({
       src: z.string(),
       alt: z.string(),

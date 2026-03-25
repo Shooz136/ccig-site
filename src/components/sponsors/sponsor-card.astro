@@ -1,4 +1,6 @@
 ---
+import Link from "@/components/ui/link.astro";
+
 const { sponsor } = Astro.props;
 ---
 
@@ -22,4 +24,13 @@ const { sponsor } = Astro.props;
   <p class="mt-5 leading-relaxed text-muted-foreground">
     {sponsor.data.description}
   </p>
+  {
+    sponsor.data.website && (
+      <div class="mt-6">
+        <Link href={sponsor.data.website} style="outline" size="md">
+          Visit Sponsor
+        </Link>
+      </div>
+    )
+  }
 </article>

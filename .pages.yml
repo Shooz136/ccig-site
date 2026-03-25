@@ -158,6 +158,10 @@ content:
         label: Sort Order
         type: number
         required: true
+      - name: website
+        label: Website
+        type: string
+        help: "Optional. Use a full URL like https://www.google.com/."
       - name: image
         label: Sponsor Image
         type: object
