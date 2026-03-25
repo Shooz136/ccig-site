@@ -1,15 +1,22 @@
 ---
+import { getMarkdownProcessor } from "@/lib/markdown";
+
 const { content, class: className } = Astro.props;
+
+const markdownProcessor = await getMarkdownProcessor();
+const renderedContent = content
+  ? await markdownProcessor.render(content)
+  : undefined;
 ---
 
 {
-  content && (
+  renderedContent && (
     <div
       class:list={[
         "prose prose-lg max-w-none prose-headings:text-foreground prose-p:text-inherit prose-li:text-inherit prose-strong:text-foreground prose-a:text-[var(--accent)] prose-code:text-foreground",
         className,
       ]}
-      set:html={content}
+      set:html={renderedContent.code}
     />
   )
 }
