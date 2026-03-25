@@ -20,7 +20,7 @@ const { Content } = await entry.render();
 <Layout title={entry.data.title}>
   <Container>
     <div class="mx-auto max-w-3xl mt-14">
-      <span class="text-blue-400 uppercase tracking-wider text-sm font-medium">
+      <span class="text-theme-accent uppercase tracking-wider text-sm font-medium">
         {entry.data.category}
       </span>
       <h1
@@ -28,33 +28,33 @@ const { Content } = await entry.render();
         {entry.data.title}
       </h1>
       <div class="flex gap-2 mt-3 items-center flex-wrap md:flex-nowrap">
-        <span class="text-gray-400">
+        <span class="text-theme-muted">
           {entry.data.author}
         </span>
-        <span class="text-gray-400">•</span>
+        <span class="text-theme-muted">•</span>
         <time
-          class="text-gray-400"
+          class="text-theme-muted"
           datetime={entry.data.publishDate.toISOString()}>
           {entry.data.publishDate.toDateString()}
         </time>
-        <span class="text-gray-400 hidden md:block">•</span>
+        <span class="text-theme-muted hidden md:block">•</span>
         <div class="w-full md:w-auto flex flex-wrap gap-3">
           {
             entry.data.tags.map((tag) => (
-              <span class="text-sm text-gray-500">#{tag}</span>
+              <span class="text-sm text-theme-muted">#{tag}</span>
             ))
           }
         </div>
       </div>
     </div>
 
-    <div class="mx-auto prose prose-lg mt-6 max-w-3xl">
+    <div class="mx-auto prose prose-lg mt-6 max-w-3xl prose-headings:text-theme prose-p:text-theme prose-li:text-theme prose-strong:text-theme prose-a:text-[var(--theme-accent)] prose-code:text-theme">
       <Content />
     </div>
     <div class="text-center mt-8">
       <a
         href="/blog"
-        class="bg-gray-100 px-5 py-3 rounded-md hover:bg-gray-200 transition"
+        class="bg-theme-surface px-5 py-3 rounded-md hover-bg-theme-surface transition text-theme"
         >← Back to Blog</a
       >
     </div>

@@ -15,17 +15,17 @@ const {
 
 <section class="mx-auto max-w-5xl py-14 text-center">
   {eyebrow && (
-    <p class="mb-4 text-sm font-semibold uppercase tracking-[0.24em] text-slate-500">
+    <p class="mb-4 text-sm font-semibold uppercase tracking-[0.24em] text-theme-accent">
       {eyebrow}
     </p>
   )}
-  <h1 class="text-5xl font-bold tracking-tight text-gray-900 lg:text-7xl">
+  <h1 class="text-5xl font-bold tracking-tight text-theme lg:text-7xl">
     {headline}
   </h1>
   {body && (
     <RichText
       content={body}
-      class="mx-auto mt-6 max-w-3xl text-slate-600 prose-p:text-xl prose-p:leading-relaxed"
+      class="mx-auto mt-6 max-w-3xl text-theme-muted prose-p:text-xl prose-p:leading-relaxed"
     />
   )}
   {(primaryCtaLabel || secondaryCtaLabel) && (

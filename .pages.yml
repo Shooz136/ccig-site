@@ -4,6 +4,47 @@ media:
   path: ""
 
 content:
+  - name: theme
+    label: Theme
+    type: file
+    path: src/config/theme.json
+    format: json
+    fields:
+      - name: headingFont
+        label: Heading Font
+        type: select
+        options:
+          values: [bricolage, inter, system]
+      - name: bodyFont
+        label: Body Font
+        type: select
+        options:
+          values: [inter, bricolage, system]
+      - name: background
+        label: Background Color
+        type: string
+      - name: surface
+        label: Surface Color
+        type: string
+      - name: text
+        label: Text Color
+        type: string
+      - name: muted
+        label: Muted Text Color
+        type: string
+      - name: border
+        label: Border Color
+        type: string
+      - name: primary
+        label: Primary Color
+        type: string
+      - name: primaryForeground
+        label: Primary Text Color
+        type: string
+      - name: accent
+        label: Accent Color
+        type: string
+
   - name: pages
     label: Pages
     type: collection

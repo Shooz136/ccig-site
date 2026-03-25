@@ -9,6 +9,44 @@
     'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
+@layer base {
+  :root {
+    --theme-background: #fffdf8;
+    --theme-surface: #f4efe5;
+    --theme-text: #1f2937;
+    --theme-muted: #6b7280;
+    --theme-border: #d6d3d1;
+    --theme-primary: #155e75;
+    --theme-primary-foreground: #f8fafc;
+    --theme-accent: #d97706;
+    --theme-font-heading:
+      "Bricolage Grotesque Variable", "Inter Variable", Inter, ui-sans-serif,
+      system-ui, sans-serif;
+    --theme-font-body:
+      "Inter Variable", Inter, ui-sans-serif, system-ui, sans-serif;
+  }
+
+  body {
+    background: var(--theme-background);
+    color: var(--theme-text);
+    font-family: var(--theme-font-body);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: var(--theme-text);
+    font-family: var(--theme-font-heading);
+  }
+
+  a {
+    color: inherit;
+  }
+}
+
 /*
   The default border color has changed to `currentColor` in Tailwind CSS v4,
   so we've added these compatibility styles to make sure everything still
@@ -23,6 +61,56 @@
   ::before,
   ::backdrop,
   ::file-selector-button {
-    border-color: var(--color-gray-200, currentColor);
+    border-color: var(--theme-border, currentColor);
+  }
+}
+
+@utility bg-theme {
+  background-color: var(--theme-background);
+}
+
+@utility bg-theme-surface {
+  background-color: var(--theme-surface);
+}
+
+@utility bg-theme-primary {
+  background-color: var(--theme-primary);
+}
+
+@utility text-theme {
+  color: var(--theme-text);
+}
+
+@utility text-theme-muted {
+  color: var(--theme-muted);
+}
+
+@utility text-theme-accent {
+  color: var(--theme-accent);
+}
+
+@utility text-theme-on-primary {
+  color: var(--theme-primary-foreground);
+}
+
+@utility border-theme {
+  border-color: var(--theme-border);
+}
+
+@utility hover-bg-theme-surface {
+  &:hover {
+    background-color: var(--theme-surface);
+  }
+}
+
+@utility hover-bg-theme-primary {
+  &:hover {
+    background-color: color-mix(in srgb, var(--theme-primary) 88%, black);
+  }
+}
+
+@utility hover-text-theme {
+  &:hover {
+    color: var(--theme-text);
   }
 }
