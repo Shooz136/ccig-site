@@ -11,7 +11,9 @@ sections:
     headline: Compassionate Solutions for Community Cats, Built by Our Community
     body: Clarion Cat Initiative Group is a volunteer-led Trap-Neuter-Return (TNR)
       program working to humanely reduce outdoor cat overpopulation while
-      improving the lives of cats and the communities they call home
+      improving the lives of cats, residents, and the communities they call home
+    image:
+      src: /uploads/1920px-Sunset_in_Clarion,_PA.jpg
   - type: feature_grid
     title: 🐾 NEED HELP WITH OUTDOOR CATS
     body: >-
