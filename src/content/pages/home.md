@@ -6,39 +6,38 @@ navLabel: Home
 showInNav: false
 navOrder: 0
 sections:
-  - type: full_width_banner
-    eyebrow: "Clarion Cat Initiative Group "
-    headline: Compassionate Solutions for Community Cats, Built by Our Community
-    body: "**Clarion Cat Initiative Group is a volunteer-led Trap-Neuter-Return
-      (TNR) program working to humanely reduce outdoor cat overpopulation while
-      improving the lives of cats and the communities they call home.**"
-    image:
-      src: /opengraph.jpg
-      alt: Full-width banner placeholder image.
-    primaryCtaLabel: Contact Us
-    primaryCtaHref: /contact
-    secondaryCtaLabel: Learn More
-    secondaryCtaHref: /about
   - type: feature_grid
-    title: Everything you need to run a flexible marketing site
-    body: These blocks are now editable through the same content system as the rest
-      of the site, so the homepage no longer needs one-off Astro edits for every
-      content change.
+    title: 🐾 NEED HELP WITH OUTDOOR CATS
+    body: >-
+      **If you’re seeing outdoor or stray cats on your property, we’re here to
+      help using a humane, proven approach called Trap-Neuter-Return (TNR).**
+
+
+      **When you submit a request for assistance, here’s what you can expect:**
     features:
-      - title: Content-first workflow
-        description: Update core pages, landing pages, and blog content through a guided
-          editor.
+      - title: 1. We Contact You
+        description: >
+          After completing the request form, a volunteer will reach out to learn
+          more about the cats, answer questions, and schedule next steps.
         icon: bx:bxs-briefcase
-      - title: Nested page structure
-        description: Organize parent and child pages cleanly without custom routes for
-          each one.
+      - title: 2. Humane Trapping
+        description: Our trained volunteers safely trap the cat or cats using humane
+          equipment
         icon: bx:bxs-window-alt
-      - title: Fast static output
-        description: Deploy to Cloudflare Pages with minimal runtime complexity.
+      - title: 3. Spay/Neuter & Vaccination
+        description: |
+          Each cat is transported to a veterinary clinic where they are:
+          Spayed or neutered
+
+
+          Vaccinated for rabies
+
+
+          Ear-tipped (a small, painless mark showing the cat has been sterilized
         icon: bx:bxs-data
-      - title: Reusable page sections
-        description: Build pages from consistent section types instead of rewriting
-          layouts by hand.
+      - title: 4. Recovery & Return
+        description: After a short recovery period, the cat is returned to the same
+          outdoor location where it was found.
         icon: bx:bxs-bot
       - title: Git-backed publishing
         description: Content stays in the repository, which keeps changes auditable and
