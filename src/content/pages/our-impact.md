@@ -2,12 +2,20 @@
 draft: false
 title: "Our Impact "
 navLabel: "Our Impact "
-showInNav: false
+showInNav: true
 navOrder: 0
 sections:
   - type: image_text
     title: "Meet Oatmeal "
-    body: "Story about Oatmeal - need text for this "
+    body: >-
+      Oatmeal was trapped as part of an outdoor litter during a local TNR
+      effort. While receiving care, volunteers discovered she was incredibly
+      sweet and social. The neighbor who helped trap her fell in love and
+      adopted her.
+
+
+      Now healthy and safe in her forever home, Oatmeal represents what humane
+      solutions can make possible for both cats and the people who help them.
     image:
       src: /uploads/1953352104048985555.jpeg
       alt: "Picture of gray cat "
