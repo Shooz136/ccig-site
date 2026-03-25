@@ -17,7 +17,7 @@ sections:
       alt: Sunset in Clarion, Pennsylvania.
     primaryCtaLabel: Request Assistance
     primaryCtaHref: Google.com
-    primaryCtaStyle: inverted
+    primaryCtaStyle: primary
     secondaryCtaLabel: "Learn More "
     secondaryCtaHref: google.com
     secondaryCtaStyle: muted
@@ -69,5 +69,5 @@ sections:
       life for both cats and residents throughout our Borough
     buttonLabel: Learn How you Can Get Involved
     buttonHref: /Get-Involved
-    buttonStyle: primary
+    buttonStyle: inverted
 ---
