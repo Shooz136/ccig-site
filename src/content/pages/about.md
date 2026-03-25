@@ -49,12 +49,18 @@ sections:
 
       &nbsp;
     align: left
-  - type: image_text
-    title: What is TNR?
-    body: Trap-Neuter-Return (TNR) is an effective community strategy to managing
-      the stray cat population….benefits to the community, cats, and nature…
-    image:
-      src: /opengraph.jpg
-      alt: Preview image for the site
-    imageSide: right
+  - type: feature_grid
+    title: How We Help
+    body: "**The Clarion Cat Initiative Group supports residents through humane cat
+      management solutions.**"
+    features:
+      - title: "TNR Assistance "
+        description: Support for trapping and getting outdoor cats spayed or neutered
+      - title: 📚 Community Education
+        description: Resources to help residents understand community cats and humane
+          solutions
+      - title: Caregiver Support
+        description: Information and tools for people caring for outdoor cats
+      - title: Community Collaboration
+        description: Working with local residents and partners to create long-term solutions
 ---
