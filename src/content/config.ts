@@ -135,6 +135,24 @@ const pagesCollection = defineCollection({
           ).default([]),
         }),
         z.object({
+          type: z.literal("linked_content_list"),
+          title: z.string(),
+          body: z.string().default(""),
+          items: z.array(
+            z.object({
+              eyebrow: z.string().default(""),
+              title: z.string(),
+              description: z.string().default(""),
+              image: z.object({
+                src: z.string(),
+                alt: z.string(),
+              }),
+              linkLabel: z.string(),
+              linkHref: z.string(),
+            })
+          ).default([]),
+        }),
+        z.object({
           type: z.literal("sponsor_list"),
           title: z.string(),
           body: z.string().default(""),

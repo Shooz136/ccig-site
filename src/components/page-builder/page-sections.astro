@@ -4,6 +4,7 @@ import SectionFeatureGrid from "@/components/page-builder/section-feature-grid.a
 import SectionFullWidthBanner from "@/components/page-builder/section-full-width-banner.astro";
 import SectionHero from "@/components/page-builder/section-hero.astro";
 import SectionImageText from "@/components/page-builder/section-image-text.astro";
+import SectionLinkedContentList from "@/components/page-builder/section-linked-content-list.astro";
 import SectionLogoCloud from "@/components/page-builder/section-logo-cloud.astro";
 import SectionSponsorList from "@/components/page-builder/section-sponsor-list.astro";
 import SectionText from "@/components/page-builder/section-text.astro";
@@ -39,6 +40,10 @@ const { sections = [] } = Astro.props;
 
     if (section.type === "logo_cloud") {
       return <SectionLogoCloud {...section} />;
+    }
+
+    if (section.type === "linked_content_list") {
+      return <SectionLinkedContentList {...section} />;
     }
 
     if (section.type === "sponsor_list") {

@@ -467,6 +467,60 @@ content:
                   - name: label
                     label: Label
                     type: string
+          - name: linked_content_list
+            label: Linked Content List
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: body
+                label: Body
+                type: rich-text
+                options:
+                  path: pages
+              - name: items
+                label: Items
+                type: object
+                list: true
+                required: true
+                fields:
+                  - name: eyebrow
+                    label: Eyebrow
+                    type: string
+                  - name: title
+                    label: Title
+                    type: string
+                    required: true
+                  - name: description
+                    label: Description
+                    type: text
+                    required: true
+                    options:
+                      rows: 3
+                  - name: image
+                    label: Image
+                    type: object
+                    required: true
+                    fields:
+                      - name: src
+                        label: Image
+                        type: image
+                        required: true
+                        options:
+                          path: pages
+                      - name: alt
+                        label: Alt Text
+                        type: string
+                        required: true
+                  - name: linkLabel
+                    label: Link Label
+                    type: string
+                    required: true
+                  - name: linkHref
+                    label: Link URL
+                    type: string
+                    required: true
           - name: sponsor_list
             label: Sponsor List
             fields:
