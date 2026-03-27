@@ -1,7 +1,7 @@
 ---
 draft: false
 title: What is TNR?
-showInNav: false
+showInNav: true
 navOrder: 0
 sections:
   - type: linked_content_list
