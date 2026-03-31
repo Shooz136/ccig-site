@@ -65,10 +65,6 @@ sections:
           cats during the TNR process.
 
 
-          Donating supplies helps us stretch resources further and respond to
-          more community requests.
-
-
           Commonly needed items:
 
 
@@ -94,7 +90,7 @@ sections:
 
 
           If you’re unsure whether an item is helpful, feel free to contact us
-          before donating.
+          before donating. Contact us to donate! 
         tone: sand
       - eyebrow: Volunteer
         title: Volunteer with Us
