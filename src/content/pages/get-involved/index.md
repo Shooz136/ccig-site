@@ -29,13 +29,13 @@ sections:
     secondaryCtaStyle: muted
   - type: info_card_list
     eyebrow: Ways to Help
-    title: Choose the kind of support that fits you best
+    title: Choose the Kind of Support that Fits you Best
     body: Every contribution matters. Whether you can donate time, supplies,
       financial support, or simply help spread the word, there is a meaningful
       way to strengthen humane community cat work in Clarion.
     items:
-      - eyebrow: Donate
-        title: Give Financially
+      - eyebrow: DONATE
+        title: Donate Financially
         body: >-
           Financial donations directly support our Trap-Neuter-Return efforts
           and allow us to help more cats and communities.
@@ -59,7 +59,7 @@ sections:
           health and safety of both cats and neighborhoods.
         tone: sage
       - eyebrow: "Provide "
-        title: Donate Supplies
+        title: Provide Supplies
         body: >-
           We rely on essential supplies to safely trap, transport, and care for
           cats during the TNR process.
