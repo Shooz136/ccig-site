@@ -44,14 +44,14 @@ sections:
     buttonStyle: outline
   - type: image_carousel
     title: "Our Work in Action "
-    autoplay: false
-    showNavigation: false
+    autoplay: true
+    showNavigation: true
     showPagination: false
-    mobileSlidesPerView: 0
-    tabletSlidesPerView: 0
-    desktopSlidesPerView: 0
-    spaceBetween: 0
-    imageAspect: square
+    mobileSlidesPerView: 1
+    tabletSlidesPerView: 2
+    desktopSlidesPerView: 3
+    spaceBetween: -2
+    imageAspect: portrait
     slides:
       - image:
           src: /uploads/IMG_20260315_202003-1.jpeg
