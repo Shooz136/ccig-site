@@ -74,4 +74,8 @@ sections:
       - image:
           src: /uploads/1000065716.jpeg
           alt: "trap happy raccoon "
+  - type: hero
+    headline: "Stories of Impact "
+    primaryCtaStyle: muted
+    secondaryCtaStyle: muted
 ---
