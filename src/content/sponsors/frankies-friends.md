@@ -6,6 +6,6 @@ level: bronze
 sortOrder: 0
 website: https://www.frankies-friends.org/
 image:
-  src: /uploads/IMG_0023-1.jpeg
+  src: /uploads/ff_logo.png
   alt: "Frankies Friends Logo "
 ---
