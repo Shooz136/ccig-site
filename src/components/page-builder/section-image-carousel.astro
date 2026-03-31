@@ -187,26 +187,59 @@ const imageAspectClass =
 </script>
 
 <style>
-  :global([data-image-carousel] .image-carousel-button) {
-    height: 3rem;
-    width: 3rem;
-    border-radius: 9999px;
-    background: color-mix(in srgb, var(--background) 88%, transparent);
-    border: 1px solid color-mix(in srgb, var(--border) 88%, transparent);
-    color: var(--foreground);
+  :global([data-image-carousel]) {
+    overflow: visible;
   }
 
-  :global([data-image-carousel] .swiper) {
-    overflow: visible;
+  :global([data-image-carousel] .image-carousel-button) {
+    position: absolute;
+    top: 50%;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3rem;
+    width: 3rem;
+    margin-top: 0;
+    padding: 0;
+    border-radius: 9999px;
+    appearance: none;
+    background: color-mix(in srgb, var(--background) 94%, transparent);
+    border: 1px solid color-mix(in srgb, var(--border) 88%, transparent);
+    box-shadow: 0 12px 30px -18px rgba(15, 23, 42, 0.45);
+    color: var(--foreground);
+    transform: translateY(-50%);
+    backdrop-filter: blur(10px);
+    cursor: pointer;
+    transition:
+      background-color 180ms ease,
+      color 180ms ease,
+      transform 180ms ease,
+      box-shadow 180ms ease;
+  }
+
+  :global([data-image-carousel] .image-carousel-button:hover) {
+    background: var(--foreground);
+    color: var(--background);
+    box-shadow: 0 16px 34px -18px rgba(15, 23, 42, 0.55);
   }
 
   :global([data-image-carousel] .image-carousel-button::after) {
     font-size: 1rem;
     font-weight: 700;
+    line-height: 1;
+  }
+
+  :global([data-image-carousel] .swiper-button-prev) {
+    left: 0.85rem;
+  }
+
+  :global([data-image-carousel] .swiper-button-next) {
+    right: 0.85rem;
   }
 
   :global([data-image-carousel] .swiper-button-disabled) {
-    opacity: 0;
+    opacity: 0.35;
     pointer-events: none;
   }
 
