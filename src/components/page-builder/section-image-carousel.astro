@@ -47,7 +47,7 @@ const imageAspectClass =
     </div>
 
     <div
-      class="swiper mt-10 overflow-hidden rounded-[2rem]"
+      class="swiper mt-10 overflow-visible rounded-[2rem] pb-12"
       data-image-carousel={carouselId}
       data-autoplay={autoplay ? "true" : "false"}
       data-show-navigation={showNavigation ? "true" : "false"}
@@ -225,9 +225,17 @@ const imageAspectClass =
   }
 
   :global([data-image-carousel] .image-carousel-button::after) {
-    font-size: 1rem;
-    font-weight: 700;
-    line-height: 1;
+    content: none;
+  }
+
+  :global([data-image-carousel] .image-carousel-button .swiper-navigation-icon) {
+    width: 0.9rem;
+    height: 0.9rem;
+    display: block;
+  }
+
+  :global([data-image-carousel] .swiper-button-prev .swiper-navigation-icon) {
+    transform: rotate(180deg);
   }
 
   :global([data-image-carousel] .swiper-button-prev) {
@@ -247,7 +255,7 @@ const imageAspectClass =
     position: absolute;
     left: 1.5rem;
     right: 1.5rem;
-    bottom: -2rem !important;
+    bottom: 0 !important;
     width: auto !important;
     display: flex;
     justify-content: center;
