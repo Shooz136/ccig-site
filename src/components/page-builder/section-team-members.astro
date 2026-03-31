@@ -5,7 +5,17 @@ import RichText from "@/components/page-builder/rich-text.astro";
 const { eyebrow = "", title, body = "" } = Astro.props;
 
 const teamMembers = await getCollection("team", ({ data }) => !data.draft);
-teamMembers.sort((a, b) => a.data.publishDate.valueOf() - b.data.publishDate.valueOf());
+const getFirstName = (name: string) => name.trim().split(/\s+/)[0] || name.trim();
+
+teamMembers.sort((a, b) => {
+  const firstNameComparison = getFirstName(a.data.name).localeCompare(getFirstName(b.data.name));
+
+  if (firstNameComparison !== 0) {
+    return firstNameComparison;
+  }
+
+  return a.data.name.localeCompare(b.data.name);
+});
 ---
 
 <section class="py-12">
