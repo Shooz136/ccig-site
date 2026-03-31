@@ -3,7 +3,7 @@ draft: false
 name: Mathew Wagle, Wells Fargo
 description: Helping the program grow through generous support and commitment to our mission
 type: sponsors_donors
-sortOrder: 0
+sortOrder: 5
 website: https://fa.wellsfargoadvisors.com/matthew-wagle/
 image:
   src: /uploads/IMG_0027.png
