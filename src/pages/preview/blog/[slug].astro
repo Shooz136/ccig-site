@@ -31,7 +31,13 @@ if (!entry) {
 const { Content } = await entry.render();
 ---
 
-<Layout title={`${entry.data.title} Preview`} preview={true}>
+<Layout
+  title={`${entry.data.title} Preview`}
+  description={entry.data.snippet}
+  image={entry.data.image.src}
+  pageType="article"
+  publishedTime={entry.data.publishDate.toISOString()}
+  preview={true}>
   <Container>
     <div class="mx-auto mt-14 max-w-3xl">
       <span class="text-accent uppercase tracking-wider text-sm font-medium">

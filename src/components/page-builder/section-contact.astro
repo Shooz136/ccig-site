@@ -1,0 +1,98 @@
+---
+import { Icon } from "astro-icon/components";
+import Contactform from "@/components/contactform.astro";
+import RichText from "@/components/page-builder/rich-text.astro";
+
+const {
+  eyebrow = "",
+  title,
+  body = "",
+  formIntro = "",
+  contactHeading = "",
+  email = "",
+  phone = "",
+  address = "",
+} = Astro.props;
+
+const normalizedEmail = email.trim();
+const normalizedPhone = phone.trim();
+const normalizedAddress = address.trim();
+const normalizedPhoneHref = normalizedPhone.replace(/\s+/g, "");
+---
+
+<section id="contact-form" class="py-10">
+  <div class="mx-auto max-w-5xl">
+    {
+      eyebrow && (
+        <p class="text-sm font-semibold uppercase tracking-[0.24em] text-accent">
+          {eyebrow}
+        </p>
+      )
+    }
+    <h2 class="mt-3 text-3xl font-bold tracking-tight text-foreground lg:text-5xl">
+      {title}
+    </h2>
+    {
+      body && (
+        <RichText
+          content={body}
+          class="mt-5 max-w-3xl text-muted-foreground prose-p:text-lg prose-p:leading-relaxed"
+        />
+      )
+    }
+
+    <div class="mt-10 grid gap-10 lg:grid-cols-[0.95fr_1.05fr]">
+      <div class="rounded-3xl border border-border bg-card p-8 text-card-foreground">
+        {
+          contactHeading && (
+            <h3 class="text-2xl font-semibold tracking-tight text-foreground">
+              {contactHeading}
+            </h3>
+          )
+        }
+        {
+          formIntro && (
+            <p class="mt-3 text-base leading-relaxed text-muted-foreground">
+              {formIntro}
+            </p>
+          )
+        }
+
+        <div class="mt-6 space-y-4">
+          {
+            normalizedEmail && (
+              <div class="flex items-start gap-3 text-muted-foreground">
+                <Icon class="mt-1 h-4 w-4 shrink-0 text-accent" name="uil:envelope" />
+                <a href={`mailto:${normalizedEmail}`} class="hover:text-foreground transition-colors">
+                  {normalizedEmail}
+                </a>
+              </div>
+            )
+          }
+          {
+            normalizedPhone && (
+              <div class="flex items-start gap-3 text-muted-foreground">
+                <Icon class="mt-1 h-4 w-4 shrink-0 text-accent" name="uil:phone" />
+                <a href={`tel:${normalizedPhoneHref}`} class="hover:text-foreground transition-colors">
+                  {normalizedPhone}
+                </a>
+              </div>
+            )
+          }
+          {
+            normalizedAddress && (
+              <div class="flex items-start gap-3 text-muted-foreground">
+                <Icon class="mt-1 h-4 w-4 shrink-0 text-accent" name="uil:map-marker" />
+                <span>{normalizedAddress}</span>
+              </div>
+            )
+          }
+        </div>
+      </div>
+
+      <div class="rounded-3xl border border-border bg-background p-8">
+        <Contactform />
+      </div>
+    </div>
+  </div>
+</section>

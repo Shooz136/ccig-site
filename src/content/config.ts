@@ -158,6 +158,17 @@ const pagesCollection = defineCollection({
           body: z.string().default(""),
           levels: z.array(sponsorLevelSchema).default([]),
         }),
+        z.object({
+          type: z.literal("contact"),
+          eyebrow: z.string().default(""),
+          title: z.string(),
+          body: z.string().default(""),
+          formIntro: z.string().default(""),
+          contactHeading: z.string().default(""),
+          email: z.string().default(""),
+          phone: z.string().default(""),
+          address: z.string().default(""),
+        }),
       ])
     ).default([]),
   }),

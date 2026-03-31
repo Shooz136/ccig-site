@@ -30,11 +30,14 @@ const entry = pageEntries.find((candidate) => normalizePageSlug(candidate.slug) 
 if (!entry) {
   return new Response("Not found", { status: 404 });
 }
+
+const pageImage = entry.data.sections.find((section) => "image" in section)?.image.src;
 ---
 
 <Layout
   title={`${entry.data.title} Preview`}
   description={entry.data.description}
+  image={pageImage}
   preview={true}>
   <Container>
     <PageSections sections={entry.data.sections} />

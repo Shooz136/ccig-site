@@ -9,9 +9,11 @@ const home = await getEntry("pages", "home");
 if (!home) {
   throw new Error('Missing "home" entry in src/content/pages/home.md');
 }
+
+const homeImage = home.data.sections.find((section) => "image" in section)?.image.src;
 ---
 
-<Layout title="" description={home.data.description}>
+<Layout title="" description={home.data.description} image={homeImage}>
   <Container>
     <PageSections sections={home.data.sections} />
   </Container>

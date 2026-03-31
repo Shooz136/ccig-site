@@ -1,5 +1,6 @@
 ---
 import SectionCta from "@/components/page-builder/section-cta.astro";
+import SectionContact from "@/components/page-builder/section-contact.astro";
 import SectionFeatureGrid from "@/components/page-builder/section-feature-grid.astro";
 import SectionFullWidthBanner from "@/components/page-builder/section-full-width-banner.astro";
 import SectionHero from "@/components/page-builder/section-hero.astro";
@@ -32,6 +33,10 @@ const { sections = [] } = Astro.props;
 
     if (section.type === "cta") {
       return <SectionCta {...section} />;
+    }
+
+    if (section.type === "contact") {
+      return <SectionContact {...section} />;
     }
 
     if (section.type === "feature_grid") {

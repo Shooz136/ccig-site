@@ -1,5 +1,7 @@
 {
-  "name": "🐈 Clarion Cat Initiative Group ",
-  "description": "A marketing site built with Astro and deployed on Cloudflare Pages.",
+  "name": "Clarion Cat Initiative Group",
+  "displayName": "Clarion Cat Initiative Group",
+  "organizationName": "Clarion Cat Initiative Group",
+  "description": "Volunteer-led Trap-Neuter-Return support, education, and community resources for outdoor cats in Clarion County, Pennsylvania.",
   "titleSeparator": " | "
 }

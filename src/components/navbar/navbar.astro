@@ -63,14 +63,6 @@ menuitems.push(
   {
     title: "Sponsors",
     path: "/sponsors",
-  },
-  {
-    title: "Blog",
-    path: "/blog",
-  },
-  {
-    title: "Contact",
-    path: "/contact",
   }
 );
 ---
@@ -80,7 +72,7 @@ menuitems.push(
     <Astronav>
       <div class="flex w-full lg:w-auto items-center justify-between">
         <a href="/" class="text-lg"
-          ><span class="font-bold text-foreground">{siteConfig.name}</span>
+          ><span class="font-bold text-foreground">{siteConfig.displayName || siteConfig.name}</span>
         </a>
         <div class="block lg:hidden">
           <MenuIcon class="w-4 h-4 text-foreground" />

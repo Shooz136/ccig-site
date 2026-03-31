@@ -11,21 +11,75 @@ import "../styles/global.css";
 export interface Props {
   title: string;
   description?: string;
+  image?: string;
+  pageType?: "website" | "article";
+  publishedTime?: string;
+  modifiedTime?: string;
+  noindex?: boolean;
   preview?: boolean;
 }
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
+const siteName = siteConfig.name;
+const organizationName = siteConfig.organizationName || siteName;
 
-const resolvedImageWithDomain = new URL(
-  "/opengraph.jpg",
-  Astro.site
-).toString();
+const {
+  title,
+  description = siteConfig.description,
+  image = "/opengraph.jpg",
+  pageType = "website",
+  publishedTime,
+  modifiedTime,
+  noindex = false,
+  preview = false,
+} = Astro.props;
 
-const { title, description = siteConfig.description, preview = false } = Astro.props;
+const resolvedImageWithDomain = new URL(image, Astro.site).toString();
+const shouldNoIndex = preview || noindex;
+const robotsContent = shouldNoIndex ? "noindex, nofollow" : "index, follow";
 
 const makeTitle = title
-  ? title + siteConfig.titleSeparator + siteConfig.name
-  : siteConfig.name;
+  ? title + siteConfig.titleSeparator + siteName
+  : siteName;
+
+const schemaGraph = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": `${Astro.site}#organization`,
+    name: organizationName,
+    url: Astro.site,
+    image: resolvedImageWithDomain,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": `${Astro.site}#website`,
+    name: siteName,
+    url: Astro.site,
+    description: siteConfig.description,
+    publisher: {
+      "@id": `${Astro.site}#organization`,
+    },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": pageType === "article" ? "Article" : "WebPage",
+    "@id": `${canonicalURL}#page`,
+    url: canonicalURL,
+    name: makeTitle,
+    description,
+    image: resolvedImageWithDomain,
+    isPartOf: {
+      "@id": `${Astro.site}#website`,
+    },
+    about: {
+      "@id": `${Astro.site}#organization`,
+    },
+    ...(publishedTime ? { datePublished: publishedTime } : {}),
+    ...(modifiedTime ? { dateModified: modifiedTime } : {}),
+  },
+];
 ---
 
 <!doctype html>
@@ -37,27 +91,38 @@ const makeTitle = title
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-
-    <!-- <link rel="preload" as="image" href={src} alt="Hero" /> -->
+    <meta name="robots" content={robotsContent} />
+    <meta property="og:site_name" content={siteName} />
     <SEO
       title={makeTitle}
       description={description}
       canonical={canonicalURL}
+      noindex={shouldNoIndex}
+      nofollow={shouldNoIndex}
       twitter={{
         card: "summary_large_image",
       }}
       openGraph={{
         basic: {
           url: canonicalURL,
-          type: "website",
-          title: siteConfig.name,
+          type: pageType,
+          title: makeTitle,
+          description,
           image: resolvedImageWithDomain,
         },
         image: {
-          alt: `${siteConfig.name} homepage preview`,
+          alt: `${siteName} page preview`,
         },
+        article:
+          pageType === "article"
+            ? {
+                publishedTime,
+                modifiedTime,
+              }
+            : undefined,
       }}
     />
+    <script type="application/ld+json" set:html={JSON.stringify(schemaGraph)} />
   </head>
   <body class="bg-background text-foreground">
     {
