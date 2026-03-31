@@ -24,6 +24,35 @@ content:
         label: Title Separator
         type: string
         required: true
+      - name: footerContactCta
+        label: Footer Contact CTA
+        type: object
+        required: true
+        fields:
+          - name: eyebrow
+            label: Eyebrow
+            type: string
+          - name: headline
+            label: Headline
+            type: string
+            required: true
+          - name: body
+            label: Body
+            type: text
+            options:
+              rows: 3
+          - name: email
+            label: Contact Email
+            type: string
+            required: true
+          - name: buttonLabel
+            label: Button Label
+            type: string
+            required: true
+          - name: buttonHref
+            label: Button Link
+            type: string
+            help: "Optional. Leave empty to use mailto: with the contact email."
 
   - name: theme
     label: Theme
