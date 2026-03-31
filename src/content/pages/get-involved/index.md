@@ -22,7 +22,7 @@ sections:
       src: /uploads/IMG_6179.jpeg
       alt: "Two cats "
     primaryCtaLabel: "Make a Donation "
-    primaryCtaHref: google.com
+    primaryCtaHref: https://www.zeffy.com/en-US/donation-form/donate-to-change-lives-11001
     primaryCtaStyle: primary
     secondaryCtaLabel: "Sign Up to Volunteer "
     secondaryCtaHref: Mailto:clarioncig@gmail.com
