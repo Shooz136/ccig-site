@@ -6,8 +6,8 @@ showInNav: true
 navOrder: 50
 sections:
   - type: full_width_banner
-    eyebrow: "Our Impact "
-    headline: "We are just getting started "
+    eyebrow: "We are just getting started "
+    headline: Our Impact
     body: >-
       We are in the early stages of expanding our work and building the
       resources needed to serve Clarion County more fully. As our program grows,
