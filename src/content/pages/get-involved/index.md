@@ -25,7 +25,7 @@ sections:
     primaryCtaHref: google.com
     primaryCtaStyle: primary
     secondaryCtaLabel: "Sign Up to Volunteer "
-    secondaryCtaHref: google.com
+    secondaryCtaHref: Mailto:clarioncig@gmail.com
     secondaryCtaStyle: muted
   - type: info_card_list
     eyebrow: Ways to Help
