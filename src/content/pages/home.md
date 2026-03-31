@@ -8,15 +8,15 @@ navOrder: 0
 sections:
   - type: full_width_banner
     eyebrow: "Clarion Cat Initiative Group "
-    headline: Compassionate Solutions for Community Cats, Built by Our Community
+    headline: Compassionate Solutions for Neighborhood Cats, Built by Our Community
     body: Clarion Cat Initiative Group is a volunteer-led Trap-Neuter-Return (TNR)
-      program working to humanely reduce outdoor cat overpopulation while
-      improving the lives of cats, residents, and the communities they call home
+      program working to humanely reduce outdoor cat overpopulation and improve
+      the lives of cats and residents in our Borough.
     image:
       src: /uploads/1920px-Sunset_in_Clarion,_PA.jpg
       alt: Sunset in Clarion, Pennsylvania.
     primaryCtaLabel: Request Assistance
-    primaryCtaHref: Google.com
+    primaryCtaHref: https://docs.google.com/forms/d/1q26e8bFEZx8KQvkC22Xf8eGv1Suhy9UhSP0v5Sao-7g/viewform
     primaryCtaStyle: primary
     secondaryCtaLabel: "Learn More "
     secondaryCtaHref: google.com
@@ -30,30 +30,23 @@ sections:
 
       **When you submit a request for assistance, here’s what you can expect:**
     features:
-      - title: "Complete the Form "
-        description: Complete our simple request form so we can learn more about you and
-          the cats you need assistance with
+      - title: "Request Assistance "
+        description: Complete our simple assistance request form so we can learn more
+          about you and the cats you’d like us to help with
         stepNumber: 1
       - title: We Contact You
         description: >
           After completing the request form, a volunteer will reach out to learn
           more about the cats, answer questions, and schedule next steps.
         stepNumber: 2
-        icon: bx:bxs-briefcase
       - title: Humane Trapping
         description: Our trained volunteers safely trap the cat or cats using humane
           equipment
         stepNumber: 3
       - title: Spay/Neuter & Vaccination
-        description: |
-          Each cat is transported to a veterinary clinic where they are:
-          Spayed or neutered
-
-
-          Vaccinated for rabies
-
-
-          Ear-tipped (a small, painless mark showing the cat has been sterilized
+        description: >
+          Each cat is transported to a veterinary clinic where they are spayed
+          or neutered, and vaccinated for rabies.
         stepNumber: 4
       - title: Recovery & Return
         description: "After a short recovery period, the cat is returned to the same
