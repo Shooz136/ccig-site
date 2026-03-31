@@ -4,7 +4,7 @@ name: "Clarion Borough Council "
 description: >
   Supporting humane solutions for community cats and residents through local
   leadership, funding, and partnership.
-level: community
+type: sponsors_donors
 sortOrder: 10
 website: https://clarionboro.org/
 image:

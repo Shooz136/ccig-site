@@ -2,7 +2,7 @@
 draft: false
 name: "Frankie’s Friends "
 description: Providing low-cost spay/neuter, vaccination, and medical care to cats in need.
-level: bronze
+type: sponsors_donors
 sortOrder: 0
 website: https://www.frankies-friends.org/
 image:

@@ -127,12 +127,12 @@ content:
     filename: "{primary}.md"
     view:
       primary: name
-      fields: [name, level, sortOrder, draft]
-      sort: [sortOrder, name]
+      fields: [name, type, sortOrder, draft]
+      sort: [type, sortOrder, name]
       default:
         sort: sortOrder
         order: asc
-      search: [name, description, level]
+      search: [name, description, type]
     fields:
       - name: draft
         label: Draft
@@ -148,12 +148,12 @@ content:
         required: true
         options:
           rows: 3
-      - name: level
-        label: Sponsor Level
+      - name: type
+        label: Sponsor Type
         type: select
         required: true
         options:
-          values: [platinum, gold, silver, bronze, community]
+          values: [sponsors_donors, veterinary_partners]
       - name: sortOrder
         label: Sort Order
         type: number
@@ -650,13 +650,13 @@ content:
                 type: rich-text
                 options:
                   path: pages
-              - name: levels
-                label: Sponsor Levels
+              - name: types
+                label: Sponsor Types
                 type: select
                 list: true
-                help: "Optional. Leave empty to show all sponsor levels."
+                help: "Optional. Leave empty to show all sponsor types."
                 options:
-                  values: [platinum, gold, silver, bronze, community]
+                  values: [sponsors_donors, veterinary_partners]
           - name: team_members
             label: Team Members
             fields:

@@ -1,16 +1,16 @@
 ---
 import RichText from "@/components/page-builder/rich-text.astro";
 import SponsorGroups from "@/components/sponsors/sponsor-groups.astro";
-import { getPublishedSponsors, groupSponsorsByLevel } from "@/lib/sponsors";
+import { getPublishedSponsors, groupSponsorsByType } from "@/lib/sponsors";
 
-const { title, body, levels = [] } = Astro.props;
+const { title, body, types = [] } = Astro.props;
 
 const sponsors = await getPublishedSponsors();
 const filteredSponsors =
-  levels.length > 0
-    ? sponsors.filter((sponsor) => levels.includes(sponsor.data.level))
+  types.length > 0
+    ? sponsors.filter((sponsor) => types.includes(sponsor.data.type))
     : sponsors;
-const sponsorGroups = groupSponsorsByLevel(filteredSponsors);
+const sponsorGroups = groupSponsorsByType(filteredSponsors);
 ---
 
 <section class="py-12">
@@ -27,7 +27,7 @@ const sponsorGroups = groupSponsorsByLevel(filteredSponsors);
         sponsorGroups.length > 0 ? (
           <SponsorGroups groups={sponsorGroups} />
         ) : (
-          <p class="text-muted-foreground">No sponsors match the selected levels yet.</p>
+          <p class="text-muted-foreground">No sponsors match the selected types yet.</p>
         )
       }
     </div>

@@ -2,7 +2,7 @@
 draft: false
 name: "Terra Works Civil Construction Services "
 description: Providing vital community backing to ensure cats and neighborhoods thrive
-level: gold
+type: sponsors_donors
 sortOrder: 0
 website: https://terraworksinc.com/
 image:

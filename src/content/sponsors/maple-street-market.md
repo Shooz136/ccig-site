@@ -2,7 +2,7 @@
 draft: false
 name: Maple Street Market
 description: A fictional small business sponsor helping cover food, transport, and recovery costs for outdoor cats in need.
-level: gold
+type: sponsors_donors
 sortOrder: 25
 website: https://www.google.com/
 image:

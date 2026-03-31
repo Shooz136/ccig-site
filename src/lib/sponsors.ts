@@ -1,23 +1,20 @@
 import { getCollection } from "astro:content";
 
-export const sponsorLevelOrder = ["platinum", "gold", "silver", "bronze", "community"] as const;
+export const sponsorTypeOrder = ["sponsors_donors", "veterinary_partners"] as const;
 
-export const sponsorLevelLabels = {
-  platinum: "Platinum Sponsors",
-  gold: "Gold Sponsors",
-  silver: "Silver Sponsors",
-  bronze: "Bronze Sponsors",
-  community: "Community Sponsors",
+export const sponsorTypeLabels = {
+  sponsors_donors: "Sponsors & Donors",
+  veterinary_partners: "Veterinary Partners",
 } as const;
 
-export type SponsorLevel = keyof typeof sponsorLevelLabels;
+export type SponsorType = keyof typeof sponsorTypeLabels;
 
 export const sortSponsors = (a, b) => {
-  const levelDiff =
-    sponsorLevelOrder.indexOf(a.data.level) - sponsorLevelOrder.indexOf(b.data.level);
+  const typeDiff =
+    sponsorTypeOrder.indexOf(a.data.type) - sponsorTypeOrder.indexOf(b.data.type);
 
-  if (levelDiff !== 0) {
-    return levelDiff;
+  if (typeDiff !== 0) {
+    return typeDiff;
   }
 
   if (a.data.sortOrder !== b.data.sortOrder) {
@@ -32,11 +29,11 @@ export const getPublishedSponsors = async () => {
   return sponsors.sort(sortSponsors);
 };
 
-export const groupSponsorsByLevel = (sponsors) =>
-  sponsorLevelOrder
-    .map((level) => ({
-      level,
-      label: sponsorLevelLabels[level],
-      sponsors: sponsors.filter((sponsor) => sponsor.data.level === level),
+export const groupSponsorsByType = (sponsors) =>
+  sponsorTypeOrder
+    .map((type) => ({
+      type,
+      label: sponsorTypeLabels[type],
+      sponsors: sponsors.filter((sponsor) => sponsor.data.type === type),
     }))
     .filter((group) => group.sponsors.length > 0);

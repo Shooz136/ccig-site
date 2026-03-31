@@ -2,10 +2,10 @@
 import Container from "@/components/container.astro";
 import Layout from "@/layouts/Layout.astro";
 import SponsorGroups from "@/components/sponsors/sponsor-groups.astro";
-import { getPublishedSponsors, groupSponsorsByLevel } from "@/lib/sponsors";
+import { getPublishedSponsors, groupSponsorsByType } from "@/lib/sponsors";
 
 const sponsors = await getPublishedSponsors();
-const groups = groupSponsorsByLevel(sponsors);
+const groups = groupSponsorsByType(sponsors);
 ---
 
 <Layout
