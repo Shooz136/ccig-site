@@ -1,10 +1,9 @@
 ---
 draft: false
-name: "Marcell Ziemann"
-biography: "Marcell focuses on outreach strategy, resident education, and the systems that help the group respond clearly when communities need support."
-avatar: {
-    src: "https://images.unsplash.com/photo-1633332755192-727a05c4013d?&fit=crop&w=280",
-    alt: "Marcell Ziemann"
-}
-publishDate: "2022-11-08 15:39"
+name: "Ben Shoemaker "
+biography: "Ben is excited to contribute to this. He is a computer nerd and likes cats. "
+avatar:
+  src: /uploads/IMG_8391-1.jpeg
+  alt: "Ben holding a black cat named Maisie "
+publishDate: 2026-03-30
 ---
