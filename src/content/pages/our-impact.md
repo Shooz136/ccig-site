@@ -58,7 +58,7 @@ sections:
       it.
     buttonLabel: Tell Us Here
     buttonHref: Mailto:clarioncig@gmail.com
-    buttonStyle: primary
+    buttonStyle: outline
   - type: image_carousel
     title: "Our Work in Action "
     autoplay: true
