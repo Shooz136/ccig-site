@@ -54,6 +54,20 @@ content:
             label: Button Link
             type: string
             help: "Optional. Leave empty to use mailto: with the contact email."
+      - name: navDonate
+        label: Navigation Donate Button
+        type: object
+        required: true
+        fields:
+          - name: label
+            label: Button Label
+            type: string
+            required: true
+          - name: href
+            label: Donate Link
+            type: string
+            required: true
+            help: "Opens in a new tab from the site header."
 
   - name: theme
     label: Theme
