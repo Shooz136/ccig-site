@@ -5,6 +5,18 @@ navLabel: "Our Impact "
 showInNav: true
 navOrder: 50
 sections:
+  - type: hero
+    eyebrow: "Out Impact "
+    headline: "We’re Just Getting Started "
+    body: >-
+      We are in the early stages of expanding our work and building the
+      resources needed to serve Clarion County more fully. As our program grows,
+      we will continue sharing updates, stories, and milestones here.
+
+
+      Thank you for being part of this journey with us.
+    primaryCtaStyle: outline
+    secondaryCtaStyle: outline
   - type: image_text
     title: "Meet Oatmeal "
     body: >-
