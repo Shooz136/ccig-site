@@ -26,10 +26,10 @@ sections:
       Our purpose is not simply to respond to problems but to build long-term
       solutions that benefit animals, residents, and the community as a whole.
     primaryCtaLabel: "Request Assistance "
-    primaryCtaHref: /contact
+    primaryCtaHref: https://docs.google.com/forms/d/1q26e8bFEZx8KQvkC22Xf8eGv1Suhy9UhSP0v5Sao-7g/viewform
     primaryCtaStyle: primary
     secondaryCtaLabel: "Get Involved "
-    secondaryCtaHref: /what-is-tnr
+    secondaryCtaHref: /get-involved
     secondaryCtaStyle: primary
   - type: feature_grid
     title: How We Help
