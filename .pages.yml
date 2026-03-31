@@ -3,6 +3,7 @@ media:
   output: /uploads
   path: ""
 
+# Touching this file can help Pages CMS re-read the current config after repo changes.
 content:
   - name: site
     label: Site Settings
