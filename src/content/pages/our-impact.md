@@ -10,8 +10,8 @@ sections:
     headline: Our Impact
     body: >-
       We are in the early stages of expanding our work and building the
-      resources needed to serve Clarion County more fully. As our program grows,
-      we will continue sharing updates, stories, and milestones here.
+      resources needed to serve Clarion Borough more fully. As our program
+      grows, we will continue sharing updates, stories, and milestones here.
 
 
       Thank you for being part of this journey with us.
