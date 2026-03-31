@@ -116,7 +116,7 @@ sections:
           Even a few hours of help can make a meaningful difference.
         tone: sky
       - eyebrow: Educate
-        title: Support humane solutions
+        title: Support Humane Solutions
         body: >-
           You can help even if you’re unable to volunteer or donate.
 
