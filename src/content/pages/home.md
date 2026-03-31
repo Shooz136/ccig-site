@@ -35,9 +35,8 @@ sections:
           about you and the cats you’d like us to help with
         stepNumber: 1
       - title: We Contact You
-        description: >
-          After completing the request form, a volunteer will reach out to learn
-          more about the cats, answer questions, and schedule next steps.
+        description: After completing the request form, a volunteer will reach out to
+          learn more about the cats, answer questions, and schedule next steps
         stepNumber: 2
       - title: Humane Trapping
         description: Our trained volunteers safely trap the cat or cats using humane
@@ -46,11 +45,11 @@ sections:
       - title: Spay/Neuter & Vaccination
         description: >
           Each cat is transported to a veterinary clinic where they are spayed
-          or neutered, and vaccinated for rabies.
+          or neutered, and vaccinated for rabies
         stepNumber: 4
       - title: Recovery & Return
-        description: "After a short recovery period, the cat is returned to the same
-          outdoor location where it was found. "
+        description: After a short recovery period, the cat is returned to the same
+          outdoor location where it was found
         stepNumber: 5
       - title: "Stay Involved "
         description: After the cat is returned, you can continue to stay involved with
