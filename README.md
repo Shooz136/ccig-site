@@ -40,7 +40,7 @@ PUBLIC_SITE_URL=https://your-domain.example
 If you do not have a custom domain yet, you can use your Pages hostname instead:
 
 ```bash
-PUBLIC_SITE_URL=https://testing-static-site.pages.dev
+PUBLIC_SITE_URL=https://clarioncig.org
 ```
 
 For lightweight draft previews on the live site, also set:
@@ -51,7 +51,7 @@ PREVIEW_TOKEN=choose-a-long-random-string
 
 ## Notes
 
-- `astro.config.mjs` falls back to `https://testing-static-site.pages.dev` if `PUBLIC_SITE_URL` is not set.
+- `astro.config.mjs` falls back to `https://clarioncig.org` if `PUBLIC_SITE_URL` is not set.
 - `src/pages/robots.txt.ts` generates `robots.txt` dynamically from the configured site URL.
 - The upstream Astroship demo URLs and promotional links were removed so they do not leak into production SEO or navigation.
 

@@ -7,7 +7,7 @@ import icon from "astro-icon";
 const site =
   process.env.PUBLIC_SITE_URL ||
   process.env.SITE_URL ||
-  "https://testing-static-site.pages.dev";
+  "https://clarioncig.org";
 
 // https://astro.build/config
 export default defineConfig({
