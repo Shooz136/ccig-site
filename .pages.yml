@@ -540,6 +540,21 @@ content:
                 help: "Optional. Leave empty to show all sponsor levels."
                 options:
                   values: [platinum, gold, silver, bronze, community]
+          - name: team_members
+            label: Team Members
+            fields:
+              - name: eyebrow
+                label: Eyebrow
+                type: string
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: body
+                label: Body
+                type: rich-text
+                options:
+                  path: pages
 
   - name: blog
     label: Blog Posts
@@ -621,12 +636,12 @@ content:
     filename: "{primary}.md"
     view:
       primary: name
-      fields: [name, title, publishDate, draft]
+      fields: [name, publishDate, draft]
       sort: [publishDate, name]
       default:
         sort: publishDate
         order: desc
-      search: [name, title]
+      search: [name, biography]
     fields:
       - name: draft
         label: Draft
@@ -636,10 +651,12 @@ content:
         label: Name
         type: string
         required: true
-      - name: title
-        label: Job Title
-        type: string
+      - name: biography
+        label: Biography
+        type: text
         required: true
+        options:
+          rows: 5
       - name: avatar
         label: Avatar
         type: object

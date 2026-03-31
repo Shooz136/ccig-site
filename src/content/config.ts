@@ -20,9 +20,9 @@ const blogCollection = defineCollection({
 
 const teamCollection = defineCollection({
   schema: z.object({
-    draft: z.boolean(),
+    draft: z.boolean().default(false),
     name: z.string(),
-    title: z.string(),
+    biography: z.string(),
     avatar: z.object({
       src: z.string(),
       alt: z.string(),
@@ -168,6 +168,12 @@ const pagesCollection = defineCollection({
           email: z.string().default(""),
           phone: z.string().default(""),
           address: z.string().default(""),
+        }),
+        z.object({
+          type: z.literal("team_members"),
+          eyebrow: z.string().default(""),
+          title: z.string(),
+          body: z.string().default(""),
         }),
       ])
     ).default([]),

@@ -1,0 +1,48 @@
+---
+import { getCollection } from "astro:content";
+import RichText from "@/components/page-builder/rich-text.astro";
+
+const { eyebrow = "", title, body = "" } = Astro.props;
+
+const teamMembers = await getCollection("team", ({ data }) => !data.draft);
+teamMembers.sort((a, b) => a.data.publishDate.valueOf() - b.data.publishDate.valueOf());
+---
+
+<section class="py-12">
+  <div class="mx-auto max-w-6xl">
+    <div class="max-w-3xl">
+      {
+        eyebrow && (
+          <p class="text-sm font-semibold uppercase tracking-[0.24em] text-accent">
+            {eyebrow}
+          </p>
+        )
+      }
+      <h2 class="mt-3 text-4xl font-bold tracking-tight text-foreground lg:text-5xl">
+        {title}
+      </h2>
+      {body && <RichText content={body} class="mt-4 text-muted-foreground" />}
+    </div>
+
+    <div class="mt-12 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+      {
+        teamMembers.map((member) => (
+          <article class="flex h-full flex-col rounded-3xl border border-border bg-card p-6 shadow-[0_20px_50px_-35px_rgba(15,23,42,0.35)]">
+            <img
+              src={member.data.avatar.src}
+              alt={member.data.avatar.alt}
+              class="h-64 w-full rounded-2xl border border-border object-cover"
+              loading="lazy"
+            />
+            <h3 class="mt-5 text-2xl font-semibold tracking-tight text-card-foreground">
+              {member.data.name}
+            </h3>
+            <p class="mt-4 leading-relaxed text-card-foreground/78">
+              {member.data.biography}
+            </p>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</section>

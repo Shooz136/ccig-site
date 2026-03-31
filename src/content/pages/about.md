@@ -45,4 +45,9 @@ sections:
         description: Information and tools for people caring for outdoor cats
       - title: 🏡 Community Collaboration
         description: Working with local residents and partners to create long-term solutions
+  - type: team_members
+    eyebrow: Our Team
+    title: Meet the volunteers behind the work
+    body: The Clarion Cat Initiative Group is powered by people who care deeply
+      about humane community cat solutions and the neighbors they serve.
 ---

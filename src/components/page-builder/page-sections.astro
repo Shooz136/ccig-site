@@ -8,6 +8,7 @@ import SectionImageText from "@/components/page-builder/section-image-text.astro
 import SectionLinkedContentList from "@/components/page-builder/section-linked-content-list.astro";
 import SectionLogoCloud from "@/components/page-builder/section-logo-cloud.astro";
 import SectionSponsorList from "@/components/page-builder/section-sponsor-list.astro";
+import SectionTeamMembers from "@/components/page-builder/section-team-members.astro";
 import SectionText from "@/components/page-builder/section-text.astro";
 
 const { sections = [] } = Astro.props;
@@ -53,6 +54,10 @@ const { sections = [] } = Astro.props;
 
     if (section.type === "sponsor_list") {
       return <SectionSponsorList {...section} />;
+    }
+
+    if (section.type === "team_members") {
+      return <SectionTeamMembers {...section} />;
     }
 
     return null;
