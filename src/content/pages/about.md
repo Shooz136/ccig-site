@@ -37,13 +37,16 @@ sections:
     body: "**The Clarion Cat Initiative Group supports residents through humane cat
       management solutions**"
     features:
-      - title: "🐈 TNR Assistance "
+      - title: "TNR Assistance "
         description: Support for trapping and getting outdoor cats spayed or neutered
+        icon: fa-solid:cat
       - title: 📚 Community Education
         description: Resources to help residents understand community cats and humane
           solutions
-      - title: 🏡 Community Collaboration
+        icon: fa-solid:clipboard-list
+      - title: Community Collaboration
         description: Working with local residents and partners to create long-term solutions
+        icon: fa-solid:home
   - type: team_members
     eyebrow: Meet the founders and volunteers behind CCIG
     title: Our Team
