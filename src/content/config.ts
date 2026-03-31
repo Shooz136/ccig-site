@@ -65,6 +65,7 @@ const pagesCollection = defineCollection({
           eyebrow: z.string().default(""),
           headline: z.string(),
           body: z.string().default(""),
+          align: z.enum(["left", "center"]).default("center"),
           primaryCtaLabel: z.string().default(""),
           primaryCtaHref: z.string().default(""),
           primaryCtaStyle: buttonStyleSchema.default("primary"),
