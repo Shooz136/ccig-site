@@ -1,10 +1,9 @@
 ---
 draft: false
-name: "Janette Lynch"
-biography: "Janette helps coordinate volunteer efforts, community partnerships, and long-term planning so humane solutions stay practical and sustainable."
-avatar: {
-    src: "https://images.unsplash.com/photo-1580489944761-15a19d654956?&fit=crop&w=280",
-    alt: "Janette Lynch"
-}
-publishDate: "2022-11-07 15:39"
+name: Alicia McBeth
+biography: "Alicia is the shelter manager for PAWs and a founding member of CCIG. "
+avatar:
+  src: /uploads/IMG_0019-1.jpeg
+  alt: "Picture of Alicia with a very small kitten "
+publishDate: 2026-03-30
 ---
