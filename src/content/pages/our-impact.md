@@ -65,4 +65,13 @@ sections:
       - image:
           src: /uploads/7660624070741873581.jpeg
           alt: Ben setting traps
+      - image:
+          src: /uploads/IMG_5691.jpeg
+          alt: Trap happy opossum
+      - image:
+          src: /uploads/1000011936.jpeg
+          alt: "Tabby Cat in humane trap "
+      - image:
+          src: /uploads/1000065716.jpeg
+          alt: "trap happy raccoon "
 ---
