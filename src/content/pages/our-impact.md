@@ -37,6 +37,17 @@ sections:
     imageSide: left
   - type: image_text
     title: "Our first TNR Outing "
+    body: >-
+      Volunteers Ben and Helen set humane traps across several areas of the
+      borough with support from local residents and businesses who welcomed the
+      initiative and offered space to safely place traps. 
+
+
+      Six community cats were safely trapped and transported to receive
+      spay/neuter surgeries and vaccinations which prevented future litters
+      while improving the cats’ health and well-being. It was a meaningful
+      beginning and a reminder that lasting change happens through collective
+      action!
     image:
       src: /uploads/3054947812095737492-1.jpeg
       alt: "Ben and Helen in the field "
