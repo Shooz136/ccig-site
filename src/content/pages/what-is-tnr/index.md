@@ -39,7 +39,8 @@ sections:
         linkLabel: "Read More Here "
         linkHref: https://www.alleycat.org/resources/how-to-live-with-cats-in-your-neighborhood/
       - title: How to Help A Sick or Injured Cat
-        description: https://www.alleycat.org/resources-page/how-to-help-sick-injured-cats/
+        description: Check out this great guide on what to do if you find a sick or
+          injured cat.
         image:
           src: /uploads/IMG_3349.jpeg
           alt: "Orange kitten "
