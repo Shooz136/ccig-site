@@ -11,20 +11,20 @@ sections:
     eyebrow: Who are We?
     headline: Compassionate Solutions for Community Cats, Built by Our Community
     body: >-
-      **The Clarion Cat Initiative Group exists to promote humane,
-      community-based solutions for outdoor and stray cats through
-      Trap-Neuter-Return (TNR), education, and collaboration.**
+      The Clarion Cat Initiative Group exists to promote humane, community-based
+      solutions for outdoor and stray cats through Trap-Neuter-Return (TNR),
+      education, and collaboration.
 
 
-      **We believe communities and cats thrive together when compassion is
-      paired with practical action. By preventing reproduction, improving
-      health, and supporting responsible caregiving, we work to reduce
-      suffering, stabilize cat populations, and create more peaceful
-      neighborhoods across Clarion County.**
+      We believe communities and cats thrive together when compassion is paired
+      with practical action. By preventing reproduction, improving health, and
+      supporting responsible caregiving, we work to reduce suffering, stabilize
+      cat populations, and create more peaceful neighborhoods across Clarion
+      County.
 
 
-      **Our purpose is not simply to respond to problems but to build long-term
-      solutions that benefit animals, residents, and the community as a whole.**
+      Our purpose is not simply to respond to problems but to build long-term
+      solutions that benefit animals, residents, and the community as a whole.
     primaryCtaLabel: "Request Assistance "
     primaryCtaHref: /contact
     primaryCtaStyle: primary
@@ -46,6 +46,6 @@ sections:
       - title: 🏡 Community Collaboration
         description: Working with local residents and partners to create long-term solutions
   - type: team_members
-    eyebrow: "Our Team "
-    title: Meet the founders and volunteers behind CCIG
+    eyebrow: Meet the founders and volunteers behind CCIG
+    title: Our Team
 ---
