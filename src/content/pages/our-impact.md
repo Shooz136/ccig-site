@@ -5,6 +5,21 @@ navLabel: "Our Impact "
 showInNav: true
 navOrder: 50
 sections:
+  - type: full_width_banner
+    eyebrow: "Our Impact "
+    headline: "We are just getting started "
+    body: >-
+      We are in the early stages of expanding our work and building the
+      resources needed to serve Clarion County more fully. As our program grows,
+      we will continue sharing updates, stories, and milestones here.
+
+
+      Thank you for being part of this journey with us.
+    image:
+      src: /uploads/3054947812095737492.jpeg
+      alt: "Helen and Ben in the field "
+    primaryCtaStyle: outline
+    secondaryCtaStyle: outline
   - type: image_text
     title: "Meet Oatmeal "
     body: >-
@@ -30,6 +45,13 @@ sections:
   - type: image_carousel
     title: "Our Work in Action "
     autoplay: false
+    showNavigation: false
+    showPagination: false
+    mobileSlidesPerView: 0
+    tabletSlidesPerView: 0
+    desktopSlidesPerView: 0
+    spaceBetween: 0
+    imageAspect: square
     slides:
       - image:
           src: /uploads/IMG_20260315_202003-1.jpeg
@@ -43,19 +65,4 @@ sections:
       - image:
           src: /uploads/7660624070741873581.jpeg
           alt: Ben setting traps
-  - type: full_width_banner
-    eyebrow: "Our Impact "
-    headline: "We are just getting started "
-    body: >-
-      We are in the early stages of expanding our work and building the
-      resources needed to serve Clarion County more fully. As our program grows,
-      we will continue sharing updates, stories, and milestones here.
-
-
-      Thank you for being part of this journey with us.
-    image:
-      src: /uploads/3054947812095737492.jpeg
-      alt: "Helen and Ben in the field "
-    primaryCtaStyle: outline
-    secondaryCtaStyle: outline
 ---
