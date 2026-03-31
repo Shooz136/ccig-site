@@ -3,7 +3,7 @@ draft: false
 title: "Our Impact "
 navLabel: "Our Impact "
 showInNav: true
-navOrder: 0
+navOrder: 50
 sections:
   - type: image_text
     title: "Meet Oatmeal "
