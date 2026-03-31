@@ -19,7 +19,7 @@ sections:
     primaryCtaHref: https://docs.google.com/forms/d/1q26e8bFEZx8KQvkC22Xf8eGv1Suhy9UhSP0v5Sao-7g/viewform
     primaryCtaStyle: primary
     secondaryCtaLabel: "Learn More "
-    secondaryCtaHref: /Resources
+    secondaryCtaHref: /what-is-tnr
     secondaryCtaStyle: muted
   - type: feature_grid
     title: NEED HELP WITH OUTDOOR CATS?
@@ -61,6 +61,6 @@ sections:
     body: Humane change happens when communities work together. Join us in improving
       life for both cats and residents throughout our Borough
     buttonLabel: Learn How you Can Get Involved
-    buttonHref: /Get-Involved
+    buttonHref: /get-involved/
     buttonStyle: inverted
 ---
