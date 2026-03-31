@@ -1,11 +1,13 @@
 ---
 draft: false
-name: Lantern Veterinary Network
-description: A fictional regional care network helping fund spay and neuter support for community cat programs.
-level: platinum
+name: "Clarion Borough Council "
+description: >
+  Supporting humane solutions for community cats and residents through local
+  leadership, funding, and partnership.
+level: community
 sortOrder: 10
-website: https://www.google.com/
+website: https://clarionboro.org/
 image:
-  src: /opengraph.jpg
-  alt: Lantern Veterinary Network sponsor image placeholder.
+  src: /uploads/1920px-Sunset_in_Clarion,_PA.jpg
+  alt: "Clarion Main Street at sunset "
 ---
