@@ -443,7 +443,7 @@ content:
                     type: number
                     help: "Optional. If provided, the card shows a numbered badge instead of an icon."
                   - name: icon
-                    label: Icon Name
+                    label: "Icon Name (bx:, uil:, fa-solid:, simple-icons:)"
                     type: string
                     help: "Optional. Use Iconify names from installed sets: https://icon-sets.iconify.design/bx/ , https://icon-sets.iconify.design/uil/ , https://icon-sets.iconify.design/simple-icons/ , or https://icon-sets.iconify.design/fa-solid/ . Ignored when Step Number is set."
           - name: logo_cloud
@@ -460,7 +460,7 @@ content:
                 required: true
                 fields:
                   - name: icon
-                    label: Icon Name
+                    label: "Icon Name (bx:, uil:, fa-solid:, simple-icons:)"
                     type: string
                     required: true
                     help: "Use Iconify names from installed sets: https://icon-sets.iconify.design/bx/ , https://icon-sets.iconify.design/uil/ , https://icon-sets.iconify.design/simple-icons/ , or https://icon-sets.iconify.design/fa-solid/ ."
