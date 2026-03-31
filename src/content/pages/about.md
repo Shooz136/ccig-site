@@ -29,7 +29,7 @@ sections:
     primaryCtaHref: /contact
     primaryCtaStyle: primary
     secondaryCtaLabel: "Get Involved "
-    secondaryCtaHref: /solutions
+    secondaryCtaHref: /what-is-tnr
     secondaryCtaStyle: primary
   - type: feature_grid
     title: How We Help
