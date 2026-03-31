@@ -41,8 +41,6 @@ sections:
       - title: 📚 Community Education
         description: Resources to help residents understand community cats and humane
           solutions
-      - title: 🤝 Caregiver Support
-        description: Information and tools for people caring for outdoor cats
       - title: 🏡 Community Collaboration
         description: Working with local residents and partners to create long-term solutions
   - type: team_members
