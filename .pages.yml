@@ -540,6 +540,36 @@ content:
                 label: Autoplay
                 type: boolean
                 required: true
+              - name: showNavigation
+                label: Show Arrows
+                type: boolean
+                required: true
+              - name: showPagination
+                label: Show Pagination
+                type: boolean
+                required: true
+              - name: mobileSlidesPerView
+                label: Mobile Slides Per View
+                type: number
+                required: true
+              - name: tabletSlidesPerView
+                label: Tablet Slides Per View
+                type: number
+                required: true
+              - name: desktopSlidesPerView
+                label: Desktop Slides Per View
+                type: number
+                required: true
+              - name: spaceBetween
+                label: Space Between Slides
+                type: number
+                required: true
+              - name: imageAspect
+                label: Image Aspect Ratio
+                type: select
+                required: true
+                options:
+                  values: [square, landscape, portrait, wide]
               - name: slides
                 label: Slides
                 type: object

@@ -10,9 +10,24 @@ const {
   body = "",
   slides = [],
   autoplay = false,
+  showNavigation = true,
+  showPagination = true,
+  mobileSlidesPerView = 1.1,
+  tabletSlidesPerView = 2,
+  desktopSlidesPerView = 3,
+  spaceBetween = 24,
+  imageAspect = "landscape",
 } = Astro.props;
 
 const carouselId = `image-carousel-${Math.random().toString(36).slice(2, 10)}`;
+const imageAspectClass =
+  imageAspect === "square"
+    ? "aspect-square"
+    : imageAspect === "portrait"
+      ? "aspect-[4/5]"
+      : imageAspect === "wide"
+        ? "aspect-[16/9]"
+        : "aspect-[4/3]";
 ---
 
 <section class="py-12">
@@ -32,48 +47,66 @@ const carouselId = `image-carousel-${Math.random().toString(36).slice(2, 10)}`;
     </div>
 
     <div
-      class="swiper mt-10 overflow-hidden rounded-[2rem] border border-border bg-card shadow-[0_25px_70px_-40px_rgba(15,23,42,0.45)]"
+      class="swiper mt-10 overflow-hidden rounded-[2rem]"
       data-image-carousel={carouselId}
       data-autoplay={autoplay ? "true" : "false"}
+      data-show-navigation={showNavigation ? "true" : "false"}
+      data-show-pagination={showPagination ? "true" : "false"}
+      data-mobile-slides-per-view={String(mobileSlidesPerView)}
+      data-tablet-slides-per-view={String(tabletSlidesPerView)}
+      data-desktop-slides-per-view={String(desktopSlidesPerView)}
+      data-space-between={String(spaceBetween)}
       aria-label={title}>
       <div class="swiper-wrapper">
         {
           slides.map((slide) => (
             <div class="swiper-slide">
-              <figure class="grid min-h-full gap-0 lg:grid-cols-[1.3fr_0.7fr]">
+              <figure class="overflow-hidden rounded-[1.65rem] border border-border bg-background shadow-[0_24px_60px_-42px_rgba(15,23,42,0.32)]">
                 <img
                   src={slide.image.src}
                   alt={slide.image.alt}
-                  class="h-[20rem] w-full object-cover md:h-[28rem] lg:h-full"
+                  class:list={[imageAspectClass, "w-full object-cover"]}
                   loading="lazy"
                 />
-                <figcaption class="flex flex-col justify-center bg-card px-6 py-6 text-card-foreground md:px-8 md:py-8">
-                  {slide.title && (
-                    <h3 class="text-2xl font-semibold leading-tight tracking-tight">
-                      {slide.title}
-                    </h3>
-                  )}
-                  {slide.description && (
-                    <p class:list={["leading-relaxed text-card-foreground/78", slide.title ? "mt-4" : ""]}>
-                      {slide.description}
-                    </p>
-                  )}
-                </figcaption>
+                {
+                  (slide.title || slide.description) && (
+                    <figcaption class="bg-background px-5 py-5 text-card-foreground">
+                      {slide.title && (
+                        <h3 class="text-xl font-semibold leading-tight tracking-tight">
+                          {slide.title}
+                        </h3>
+                      )}
+                      {slide.description && (
+                        <p class:list={["leading-relaxed text-card-foreground/78", slide.title ? "mt-3" : ""]}>
+                          {slide.description}
+                        </p>
+                      )}
+                    </figcaption>
+                  )
+                }
               </figure>
             </div>
           ))
         }
       </div>
 
-      <div class="swiper-pagination image-carousel-pagination"></div>
-      <button
-        type="button"
-        class="swiper-button-prev image-carousel-button"
-        aria-label="Previous slide"></button>
-      <button
-        type="button"
-        class="swiper-button-next image-carousel-button"
-        aria-label="Next slide"></button>
+      {
+        showPagination && <div class="swiper-pagination image-carousel-pagination"></div>
+      }
+      {
+        showNavigation && (
+          <>
+            <button
+              type="button"
+              class="swiper-button-prev image-carousel-button"
+              aria-label="Previous slide"></button>
+            <button
+              type="button"
+              class="swiper-button-next image-carousel-button"
+              aria-label="Next slide"></button>
+          </>
+        )
+      }
     </div>
   </div>
 </section>
@@ -89,6 +122,12 @@ const carouselId = `image-carousel-${Math.random().toString(36).slice(2, 10)}`;
       }
 
       const slideCount = root.querySelectorAll(".swiper-slide").length;
+      const showNavigation = root.dataset.showNavigation === "true";
+      const showPagination = root.dataset.showPagination === "true";
+      const mobileSlidesPerView = Number(root.dataset.mobileSlidesPerView || "1.1");
+      const tabletSlidesPerView = Number(root.dataset.tabletSlidesPerView || "2");
+      const desktopSlidesPerView = Number(root.dataset.desktopSlidesPerView || "3");
+      const spaceBetween = Number(root.dataset.spaceBetween || "24");
       root.dataset.initialized = "true";
 
       new Swiper(root, {
@@ -97,14 +136,32 @@ const carouselId = `image-carousel-${Math.random().toString(36).slice(2, 10)}`;
         speed: 650,
         grabCursor: slideCount > 1,
         watchOverflow: true,
-        navigation: {
-          nextEl: root.querySelector(".swiper-button-next"),
-          prevEl: root.querySelector(".swiper-button-prev"),
+        slidesPerView: mobileSlidesPerView,
+        spaceBetween,
+        breakpoints: {
+          768: {
+            slidesPerView: tabletSlidesPerView,
+            spaceBetween,
+          },
+          1200: {
+            slidesPerView: desktopSlidesPerView,
+            spaceBetween,
+          },
         },
-        pagination: {
-          el: root.querySelector(".swiper-pagination"),
-          clickable: true,
-        },
+        navigation:
+          showNavigation
+            ? {
+                nextEl: root.querySelector(".swiper-button-next"),
+                prevEl: root.querySelector(".swiper-button-prev"),
+              }
+            : false,
+        pagination:
+          showPagination
+            ? {
+                el: root.querySelector(".swiper-pagination"),
+                clickable: true,
+              }
+            : false,
         autoplay:
           root.dataset.autoplay === "true" && slideCount > 1
             ? {
@@ -139,6 +196,10 @@ const carouselId = `image-carousel-${Math.random().toString(36).slice(2, 10)}`;
     color: var(--foreground);
   }
 
+  :global([data-image-carousel] .swiper) {
+    overflow: visible;
+  }
+
   :global([data-image-carousel] .image-carousel-button::after) {
     font-size: 1rem;
     font-weight: 700;
@@ -153,7 +214,7 @@ const carouselId = `image-carousel-${Math.random().toString(36).slice(2, 10)}`;
     position: absolute;
     left: 1.5rem;
     right: 1.5rem;
-    bottom: 1.25rem !important;
+    bottom: -2rem !important;
     width: auto !important;
     display: flex;
     justify-content: center;

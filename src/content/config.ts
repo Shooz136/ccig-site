@@ -158,6 +158,13 @@ const pagesCollection = defineCollection({
           title: z.string(),
           body: z.string().default(""),
           autoplay: z.boolean().default(false),
+          showNavigation: z.boolean().default(true),
+          showPagination: z.boolean().default(true),
+          mobileSlidesPerView: z.number().default(1.1),
+          tabletSlidesPerView: z.number().default(2),
+          desktopSlidesPerView: z.number().default(3),
+          spaceBetween: z.number().default(24),
+          imageAspect: z.enum(["square", "landscape", "portrait", "wide"]).default("landscape"),
           slides: z.array(
             z.object({
               image: z.object({
