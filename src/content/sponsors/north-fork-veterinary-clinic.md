@@ -1,7 +1,7 @@
 ---
 draft: false
 name: North Fork Veterinary Clinic
-description: Providing low-cost spay/neuter, vaccination, and medical care to cats in need
+description: Comprehensive Veterinary Care for Large And Small Animals
 type: veterinary_partners
 sortOrder: 25
 website: https://northforkveterinary.com/
