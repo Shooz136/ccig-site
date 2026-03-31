@@ -18,13 +18,15 @@ const { title, body, items = [] } = Astro.props;
         items.map((item) => (
           <li>
             <a href={item.linkHref} class="group block">
-              <div class="grid items-center gap-5 md:grid-cols-2 md:gap-10">
-                <img
-                  src={item.image.src}
-                  alt={item.image.alt}
-                  class="w-full rounded-2xl border border-border object-cover object-center shadow-[0_20px_50px_-35px_rgba(15,23,42,0.35)] transition duration-200 group-hover:scale-[1.01]"
-                  loading="lazy"
-                />
+              <div class="grid items-center gap-5 md:grid-cols-[minmax(0,28rem)_minmax(0,1fr)] md:gap-10">
+                <div class="overflow-hidden rounded-2xl border border-border shadow-[0_20px_50px_-35px_rgba(15,23,42,0.35)]">
+                  <img
+                    src={item.image.src}
+                    alt={item.image.alt}
+                    class="aspect-[4/5] w-full object-cover object-center transition duration-200 group-hover:scale-[1.01] md:max-h-[32rem]"
+                    loading="lazy"
+                  />
+                </div>
                 <div>
                   {item.eyebrow && (
                     <span class="text-sm font-medium uppercase tracking-wider text-accent">
