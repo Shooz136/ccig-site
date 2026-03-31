@@ -37,8 +37,8 @@ sections:
     imageSide: left
   - type: cta
     title: Share your Story!
-    body: This work would not be possible without the generous donations and
-      sponsorship from community members and local businesses…
+    body: Have a story or testimonial about working with us? We’d love to hear about
+      it.
     buttonLabel: Tell Us Here
     buttonHref: Mailto:clarioncig@gmail.com
     buttonStyle: primary
