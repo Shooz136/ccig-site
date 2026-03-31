@@ -39,4 +39,20 @@ sections:
     buttonLabel: Become a Sponsor
     buttonHref: Google.com
     buttonStyle: outline
+  - type: image_carousel
+    title: "Our Work in Action "
+    autoplay: false
+    slides:
+      - image:
+          src: /uploads/IMG_20260315_202003-1.jpeg
+          alt: "Helen setting humane traps in the field "
+      - image:
+          src: /uploads/20260313_223500.jpeg
+          alt: "Oatmeal hanging out after being trapped "
+      - image:
+          src: /uploads/20260314_162736.jpeg
+          alt: "Cat trapped and heading to the clinic "
+      - image:
+          src: /uploads/7660624070741873581.jpeg
+          alt: Ben setting traps
 ---
