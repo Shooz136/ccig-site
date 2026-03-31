@@ -34,7 +34,7 @@ sections:
       financial support, or simply help spread the word, there is a meaningful
       way to strengthen humane community cat work in Clarion.
     items:
-      - eyebrow: Donations
+      - eyebrow: Donate
         title: Give Financially
         body: >-
           Financial donations directly support our Trap-Neuter-Return efforts
@@ -58,7 +58,7 @@ sections:
           Every contribution helps prevent future litters and improves the
           health and safety of both cats and neighborhoods.
         tone: sage
-      - eyebrow: Supplies
+      - eyebrow: "Provide "
         title: Donate Supplies
         body: >-
           We rely on essential supplies to safely trap, transport, and care for
