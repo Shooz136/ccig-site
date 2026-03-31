@@ -40,7 +40,7 @@ sections:
       - title: "TNR Assistance "
         description: Support for trapping and getting outdoor cats spayed or neutered
         icon: fa-solid:cat
-      - title: 📚 Community Education
+      - title: Community Education
         description: Resources to help residents understand community cats and humane
           solutions
         icon: fa-solid:clipboard-list
