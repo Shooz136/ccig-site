@@ -47,7 +47,7 @@ const imageAspectClass =
     </div>
 
     <div
-      class="swiper mt-10 overflow-visible rounded-[2rem] pb-12"
+      class="relative mt-10 pb-12"
       data-image-carousel={carouselId}
       data-autoplay={autoplay ? "true" : "false"}
       data-show-navigation={showNavigation ? "true" : "false"}
@@ -57,37 +57,44 @@ const imageAspectClass =
       data-desktop-slides-per-view={String(desktopSlidesPerView)}
       data-space-between={String(spaceBetween)}
       aria-label={title}>
-      <div class="swiper-wrapper">
-        {
-          slides.map((slide) => (
-            <div class="swiper-slide">
-              <figure class="overflow-hidden rounded-[1.65rem] border border-border bg-background shadow-[0_24px_60px_-42px_rgba(15,23,42,0.32)]">
-                <img
-                  src={slide.image.src}
-                  alt={slide.image.alt}
-                  class:list={[imageAspectClass, "w-full object-cover"]}
-                  loading="lazy"
-                />
-                {
-                  (slide.title || slide.description) && (
-                    <figcaption class="bg-background px-5 py-5 text-card-foreground">
-                      {slide.title && (
-                        <h3 class="text-xl font-semibold leading-tight tracking-tight">
-                          {slide.title}
-                        </h3>
-                      )}
-                      {slide.description && (
-                        <p class:list={["leading-relaxed text-card-foreground/78", slide.title ? "mt-3" : ""]}>
-                          {slide.description}
-                        </p>
-                      )}
-                    </figcaption>
-                  )
-                }
-              </figure>
-            </div>
-          ))
-        }
+      <div class="pointer-events-none absolute inset-y-0 left-0 z-10 w-12 bg-[linear-gradient(90deg,var(--background)_10%,transparent)] md:w-20"></div>
+      <div class="pointer-events-none absolute inset-y-0 right-0 z-10 w-12 bg-[linear-gradient(270deg,var(--background)_10%,transparent)] md:w-20"></div>
+
+      <div class="overflow-hidden rounded-[2rem]">
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            {
+              slides.map((slide) => (
+                <div class="swiper-slide">
+                  <figure class="overflow-hidden rounded-[1.65rem] border border-border bg-background shadow-[0_24px_60px_-42px_rgba(15,23,42,0.32)]">
+                    <img
+                      src={slide.image.src}
+                      alt={slide.image.alt}
+                      class:list={[imageAspectClass, "w-full object-cover"]}
+                      loading="lazy"
+                    />
+                    {
+                      (slide.title || slide.description) && (
+                        <figcaption class="bg-background px-5 py-5 text-card-foreground">
+                          {slide.title && (
+                            <h3 class="text-xl font-semibold leading-tight tracking-tight">
+                              {slide.title}
+                            </h3>
+                          )}
+                          {slide.description && (
+                            <p class:list={["leading-relaxed text-card-foreground/78", slide.title ? "mt-3" : ""]}>
+                              {slide.description}
+                            </p>
+                          )}
+                        </figcaption>
+                      )
+                    }
+                  </figure>
+                </div>
+              ))
+            }
+          </div>
+        </div>
       </div>
 
       {
@@ -121,7 +128,13 @@ const imageAspectClass =
         return;
       }
 
-      const slideCount = root.querySelectorAll(".swiper-slide").length;
+      const swiperRoot = root.querySelector(".swiper");
+
+      if (!(swiperRoot instanceof HTMLElement)) {
+        return;
+      }
+
+      const slideCount = swiperRoot.querySelectorAll(".swiper-slide").length;
       const showNavigation = root.dataset.showNavigation === "true";
       const showPagination = root.dataset.showPagination === "true";
       const mobileSlidesPerView = Number(root.dataset.mobileSlidesPerView || "1.1");
@@ -130,7 +143,7 @@ const imageAspectClass =
       const spaceBetween = Number(root.dataset.spaceBetween || "24");
       root.dataset.initialized = "true";
 
-      new Swiper(root, {
+      new Swiper(swiperRoot, {
         modules: [A11y, Autoplay, Navigation, Pagination],
         loop: slideCount > 1,
         speed: 650,
@@ -187,10 +200,6 @@ const imageAspectClass =
 </script>
 
 <style>
-  :global([data-image-carousel]) {
-    overflow: visible;
-  }
-
   :global([data-image-carousel] .image-carousel-button) {
     position: absolute;
     top: 50%;
