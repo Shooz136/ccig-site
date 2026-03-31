@@ -445,7 +445,7 @@ content:
                   - name: icon
                     label: Icon Name
                     type: string
-                    help: "Optional. Use Iconify names like bx:cat, bxs:church, simple-icons:astro, or uil:home. Ignored when Step Number is set."
+                    help: "Optional. Use Iconify names from installed sets: https://icon-sets.iconify.design/bx/ , https://icon-sets.iconify.design/uil/ , https://icon-sets.iconify.design/simple-icons/ , or https://icon-sets.iconify.design/fa-solid/ . Ignored when Step Number is set."
           - name: logo_cloud
             label: Logo Cloud
             fields:
@@ -463,7 +463,7 @@ content:
                     label: Icon Name
                     type: string
                     required: true
-                    help: "Use Iconify names like bx:cat, bxs:church, simple-icons:astro, or uil:home."
+                    help: "Use Iconify names from installed sets: https://icon-sets.iconify.design/bx/ , https://icon-sets.iconify.design/uil/ , https://icon-sets.iconify.design/simple-icons/ , or https://icon-sets.iconify.design/fa-solid/ ."
                   - name: label
                     label: Label
                     type: string
