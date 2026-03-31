@@ -30,14 +30,74 @@ sections:
   - type: info_card_list
     eyebrow: Ways to Help
     title: Choose the kind of support that fits you best
-    body: >-
-      Every contribution matters. Whether you can donate time, supplies,
+    body: Every contribution matters. Whether you can donate time, supplies,
       financial support, or simply help spread the word, there is a meaningful
       way to strengthen humane community cat work in Clarion.
     items:
+      - eyebrow: Donations
+        title: Give Financially
+        body: >-
+          Financial donations directly support our Trap-Neuter-Return efforts
+          and allow us to help more cats and communities.
+
+
+          Donations help cover:
+
+
+          - Spay and neuter surgeries
+
+          - Rabies vaccinations
+
+          - Medical care when needed
+
+          - Traps and humane equipment
+
+          - Food and other supplies
+
+
+          Every contribution helps prevent future litters and improves the
+          health and safety of both cats and neighborhoods.
+        tone: sage
+      - eyebrow: Supplies
+        title: Donate Supplies
+        body: >-
+          We rely on essential supplies to safely trap, transport, and care for
+          cats during the TNR process.
+
+
+          Donating supplies helps us stretch resources further and respond to
+          more community requests.
+
+
+          Commonly needed items:
+
+
+          - Wet and dry cat food
+
+          - Paper towels
+
+          - Disposable gloves
+
+          - Puppy pads
+
+          - Small paper plates
+
+          - Towels or small blankets (gently used is okay)
+
+          - Large trash bags
+
+          - Laundry detergent (unscented preferred)
+
+          - Humane traps 
+
+          - Storage bins with lids
+
+
+          If you’re unsure whether an item is helpful, feel free to contact us
+          before donating.
+        tone: sand
       - eyebrow: Volunteer
-        title: Volunteer with us
-        tone: sky
+        title: Volunteer with Us
         body: >-
           Volunteers are the heart of our work. You don’t need prior experience
           — we provide guidance and support.
@@ -58,75 +118,9 @@ sections:
 
 
           Even a few hours of help can make a meaningful difference.
-      - eyebrow: Supplies
-        title: Donate supplies
-        tone: sand
-        body: >-
-          In addition to monetary donations, we rely on essential supplies to
-          safely trap, transport, and care for cats during the TNR process.
-
-
-          Donating supplies helps us stretch resources further and respond to
-          more community requests.
-
-
-          Commonly needed items:
-
-
-          - Wet and dry cat food
-
-          - Kitten food and kitten formula
-
-          - Paper towels
-
-          - Disposable gloves
-
-          - Puppy pads
-
-          - Towels or small blankets (gently used is okay)
-
-          - Large trash bags
-
-          - Laundry detergent (unscented preferred)
-
-          - Cat carriers (hard-sided preferred)
-
-          - Humane traps (by arrangement)
-
-          - Heating pads (non-auto shutoff)
-
-          - Storage bins with lids
-
-
-          If you’re unsure whether an item is helpful, feel free to contact us
-          before donating.
-      - eyebrow: Donations
-        title: Give financially
-        tone: sage
-        body: >-
-          Financial donations directly support our Trap-Neuter-Return efforts
-          and allow us to help more cats and communities.
-
-
-          Donations help cover:
-
-
-          - Spay and neuter surgeries
-
-          - Rabies vaccinations
-
-          - Medical care when needed
-
-          - Traps and humane equipment
-
-          - Food and recovery supplies
-
-
-          Every contribution helps prevent future litters and improves the
-          health and safety of both cats and neighborhoods.
-      - eyebrow: Advocacy
+        tone: sky
+      - eyebrow: Educate
         title: Support humane solutions
-        tone: ink
         body: >-
           You can help even if you’re unable to volunteer or donate.
 
@@ -149,4 +143,5 @@ sections:
 
 
           Small actions help create lasting impact.
+        tone: ink
 ---
