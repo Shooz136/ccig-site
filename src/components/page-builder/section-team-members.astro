@@ -17,11 +17,7 @@ teamMembers.sort((a, b) => {
   return a.data.name.localeCompare(b.data.name);
 });
 
-const getAccentSeed = (name: string) =>
-  name
-    .trim()
-    .toLowerCase()
-    .charCodeAt(0) % 3;
+const getAccentSeed = (name: string) => name.trim().toLowerCase().charCodeAt(0) % 3;
 ---
 
 <section class="py-12">
@@ -46,15 +42,15 @@ const getAccentSeed = (name: string) =>
           const accentSeed = getAccentSeed(member.data.name);
           const accentClass =
             accentSeed === 0
-              ? "bg-[color-mix(in_srgb,var(--accent)_78%,white)]"
+              ? "bg-[linear-gradient(135deg,color-mix(in_srgb,var(--accent)_72%,white),color-mix(in_srgb,var(--accent)_88%,black))]"
               : accentSeed === 1
-                ? "bg-[color-mix(in_srgb,var(--primary)_78%,white)]"
-                : "bg-[color-mix(in_srgb,var(--foreground)_72%,white)]";
+                ? "bg-[linear-gradient(135deg,color-mix(in_srgb,var(--primary)_68%,white),color-mix(in_srgb,var(--primary)_84%,black))]"
+                : "bg-[linear-gradient(135deg,color-mix(in_srgb,var(--foreground)_16%,white),color-mix(in_srgb,var(--foreground)_62%,white))]";
 
           return (
-            <article class="overflow-hidden rounded-[2rem] border border-border bg-card shadow-[0_28px_70px_-42px_rgba(15,23,42,0.38)]">
+            <article class="overflow-hidden rounded-[2rem] border border-border bg-background shadow-[0_30px_80px_-46px_rgba(15,23,42,0.28)] transition-transform duration-200 hover:-translate-y-1">
               <div class:list={["px-5 pb-5 pt-5", accentClass]}>
-                <div class="rounded-[1.4rem] border border-white/55 bg-white/20 p-2 backdrop-blur-sm">
+                <div class="rounded-[1.45rem] border border-white/60 bg-white/18 p-2 backdrop-blur-sm">
                   <img
                     src={member.data.avatar.src}
                     alt={member.data.avatar.alt}
@@ -64,14 +60,12 @@ const getAccentSeed = (name: string) =>
                 </div>
               </div>
 
-              <div class="bg-card px-6 pb-7 pt-2">
-                <div class="inline-flex rounded-full border border-border bg-background px-3 py-1 text-[0.68rem] font-semibold uppercase tracking-[0.22em] text-muted-foreground">
-                  {getFirstName(member.data.name)}
-                </div>
-                <h3 class="mt-4 text-[1.9rem] font-semibold leading-tight tracking-tight text-card-foreground">
+              <div class="bg-background px-6 pb-7 pt-6">
+                <div class="h-1.5 w-16 rounded-full bg-[color-mix(in_srgb,var(--accent)_72%,white)]"></div>
+                <h3 class="mt-4 text-[1.95rem] font-semibold leading-tight tracking-tight text-foreground">
                   {member.data.name}
                 </h3>
-                <p class="mt-4 text-[1rem] leading-8 text-card-foreground/78">
+                <p class="mt-4 max-w-[28ch] text-[1rem] leading-8 text-foreground/76">
                   {member.data.biography}
                 </p>
               </div>
