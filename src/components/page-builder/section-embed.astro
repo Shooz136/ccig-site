@@ -2,8 +2,8 @@
 const { embedCode, maxWidth = "lg" } = Astro.props;
 
 const widthClasses = {
-  md: "max-w-4xl",
-  lg: "max-w-5xl",
+  md: "max-w-3xl",
+  lg: "max-w-4xl",
   full: "max-w-6xl",
 };
 ---
@@ -19,6 +19,14 @@ const widthClasses = {
 </section>
 
 <style>
+  .embed-shell {
+    position: relative;
+    width: 100%;
+    min-height: clamp(32rem, 72vh, 56rem);
+    overflow: hidden;
+    border-radius: 1.25rem;
+  }
+
   .embed-shell :global(*) {
     box-sizing: border-box;
     max-width: 100%;
@@ -32,7 +40,7 @@ const widthClasses = {
 
   .embed-shell :global(iframe),
   .embed-shell :global(video) {
-    min-height: 28rem;
+    height: 100%;
     border: 0;
     border-radius: 1.25rem;
   }
