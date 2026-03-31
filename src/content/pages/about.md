@@ -31,7 +31,7 @@ sections:
     primaryCtaStyle: primary
     secondaryCtaLabel: "Get Involved "
     secondaryCtaHref: /get-involved
-    secondaryCtaStyle: inverted
+    secondaryCtaStyle: outline
   - type: feature_grid
     title: How We Help
     body: "**The Clarion Cat Initiative Group supports residents through humane cat
