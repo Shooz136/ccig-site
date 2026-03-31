@@ -17,17 +17,9 @@ sections:
       Thank you for being part of this journey with us.
     image:
       src: /uploads/20260313_223500-1.jpeg
-      alt: "Helen and Ben in the field "
+      alt: "Cat in trap  "
     primaryCtaStyle: outline
     secondaryCtaStyle: outline
-  - type: hero
-    headline: "Stories of Impact "
-    body: "Have a story or testimonial about working with us? We’d love to hear
-      about it! "
-    primaryCtaLabel: Tell Us Here
-    primaryCtaHref: Mailto:clarioncig@gmail.com
-    primaryCtaStyle: primary
-    secondaryCtaStyle: muted
   - type: image_text
     title: "Meet Oatmeal "
     body: >-
@@ -44,12 +36,12 @@ sections:
       alt: "Picture of gray cat "
     imageSide: left
   - type: cta
-    title: Thank you to our Sponsors!
+    title: Share your Story!
     body: This work would not be possible without the generous donations and
       sponsorship from community members and local businesses…
-    buttonLabel: Become a Sponsor
-    buttonHref: Google.com
-    buttonStyle: outline
+    buttonLabel: Tell Us Here
+    buttonHref: Mailto:clarioncig@gmail.com
+    buttonStyle: primary
   - type: image_carousel
     title: "Our Work in Action "
     autoplay: true
