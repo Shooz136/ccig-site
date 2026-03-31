@@ -634,6 +634,22 @@ content:
                     type: text
                     options:
                       rows: 3
+          - name: embed
+            label: Embed
+            fields:
+              - name: maxWidth
+                label: Width
+                type: select
+                required: true
+                options:
+                  values: [md, lg, full]
+              - name: embedCode
+                label: Embed Code
+                type: text
+                required: true
+                options:
+                  rows: 8
+                help: "Paste provider embed HTML such as YouTube iframe code or a donation form snippet."
           - name: info_card_list
             label: Info Card List
             fields:

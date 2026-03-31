@@ -179,6 +179,11 @@ const pagesCollection = defineCollection({
           ).min(1),
         }),
         z.object({
+          type: z.literal("embed"),
+          embedCode: z.string(),
+          maxWidth: z.enum(["md", "lg", "full"]).default("lg"),
+        }),
+        z.object({
           type: z.literal("info_card_list"),
           eyebrow: z.string().default(""),
           title: z.string(),
