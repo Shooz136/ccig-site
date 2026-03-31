@@ -1,0 +1,74 @@
+---
+import RichText from "@/components/page-builder/rich-text.astro";
+
+const { eyebrow = "", title, body = "", items = [] } = Astro.props;
+
+const toneClasses = {
+  sand: {
+    card: "bg-[color-mix(in_srgb,var(--secondary)_76%,white)] border-[color-mix(in_srgb,var(--border)_88%,white)]",
+    badge: "bg-[color-mix(in_srgb,var(--accent)_16%,white)] text-[color-mix(in_srgb,var(--foreground)_88%,black)]",
+    accent: "bg-[color-mix(in_srgb,var(--accent)_72%,white)]",
+  },
+  sky: {
+    card: "bg-[color-mix(in_srgb,var(--primary)_10%,white)] border-[color-mix(in_srgb,var(--primary)_20%,white)]",
+    badge: "bg-[color-mix(in_srgb,var(--primary)_14%,white)] text-[color-mix(in_srgb,var(--primary)_86%,black)]",
+    accent: "bg-[color-mix(in_srgb,var(--primary)_70%,white)]",
+  },
+  sage: {
+    card: "bg-[color-mix(in_srgb,#7c9b7c_16%,white)] border-[color-mix(in_srgb,#7c9b7c_26%,white)]",
+    badge: "bg-[color-mix(in_srgb,#7c9b7c_18%,white)] text-[color-mix(in_srgb,#456245_88%,black)]",
+    accent: "bg-[color-mix(in_srgb,#6d8d6d_76%,white)]",
+  },
+  ink: {
+    card: "bg-[color-mix(in_srgb,var(--foreground)_7%,white)] border-[color-mix(in_srgb,var(--foreground)_16%,white)]",
+    badge: "bg-[color-mix(in_srgb,var(--foreground)_10%,white)] text-[color-mix(in_srgb,var(--foreground)_88%,black)]",
+    accent: "bg-[color-mix(in_srgb,var(--foreground)_72%,white)]",
+  },
+} as const;
+---
+
+<section class="py-12">
+  <div class="mx-auto max-w-6xl">
+    <div class="max-w-3xl">
+      {
+        eyebrow && (
+          <p class="text-sm font-semibold uppercase tracking-[0.24em] text-accent">
+            {eyebrow}
+          </p>
+        )
+      }
+      <h2 class="mt-3 text-4xl font-bold tracking-tight text-foreground lg:text-5xl">
+        {title}
+      </h2>
+      {body && <RichText content={body} class="mt-4 text-lg text-muted-foreground" />}
+    </div>
+
+    <div class="mt-12 grid gap-8 lg:grid-cols-2">
+      {
+        items.map((item) => {
+          const tone = toneClasses[item.tone] || toneClasses.sand;
+
+          return (
+            <article class:list={["overflow-hidden rounded-[2rem] border p-8 shadow-[0_26px_70px_-48px_rgba(15,23,42,0.35)]", tone.card]}>
+              <div class:list={["h-1.5 w-18 rounded-full", tone.accent]}></div>
+              {
+                item.eyebrow && (
+                  <div class:list={["mt-5 inline-flex rounded-full px-3 py-1 text-[0.72rem] font-semibold uppercase tracking-[0.22em]", tone.badge]}>
+                    {item.eyebrow}
+                  </div>
+                )
+              }
+              <h3 class="mt-5 text-3xl font-semibold leading-tight tracking-tight text-foreground">
+                {item.title}
+              </h3>
+              <RichText
+                content={item.body}
+                class="mt-5 text-foreground/78 prose-ul:columns-1 prose-ul:gap-6 prose-li:break-inside-avoid md:prose-ul:columns-2"
+              />
+            </article>
+          );
+        })
+      }
+    </div>
+  </div>
+</section>

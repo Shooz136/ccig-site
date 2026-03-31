@@ -27,112 +27,126 @@ sections:
     secondaryCtaLabel: "Sign Up to Volunteer "
     secondaryCtaHref: google.com
     secondaryCtaStyle: muted
-  - type: text
-    title: Volunteer with us
+  - type: info_card_list
+    eyebrow: Ways to Help
+    title: Choose the kind of support that fits you best
     body: >-
-      Volunteers are the heart of our work. You don’t need prior experience — we
-      provide guidance and support.
+      Every contribution matters. Whether you can donate time, supplies,
+      financial support, or simply help spread the word, there is a meaningful
+      way to strengthen humane community cat work in Clarion.
+    items:
+      - eyebrow: Volunteer
+        title: Volunteer with us
+        tone: sky
+        body: >-
+          Volunteers are the heart of our work. You don’t need prior experience
+          — we provide guidance and support.
 
 
-      Volunteers help with:
+          Volunteers help with:
 
 
-      - Humane trapping
+          - Humane trapping
 
-      - Transporting cats to and from vet appointments
+          - Transporting cats to and from vet appointments
 
-      - Outreach and community education
+          - Outreach and community education
 
-      - Administrative or behind-the-scenes support
+          - Administrative or behind-the-scenes support
 
-      - Event and awareness activities
-
-
-      Even a few hours of help can make a meaningful difference.
-    align: left
-  - type: text
-    title: "Donate Supplies "
-    body: >-
-      In addition to monetary donations, we rely on essential supplies to safely
-      trap, transport, and care for cats during the TNR process.
+          - Event and awareness activities
 
 
-      Donating supplies helps us stretch resources further and respond to more
-      community requests.
+          Even a few hours of help can make a meaningful difference.
+      - eyebrow: Supplies
+        title: Donate supplies
+        tone: sand
+        body: >-
+          In addition to monetary donations, we rely on essential supplies to
+          safely trap, transport, and care for cats during the TNR process.
 
 
-      Commonly Needed Items:
+          Donating supplies helps us stretch resources further and respond to
+          more community requests.
 
 
-      - Wet and dry cat food
-
-      - Kitten food and kitten formula
-
-      - Paper towels
-
-      - Disposable gloves
-
-      - Puppy pads
-
-      - Towels or small blankets (gently used is okay)
-
-      - Large trash bags
-
-      - Laundry detergent (unscented preferred)
-
-      - Cat carriers (hard-sided preferred)
-
-      - Humane traps (by arrangement)
-
-      - Heating pads (non-auto shutoff)
-
-      - Storage bins with lids
+          Commonly needed items:
 
 
-      If you’re unsure whether an item is helpful, feel free to contact us
-      before donating.
-  - type: text
-    title: "Donate "
-    body: >-
-      Financial donations directly support our Trap-Neuter-Return efforts and
-      allow us to help more cats and communities.Donations help cover:- Spay and
-      neuter surgeries
+          - Wet and dry cat food
+
+          - Kitten food and kitten formula
+
+          - Paper towels
+
+          - Disposable gloves
+
+          - Puppy pads
+
+          - Towels or small blankets (gently used is okay)
+
+          - Large trash bags
+
+          - Laundry detergent (unscented preferred)
+
+          - Cat carriers (hard-sided preferred)
+
+          - Humane traps (by arrangement)
+
+          - Heating pads (non-auto shutoff)
+
+          - Storage bins with lids
 
 
-      - Rabies vaccinations
+          If you’re unsure whether an item is helpful, feel free to contact us
+          before donating.
+      - eyebrow: Donations
+        title: Give financially
+        tone: sage
+        body: >-
+          Financial donations directly support our Trap-Neuter-Return efforts
+          and allow us to help more cats and communities.
 
 
-      - Medical care when needed
+          Donations help cover:
 
 
-      - Traps and humane equipment
+          - Spay and neuter surgeries
+
+          - Rabies vaccinations
+
+          - Medical care when needed
+
+          - Traps and humane equipment
+
+          - Food and recovery supplies
 
 
-      - Food and recovery suppliesEvery contribution helps prevent future
-      litters and improves the health and safety of both cats and neighborhoods.
-    align: left
-  - type: text
-    title: "Support Humane Solutions "
-    body: >-
-      You can help even if you’re unable to volunteer or donate.
+          Every contribution helps prevent future litters and improves the
+          health and safety of both cats and neighborhoods.
+      - eyebrow: Advocacy
+        title: Support humane solutions
+        tone: ink
+        body: >-
+          You can help even if you’re unable to volunteer or donate.
 
 
-      Sharing accurate information about community cats and humane solutions
-      helps reduce misunderstandings and builds support for long-term change.
+          Sharing accurate information about community cats and humane solutions
+          helps reduce misunderstandings and builds support for long-term
+          change.
 
 
-      You can help by:
+          You can help by:
 
 
-      - Sharing our resources on social media
+          - Sharing our resources on social media
 
-      - Talking with neighbors about TNR
+          - Talking with neighbors about TNR
 
-      - Connecting us with community partners
+          - Connecting us with community partners
 
-      - Encouraging humane solutions in local conversations
+          - Encouraging humane solutions in local conversations
 
 
-      Small actions help create lasting impact.
-    align: left
+          Small actions help create lasting impact.
 ---

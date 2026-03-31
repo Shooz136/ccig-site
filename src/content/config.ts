@@ -33,6 +33,7 @@ const teamCollection = defineCollection({
 
 const buttonStyleSchema = z.enum(["primary", "outline", "inverted", "muted"]);
 const sponsorLevelSchema = z.enum(["platinum", "gold", "silver", "bronze", "community"]);
+const infoCardToneSchema = z.enum(["sand", "sky", "sage", "ink"]);
 
 const sponsorsCollection = defineCollection({
   schema: z.object({
@@ -175,6 +176,20 @@ const pagesCollection = defineCollection({
               description: z.string().default(""),
             })
           ).min(1),
+        }),
+        z.object({
+          type: z.literal("info_card_list"),
+          eyebrow: z.string().default(""),
+          title: z.string(),
+          body: z.string().default(""),
+          items: z.array(
+            z.object({
+              eyebrow: z.string().default(""),
+              title: z.string(),
+              body: z.string().default(""),
+              tone: infoCardToneSchema.default("sand"),
+            })
+          ).default([]),
         }),
         z.object({
           type: z.literal("sponsor_list"),
