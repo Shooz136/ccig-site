@@ -3,7 +3,7 @@ draft: false
 title: Community Heroes
 navLabel: "Community Heroes "
 showInNav: true
-navOrder: 5
+navOrder: 55
 sections:
   - type: sponsor_list
     title: Community Heroes
