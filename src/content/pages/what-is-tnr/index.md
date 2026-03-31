@@ -14,7 +14,13 @@ sections:
     primaryCtaStyle: inverted
     secondaryCtaStyle: inverted
   - type: linked_content_list
-    title: What is TNR?
+    title: "Community Cat Resource Library "
+    body: Our Resource Library is a growing collection of guides, tips, and tools to
+      help residents care for community cats. From understanding
+      Trap-Neuter-Return (TNR) to recognizing signs of illness or injury, these
+      resources are designed to support humane solutions in Clarion Borough.
+      We’re still building out the library, so check back often for new
+      information and helpful links!
     items:
       - title: What is TNR?
         description: Trap-Neuter-Return (TNR) is a humane, evidence-based approach to
@@ -22,13 +28,10 @@ sections:
           cats are returned to their outdoor homes, and how TNR improves life
           for both cats and communities.
         image:
-          src: /uploads/IMG_0024.jpeg
-          alt: TNR
-        linkLabel: Read more here
+          src: /uploads/IMG_0024-1.jpeg
+          alt: "Tnr "
+        linkLabel: Read More Here
         linkHref: https://www.alleycat.org/our-work/trap-neuter-return/
-  - type: linked_content_list
-    title: "Living with Community Cats "
-    items:
       - title: Living with Community Cats
         description: Seeing outdoor cats in your neighborhood? Learn practical, humane
           ways to reduce nuisance behaviors, protect gardens, and peacefully
