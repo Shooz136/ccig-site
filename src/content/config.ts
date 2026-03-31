@@ -27,7 +27,7 @@ const teamCollection = defineCollection({
       src: z.string(),
       alt: z.string(),
     }),
-    publishDate: z.string().transform(str => new Date(str)),
+    publishDate: z.coerce.date(),
   }),
 });
 
@@ -151,6 +151,23 @@ const pagesCollection = defineCollection({
               linkHref: z.string(),
             })
           ).default([]),
+        }),
+        z.object({
+          type: z.literal("image_carousel"),
+          eyebrow: z.string().default(""),
+          title: z.string(),
+          body: z.string().default(""),
+          autoplay: z.boolean().default(false),
+          slides: z.array(
+            z.object({
+              image: z.object({
+                src: z.string(),
+                alt: z.string(),
+              }),
+              title: z.string().default(""),
+              description: z.string().default(""),
+            })
+          ).min(1),
         }),
         z.object({
           type: z.literal("sponsor_list"),

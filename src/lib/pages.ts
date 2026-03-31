@@ -9,3 +9,21 @@ export const normalizePageSlug = (slug: string) => {
 
   return slug;
 };
+
+export const getPagePreviewImage = (sections: Array<Record<string, any>> = []) => {
+  for (const section of sections) {
+    if (section?.image?.src) {
+      return section.image.src;
+    }
+
+    if (Array.isArray(section?.slides) && section.slides[0]?.image?.src) {
+      return section.slides[0].image.src;
+    }
+
+    if (Array.isArray(section?.items) && section.items[0]?.image?.src) {
+      return section.items[0].image.src;
+    }
+  }
+
+  return undefined;
+};

@@ -2,7 +2,7 @@
 import { getCollection } from "astro:content";
 import Container from "@/components/container.astro";
 import Layout from "@/layouts/Layout.astro";
-import { normalizePageSlug } from "@/lib/pages";
+import { getPagePreviewImage, normalizePageSlug } from "@/lib/pages";
 import PageSections from "@/components/page-builder/page-sections.astro";
 
 export async function getStaticPaths() {
@@ -17,7 +17,7 @@ export async function getStaticPaths() {
 }
 
 const { entry } = Astro.props;
-const pageImage = entry.data.sections.find((section) => "image" in section)?.image.src;
+const pageImage = getPagePreviewImage(entry.data.sections);
 ---
 
 <Layout title={entry.data.title} description={entry.data.description} image={pageImage}>

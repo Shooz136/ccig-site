@@ -2,7 +2,7 @@
 import { getCollection } from "astro:content";
 import Container from "@/components/container.astro";
 import Layout from "@/layouts/Layout.astro";
-import { normalizePageSlug } from "@/lib/pages";
+import { getPagePreviewImage, normalizePageSlug } from "@/lib/pages";
 import PageSections from "@/components/page-builder/page-sections.astro";
 import { isValidPreviewRequest } from "@/lib/preview";
 
@@ -31,7 +31,7 @@ if (!entry) {
   return new Response("Not found", { status: 404 });
 }
 
-const pageImage = entry.data.sections.find((section) => "image" in section)?.image.src;
+const pageImage = getPagePreviewImage(entry.data.sections);
 ---
 
 <Layout

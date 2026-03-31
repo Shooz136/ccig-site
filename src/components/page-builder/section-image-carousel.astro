@@ -1,0 +1,180 @@
+---
+import RichText from "@/components/page-builder/rich-text.astro";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+
+const {
+  eyebrow = "",
+  title,
+  body = "",
+  slides = [],
+  autoplay = false,
+} = Astro.props;
+
+const carouselId = `image-carousel-${Math.random().toString(36).slice(2, 10)}`;
+---
+
+<section class="py-12">
+  <div class="mx-auto max-w-6xl">
+    <div class="max-w-3xl">
+      {
+        eyebrow && (
+          <p class="text-sm font-semibold uppercase tracking-[0.24em] text-accent">
+            {eyebrow}
+          </p>
+        )
+      }
+      <h2 class="mt-3 text-4xl font-bold tracking-tight text-foreground lg:text-5xl">
+        {title}
+      </h2>
+      {body && <RichText content={body} class="mt-4 text-muted-foreground" />}
+    </div>
+
+    <div
+      class="swiper mt-10 overflow-hidden rounded-[2rem] border border-border bg-card shadow-[0_25px_70px_-40px_rgba(15,23,42,0.45)]"
+      data-image-carousel={carouselId}
+      data-autoplay={autoplay ? "true" : "false"}
+      aria-label={title}>
+      <div class="swiper-wrapper">
+        {
+          slides.map((slide) => (
+            <div class="swiper-slide">
+              <figure class="grid min-h-full gap-0 lg:grid-cols-[1.3fr_0.7fr]">
+                <img
+                  src={slide.image.src}
+                  alt={slide.image.alt}
+                  class="h-[20rem] w-full object-cover md:h-[28rem] lg:h-full"
+                  loading="lazy"
+                />
+                <figcaption class="flex flex-col justify-center bg-card px-6 py-6 text-card-foreground md:px-8 md:py-8">
+                  {slide.title && (
+                    <h3 class="text-2xl font-semibold leading-tight tracking-tight">
+                      {slide.title}
+                    </h3>
+                  )}
+                  {slide.description && (
+                    <p class:list={["leading-relaxed text-card-foreground/78", slide.title ? "mt-4" : ""]}>
+                      {slide.description}
+                    </p>
+                  )}
+                </figcaption>
+              </figure>
+            </div>
+          ))
+        }
+      </div>
+
+      <div class="swiper-pagination image-carousel-pagination"></div>
+      <button
+        type="button"
+        class="swiper-button-prev image-carousel-button"
+        aria-label="Previous slide"></button>
+      <button
+        type="button"
+        class="swiper-button-next image-carousel-button"
+        aria-label="Next slide"></button>
+    </div>
+  </div>
+</section>
+
+<script>
+  import Swiper from "swiper";
+  import { A11y, Autoplay, Navigation, Pagination } from "swiper/modules";
+
+  const initImageCarousels = () => {
+    document.querySelectorAll("[data-image-carousel]").forEach((root) => {
+      if (!(root instanceof HTMLElement) || root.dataset.initialized === "true") {
+        return;
+      }
+
+      const slideCount = root.querySelectorAll(".swiper-slide").length;
+      root.dataset.initialized = "true";
+
+      new Swiper(root, {
+        modules: [A11y, Autoplay, Navigation, Pagination],
+        loop: slideCount > 1,
+        speed: 650,
+        grabCursor: slideCount > 1,
+        watchOverflow: true,
+        navigation: {
+          nextEl: root.querySelector(".swiper-button-next"),
+          prevEl: root.querySelector(".swiper-button-prev"),
+        },
+        pagination: {
+          el: root.querySelector(".swiper-pagination"),
+          clickable: true,
+        },
+        autoplay:
+          root.dataset.autoplay === "true" && slideCount > 1
+            ? {
+                delay: 4500,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true,
+              }
+            : false,
+        a11y: {
+          prevSlideMessage: "Previous image",
+          nextSlideMessage: "Next image",
+          paginationBulletMessage: "Go to image {{index}}",
+        },
+      });
+    });
+  };
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initImageCarousels, { once: true });
+  } else {
+    initImageCarousels();
+  }
+</script>
+
+<style>
+  :global([data-image-carousel] .image-carousel-button) {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 9999px;
+    background: color-mix(in srgb, var(--background) 88%, transparent);
+    border: 1px solid color-mix(in srgb, var(--border) 88%, transparent);
+    color: var(--foreground);
+  }
+
+  :global([data-image-carousel] .image-carousel-button::after) {
+    font-size: 1rem;
+    font-weight: 700;
+  }
+
+  :global([data-image-carousel] .swiper-button-disabled) {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  :global([data-image-carousel] .image-carousel-pagination) {
+    position: absolute;
+    left: 1.5rem;
+    right: 1.5rem;
+    bottom: 1.25rem !important;
+    width: auto !important;
+    display: flex;
+    justify-content: center;
+    gap: 0.4rem;
+  }
+
+  :global([data-image-carousel] .swiper-pagination-bullet) {
+    width: 0.7rem;
+    height: 0.7rem;
+    margin: 0 !important;
+    background: color-mix(in srgb, var(--background) 55%, transparent);
+    opacity: 1;
+  }
+
+  :global([data-image-carousel] .swiper-pagination-bullet-active) {
+    background: var(--accent);
+  }
+  
+  @media (max-width: 640px) {
+    :global([data-image-carousel] .image-carousel-button) {
+      display: none;
+    }
+  }
+</style>

@@ -521,6 +521,54 @@ content:
                     label: Link URL
                     type: string
                     required: true
+          - name: image_carousel
+            label: Image Carousel
+            fields:
+              - name: eyebrow
+                label: Eyebrow
+                type: string
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: body
+                label: Body
+                type: rich-text
+                options:
+                  path: pages
+              - name: autoplay
+                label: Autoplay
+                type: boolean
+                required: true
+              - name: slides
+                label: Slides
+                type: object
+                list: true
+                required: true
+                fields:
+                  - name: image
+                    label: Image
+                    type: object
+                    required: true
+                    fields:
+                      - name: src
+                        label: Image
+                        type: image
+                        required: true
+                        options:
+                          path: pages
+                      - name: alt
+                        label: Alt Text
+                        type: string
+                        required: true
+                  - name: title
+                    label: Slide Title
+                    type: string
+                  - name: description
+                    label: Slide Description
+                    type: text
+                    options:
+                      rows: 3
           - name: sponsor_list
             label: Sponsor List
             fields:
