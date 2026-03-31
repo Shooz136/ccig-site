@@ -20,6 +20,14 @@ sections:
       alt: "Helen and Ben in the field "
     primaryCtaStyle: outline
     secondaryCtaStyle: outline
+  - type: hero
+    headline: "Stories of Impact "
+    body: "Have a story or testimonial about working with us? We’d love to hear
+      about it! "
+    primaryCtaLabel: Tell Us Here
+    primaryCtaHref: Mailto:clarioncig@gmail.com
+    primaryCtaStyle: primary
+    secondaryCtaStyle: muted
   - type: image_text
     title: "Meet Oatmeal "
     body: >-
@@ -74,8 +82,4 @@ sections:
       - image:
           src: /uploads/1000065716.jpeg
           alt: "trap happy raccoon "
-  - type: hero
-    headline: "Stories of Impact "
-    primaryCtaStyle: muted
-    secondaryCtaStyle: muted
 ---
