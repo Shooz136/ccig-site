@@ -19,7 +19,7 @@ sections:
     primaryCtaHref: https://docs.google.com/forms/d/1q26e8bFEZx8KQvkC22Xf8eGv1Suhy9UhSP0v5Sao-7g/viewform
     primaryCtaStyle: primary
     secondaryCtaLabel: "Learn More "
-    secondaryCtaHref: /
+    secondaryCtaHref: /Resources
     secondaryCtaStyle: muted
   - type: feature_grid
     title: NEED HELP WITH OUTDOOR CATS?
