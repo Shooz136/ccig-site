@@ -6,18 +6,36 @@ showInNav: true
 navOrder: 30
 sections:
   - type: full_width_banner
-    eyebrow: "Our Impact "
-    headline: "We’re just getting started "
-    body: >-
-      We are in the early stages of expanding our work and building the
-      resources needed to serve Clarion County more fully. As our program grows,
-      we will continue sharing updates, stories, and milestones here.
-
-
-      Thank you for being part of this journey with us.
+    eyebrow: "Resources "
+    headline: Helping Our Community Understand Humane Solutions
     image:
-      src: /uploads/IMG_20260315_202003.jpeg
-      alt: "Helen in the field setting a humane trap "
-    primaryCtaStyle: outline
-    secondaryCtaStyle: outline
+      src: /uploads/IMG_0022.jpeg
+      alt: Orange cat in the yard
+    primaryCtaStyle: inverted
+    secondaryCtaStyle: inverted
+  - type: linked_content_list
+    title: What is TNR?
+    items:
+      - title: What is TNR?
+        description: Trap-Neuter-Return (TNR) is a humane, evidence-based approach to
+          managing outdoor cat populations. Learn how the process works, why
+          cats are returned to their outdoor homes, and how TNR improves life
+          for both cats and communities.
+        image:
+          src: /uploads/IMG_0024.jpeg
+          alt: TNR
+        linkLabel: Read more here
+        linkHref: https://www.alleycat.org/our-work/trap-neuter-return/
+  - type: linked_content_list
+    title: "Living with Community Cats "
+    items:
+      - title: Living with Community Cats
+        description: Seeing outdoor cats in your neighborhood? Learn practical, humane
+          ways to reduce nuisance behaviors, protect gardens, and peacefully
+          coexist while supporting long-term population control.
+        image:
+          src: /uploads/IMG_0023.jpeg
+          alt: "Gray and white cat outside "
+        linkLabel: "Read More Here "
+        linkHref: https://www.alleycat.org/resources/how-to-live-with-cats-in-your-neighborhood/
 ---
