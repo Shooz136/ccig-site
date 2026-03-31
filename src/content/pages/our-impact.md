@@ -35,6 +35,12 @@ sections:
       src: /uploads/1953352104048985555.jpeg
       alt: "Picture of gray cat "
     imageSide: left
+  - type: image_text
+    title: "Our first TNR Outing "
+    image:
+      src: /uploads/3054947812095737492-1.jpeg
+      alt: "Ben and Helen in the field "
+    imageSide: right
   - type: cta
     title: Share your Story!
     body: Have a story or testimonial about working with us? We’d love to hear about
