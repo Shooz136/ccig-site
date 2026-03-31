@@ -9,7 +9,7 @@ navOrder: 5
 sections:
   - type: hero
     eyebrow: Who are We?
-    headline: Compassionate Solutions for Community Cats, Built by Our Community
+    headline: Compassionate Solutions for Neighborhood Cats, Built by Our Community
     align: left
     body: >-
       The Clarion Cat Initiative Group exists to promote humane, community-based
