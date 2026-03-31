@@ -16,7 +16,7 @@ sections:
 
       Thank you for being part of this journey with us.
     image:
-      src: /uploads/3054947812095737492.jpeg
+      src: /uploads/20260313_223500-1.jpeg
       alt: "Helen and Ben in the field "
     primaryCtaStyle: outline
     secondaryCtaStyle: outline
