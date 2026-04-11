@@ -94,4 +94,10 @@ sections:
       - image:
           src: /uploads/1000065716.jpeg
           alt: "trap happy raccoon "
+      - image:
+          src: /uploads/1000012496.jpeg
+          alt: "Black and White Trapped Tuxedo Cat "
+      - image:
+          src: /uploads/1000012160.jpeg
+          alt: "Light orange cat in a humane trap "
 ---
