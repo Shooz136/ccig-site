@@ -100,4 +100,10 @@ sections:
       - image:
           src: /uploads/1000012160.jpeg
           alt: "Light orange cat in a humane trap "
+      - image:
+          src: /uploads/1000012617.jpeg
+          alt: Black and white tuxedo cat
+      - image:
+          src: /uploads/1000012613.jpeg
+          alt: Black Cat
 ---
