@@ -1,6 +1,6 @@
 ---
 draft: false
-name: "Donors "
+name: "Individual Donors "
 description: Everyday heroes whose contributions and dedication make our work possible
 type: sponsors_donors
 sortOrder: 15
