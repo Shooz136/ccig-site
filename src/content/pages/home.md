@@ -65,13 +65,8 @@ sections:
   - type: counter
     label: Cats Spayed & Neutered in Clarion Borough
     heading: Every number represents a cat no longer contributing to overpopulation
-      and future litters.
-    body: >+
-      This work is part of a humane Trap-Neuter-Return (TNR) approach that
-      stabilizes outdoor cat populations over time.  
-
-      When cats are removed from an area, new cats often move in to take
-      advantage of available food and shelter—a process known as the *vacuum
-      effect*. By focusing on spay and neuter, we prevent that cycle and create
-      lasting, sustainable population control.
+    body: Stabilizing outdoor cat populations over time is key to lasting impact.
+      When cats are simply removed, new cats often move in to fill the space- a
+      process known as the *vacuum effect*. Spay and neuter through TNR  breaks
+      this cycle and creates long-term, humane population control.
 ---
