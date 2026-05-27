@@ -63,8 +63,9 @@ sections:
     buttonHref: /get-involved/
     buttonStyle: inverted
   - type: counter
-    label: "32"
+    label: Cats Spayed & Neutered in Clarion Borough
     heading: Every number represents a cat no longer contributing to overpopulation
       and future litters.
-    body: "32"
+    body: |+
+      - **Cats Spayed & Neutered in Clarion Borough**
 ---
