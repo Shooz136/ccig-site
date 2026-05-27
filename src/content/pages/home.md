@@ -66,4 +66,5 @@ sections:
     label: "32"
     heading: Every number represents a cat no longer contributing to overpopulation
       and future litters.
+    body: "32"
 ---
