@@ -10,7 +10,7 @@ description: >-
   companionship. They also act as a protective association primarily in the care
   and disposition of lost, strayed or homeless cats.
 type: rescue_and_shelter_partners
-sortOrder: 0
+sortOrder: 10
 website: https://www.clarionpaws.org/
 image:
   src: /uploads/1000012183.jpeg
