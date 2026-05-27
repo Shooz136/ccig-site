@@ -55,13 +55,6 @@ sections:
         description: After the cat is returned, you can continue to stay involved with
           the group in a variety of ways!
         stepNumber: 6
-  - type: cta
-    title: Be Part of the Solution
-    body: Humane change happens when communities work together. Join us in improving
-      life for both cats and residents throughout our Borough
-    buttonLabel: Learn How you Can Get Involved
-    buttonHref: /get-involved/
-    buttonStyle: inverted
   - type: counter
     label: Cats Spayed & Neutered in Clarion Borough
     heading: Every number represents a cat no longer contributing to overpopulation
@@ -69,4 +62,11 @@ sections:
       When cats are simply removed, new cats often move in to fill the space- a
       process known as the *vacuum effect*. Spay and neuter through TNR  breaks
       this cycle and creates long-term, humane population control.
+  - type: cta
+    title: Be Part of the Solution
+    body: Humane change happens when communities work together. Join us in improving
+      life for both cats and residents throughout our Borough
+    buttonLabel: Learn How you Can Get Involved
+    buttonHref: /get-involved/
+    buttonStyle: inverted
 ---
