@@ -20,6 +20,15 @@ sections:
       alt: "Cat in trap  "
     primaryCtaStyle: outline
     secondaryCtaStyle: outline
+  - type: counter
+    label: Cats Spayed & Neutered in Clarion Borough
+    heading: Every number represents a cat no longer contributing to overpopulation
+    body: >+
+      Stabilizing outdoor cat populations over time is key to lasting impact.
+      When cats are simply removed, new cats often move in to fill the space- a
+      process known as the *vacuum effect*. Spay and neuter through TNR breaks
+      this cycle and creates long-term, humane population control.
+
   - type: image_text
     title: "Meet Oatmeal "
     body: >-
@@ -106,12 +115,4 @@ sections:
       - image:
           src: /uploads/1000012613.jpeg
           alt: Black Cat
-  - type: counter
-    label: Cats Spayed & Neutered in Clarion Borough
-    heading: Every number represents a cat no longer contributing to overpopulation
-    body: >+
-      ## Stabilizing outdoor cat populations over time is key to lasting impact.
-      When cats are simply removed, new cats often move in to fill the space- a
-      process known as the *vacuum effect*. Spay and neuter through TNR breaks
-      this cycle and creates long-term, humane population control.
 ---
