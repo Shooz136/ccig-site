@@ -62,4 +62,8 @@ sections:
     buttonLabel: Learn How you Can Get Involved
     buttonHref: /get-involved/
     buttonStyle: inverted
+  - type: counter
+    label: "32"
+    heading: Every number represents a cat no longer contributing to overpopulation
+      and future litters.
 ---
