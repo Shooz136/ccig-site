@@ -11,6 +11,6 @@ type: rescue_and_shelter_partners
 sortOrder: 11
 website: https://tricounty-arc.org/?page_id=22
 image:
-  src: /uploads/IMG_0047.png
+  src: /uploads/IMG_0047.jpeg
   alt: "Tri-County logo "
 ---
