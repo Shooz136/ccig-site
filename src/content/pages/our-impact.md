@@ -89,17 +89,35 @@ sections:
           src: /uploads/1000012496.jpeg
           alt: "Black and White Trapped Tuxedo Cat "
       - image:
+          src: /uploads/IMG_8609.jpeg
+          alt: "Gray female cat "
+      - image:
           src: /uploads/20260313_223500.jpeg
           alt: "Oatmeal hanging out after being trapped "
+      - image:
+          src: /uploads/IMG_7074.jpeg
+          alt: Gray Tabby cat
+      - image:
+          src: /uploads/IMG_7367.jpeg
+          alt: Monty the cat
       - image:
           src: /uploads/20260314_162736.jpeg
           alt: "Cat trapped and heading to the clinic "
       - image:
+          src: /uploads/IMG_7068.jpeg
+          alt: "Tabby cat with white on their chest "
+      - image:
           src: /uploads/7660624070741873581.jpeg
           alt: Ben setting traps
       - image:
+          src: /uploads/1000014588.jpeg
+          alt: "Gray Cat "
+      - image:
           src: /uploads/IMG_5691.jpeg
           alt: Trap happy opossum
+      - image:
+          src: /uploads/1000014308.jpeg
+          alt: Calico cat
       - image:
           src: /uploads/1000011936.jpeg
           alt: "Tabby Cat in humane trap "
@@ -115,4 +133,7 @@ sections:
       - image:
           src: /uploads/1000012613.jpeg
           alt: Black Cat
+      - image:
+          src: /uploads/IMG_6683.jpeg
+          alt: "Pile of kittens "
 ---
