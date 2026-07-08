@@ -1,7 +1,7 @@
 ---
 draft: false
 title: Home
-description: Homepage content for the site.
+description: Volunteer-led TNR help, education, and community resources for outdoor and stray cats in Clarion Borough and Clarion County, Pennsylvania.
 navLabel: Home
 showInNav: false
 navOrder: 0

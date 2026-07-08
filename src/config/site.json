@@ -1,7 +1,61 @@
 {
   "name": "Clarion Cat Initiative Group",
+  "displayName": "Clarion Cat Initiative Group",
+  "alternateName": "CCIG",
+  "organizationName": "Clarion Cat Initiative Group",
+  "organizationType": "NonprofitOrganization",
+  "url": "https://clarioncig.org",
+  "logo": "/ccig-logo.jpg",
+  "defaultImage": "/opengraph.jpg",
   "description": "Volunteer-led Trap-Neuter-Return support, education, and community resources for outdoor cats in Clarion County, Pennsylvania.",
+  "mission": "Clarion Cat Initiative Group promotes humane, community-based solutions for outdoor and stray cats through Trap-Neuter-Return, education, and collaboration.",
   "titleSeparator": " | ",
+  "locality": "Clarion",
+  "region": "Pennsylvania",
+  "country": "United States",
+  "areaServed": [
+    "Clarion Borough",
+    "Clarion County, Pennsylvania"
+  ],
+  "address": {
+    "addressLocality": "Clarion",
+    "addressRegion": "PA",
+    "addressCountry": "US"
+  },
+  "foundingLocation": {
+    "@type": "Place",
+    "name": "Clarion, Pennsylvania",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Clarion",
+      "addressRegion": "PA",
+      "addressCountry": "US"
+    }
+  },
+  "keywords": [
+    "Clarion Cat Initiative Group",
+    "CCIG",
+    "Clarion cats",
+    "Clarion County cats",
+    "Trap-Neuter-Return",
+    "TNR",
+    "community cats",
+    "outdoor cats",
+    "stray cats",
+    "cat spay and neuter",
+    "humane cat population control",
+    "Clarion Pennsylvania animal welfare"
+  ],
+  "knowsAbout": [
+    "Trap-Neuter-Return",
+    "community cat care",
+    "outdoor cat population management",
+    "humane trapping",
+    "spay and neuter support",
+    "rabies vaccination",
+    "community education",
+    "Clarion Borough cat resources"
+  ],
   "catsFixedCount": 39,
   "footerContactCta": {
     "eyebrow": "Have A Question?",

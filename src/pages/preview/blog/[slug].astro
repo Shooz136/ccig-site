@@ -35,8 +35,11 @@ const { Content } = await entry.render();
   title={`${entry.data.title} Preview`}
   description={entry.data.snippet}
   image={entry.data.image.src}
+  imageAlt={entry.data.image.alt}
   pageType="article"
   publishedTime={entry.data.publishDate.toISOString()}
+  author={entry.data.author}
+  tags={entry.data.tags}
   preview={true}>
   <Container>
     <div class="mx-auto mt-14 max-w-3xl">

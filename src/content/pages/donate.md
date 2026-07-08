@@ -1,6 +1,7 @@
 ---
 draft: false
 title: Donate
+description: Donate to Clarion Cat Initiative Group to fund spay and neuter surgeries, rabies vaccinations, humane traps, food, and TNR supplies.
 showInNav: false
 navOrder: 0
 sections:

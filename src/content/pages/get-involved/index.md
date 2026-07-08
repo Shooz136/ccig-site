@@ -1,7 +1,7 @@
 ---
 draft: false
 title: Get Involved
-description: "[Placeholder]"
+description: Volunteer, donate, share resources, or partner with CCIG to support humane TNR work and community cat care in Clarion County.
 navLabel: "Get Involved "
 showInNav: true
 navOrder: 10

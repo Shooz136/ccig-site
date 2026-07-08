@@ -1,6 +1,7 @@
 ---
 draft: false
 title: "Our Impact "
+description: Follow CCIG's early TNR impact, cat rescue stories, and progress toward humane outdoor cat population control in Clarion Borough.
 navLabel: "Our Impact "
 showInNav: true
 navOrder: 50

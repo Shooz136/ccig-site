@@ -1,6 +1,7 @@
 ---
 draft: false
 title: Resources
+description: Learn about Trap-Neuter-Return, living with community cats, and practical humane resources for outdoor cats in Clarion County.
 navLabel: "Resources "
 showInNav: true
 navOrder: 30

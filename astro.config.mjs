@@ -12,7 +12,13 @@ const site =
 // https://astro.build/config
 export default defineConfig({
   site,
-  integrations: [mdx(), sitemap(), icon()],
+  integrations: [
+    mdx(),
+    sitemap({
+      filter: (page) => !new URL(page).pathname.startsWith("/preview/"),
+    }),
+    icon(),
+  ],
   vite: {
     plugins: [tailwindcss()],
   },

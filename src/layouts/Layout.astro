@@ -12,74 +12,210 @@ export interface Props {
   title: string;
   description?: string;
   image?: string;
+  imageAlt?: string;
   pageType?: "website" | "article";
   publishedTime?: string;
   modifiedTime?: string;
+  author?: string;
+  tags?: string[];
   noindex?: boolean;
   preview?: boolean;
 }
 
-const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
+const siteUrl = new URL(Astro.site ?? siteConfig.url);
+const siteOrigin = siteUrl.origin;
+const siteRoot = `${siteOrigin}/`;
+const canonicalURL = new URL(Astro.url.pathname, siteRoot).toString();
+const sitemapURL = new URL("/sitemap-index.xml", siteRoot).toString();
 const siteName = siteConfig.name;
+const displayName = siteConfig.displayName || siteName;
 const organizationName = siteConfig.organizationName || siteName;
+const keywords = siteConfig.keywords || [];
 
 const {
   title,
   description = siteConfig.description,
-  image = "/opengraph.jpg",
+  image = siteConfig.defaultImage || "/opengraph.jpg",
+  imageAlt = `${displayName} page preview`,
   pageType = "website",
   publishedTime,
   modifiedTime,
+  author,
+  tags = [],
   noindex = false,
   preview = false,
 } = Astro.props;
 
-const resolvedImageWithDomain = new URL(image, Astro.site).toString();
+const resolvedImageWithDomain = new URL(image, siteRoot).toString();
+const resolvedLogoWithDomain = new URL(siteConfig.logo || image, siteRoot).toString();
 const shouldNoIndex = preview || noindex;
 const robotsContent = shouldNoIndex ? "noindex, nofollow" : "index, follow";
+const pageKeywords = [...new Set([...keywords, ...tags])];
+const pageKeywordsContent = pageKeywords.join(", ");
 
 const makeTitle = title
   ? title + siteConfig.titleSeparator + siteName
   : siteName;
 
-const schemaGraph = [
+const organizationId = `${siteRoot}#organization`;
+const websiteId = `${siteRoot}#website`;
+const logoId = `${siteRoot}#logo`;
+const pageId = `${canonicalURL}#page`;
+const breadcrumbId = `${canonicalURL}#breadcrumb`;
+const missionId = `${siteRoot}#mission`;
+const pageSchemaType = pageType === "article" ? "Article" : "WebPage";
+const normalizedPath = Astro.url.pathname.replace(/^\//, "").replace(/\/$/, "");
+const breadcrumbSegments = normalizedPath ? normalizedPath.split("/") : [];
+const breadcrumbItems = [
   {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "@id": `${Astro.site}#organization`,
-    name: organizationName,
-    url: Astro.site,
-    image: resolvedImageWithDomain,
+    "@type": "ListItem",
+    position: 1,
+    name: "Home",
+    item: siteRoot,
   },
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "@id": `${Astro.site}#website`,
-    name: siteName,
-    url: Astro.site,
-    description: siteConfig.description,
-    publisher: {
-      "@id": `${Astro.site}#organization`,
-    },
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": pageType === "article" ? "Article" : "WebPage",
-    "@id": `${canonicalURL}#page`,
-    url: canonicalURL,
-    name: makeTitle,
-    description,
-    image: resolvedImageWithDomain,
-    isPartOf: {
-      "@id": `${Astro.site}#website`,
-    },
-    about: {
-      "@id": `${Astro.site}#organization`,
-    },
-    ...(publishedTime ? { datePublished: publishedTime } : {}),
-    ...(modifiedTime ? { dateModified: modifiedTime } : {}),
-  },
+  ...breadcrumbSegments.map((segment, index) => {
+    const path = `/${breadcrumbSegments.slice(0, index + 1).join("/")}/`;
+    return {
+      "@type": "ListItem",
+      position: index + 2,
+      name: segment
+        .split("-")
+        .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+        .join(" "),
+      item: new URL(path, siteRoot).toString(),
+    };
+  }),
 ];
+
+const imageObject = {
+  "@type": "ImageObject",
+  url: resolvedImageWithDomain,
+  contentUrl: resolvedImageWithDomain,
+  caption: imageAlt,
+};
+
+const logoObject = {
+  "@type": "ImageObject",
+  "@id": logoId,
+  url: resolvedLogoWithDomain,
+  contentUrl: resolvedLogoWithDomain,
+  caption: `${displayName} logo`,
+};
+
+const address = siteConfig.address
+  ? {
+      "@type": "PostalAddress",
+      ...siteConfig.address,
+    }
+  : undefined;
+const articleAuthor = author || organizationName;
+const articleModifiedTime = modifiedTime || publishedTime;
+const articleSchema =
+  pageType === "article"
+    ? {
+        author: {
+          "@type": "Person",
+          name: articleAuthor,
+        },
+        publisher: {
+          "@id": organizationId,
+        },
+        ...(publishedTime ? { datePublished: publishedTime } : {}),
+        ...(articleModifiedTime ? { dateModified: articleModifiedTime } : {}),
+      }
+    : {};
+const openGraphArticle =
+  pageType === "article"
+    ? {
+        publishedTime,
+        modifiedTime,
+        authors: [articleAuthor],
+        tags,
+      }
+    : undefined;
+
+const schemaGraph = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": siteConfig.organizationType || "NonprofitOrganization",
+      "@id": organizationId,
+      name: organizationName,
+      alternateName: siteConfig.alternateName,
+      url: siteRoot,
+      description: siteConfig.description,
+      logo: {
+        "@id": logoId,
+      },
+      image: logoObject,
+      email: siteConfig.footerContactCta?.email,
+      contactPoint: siteConfig.footerContactCta?.email
+        ? {
+            "@type": "ContactPoint",
+            contactType: "community support",
+            email: siteConfig.footerContactCta.email,
+            areaServed: siteConfig.areaServed,
+            availableLanguage: "English",
+          }
+        : undefined,
+      address,
+      areaServed: siteConfig.areaServed,
+      foundingLocation: siteConfig.foundingLocation,
+      knowsAbout: siteConfig.knowsAbout,
+    },
+    {
+      "@type": "WebSite",
+      "@id": websiteId,
+      name: siteName,
+      alternateName: siteConfig.alternateName,
+      url: siteRoot,
+      inLanguage: "en-US",
+      description: siteConfig.description,
+      publisher: {
+        "@id": organizationId,
+      },
+    },
+    {
+      "@type": pageSchemaType,
+      "@id": pageId,
+      url: canonicalURL,
+      name: makeTitle,
+      headline: title || siteName,
+      description,
+      image: imageObject,
+      isPartOf: {
+        "@id": websiteId,
+      },
+      about: {
+        "@id": organizationId,
+      },
+      primaryImageOfPage: imageObject,
+      breadcrumb: {
+        "@id": breadcrumbId,
+      },
+      inLanguage: "en-US",
+      ...(pageKeywords.length ? { keywords: pageKeywordsContent } : {}),
+      ...articleSchema,
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": breadcrumbId,
+      itemListElement: breadcrumbItems,
+    },
+    {
+      "@type": "WebPageElement",
+      "@id": missionId,
+      name: "Mission",
+      text: siteConfig.mission,
+      isPartOf: {
+        "@id": websiteId,
+      },
+      about: {
+        "@id": organizationId,
+      },
+    },
+  ],
+};
 ---
 
 <!doctype html>
@@ -89,9 +225,16 @@ const schemaGraph = [
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="sitemap" type="application/xml" href={sitemapURL} />
     <meta name="generator" content={Astro.generator} />
     <meta name="robots" content={robotsContent} />
+    <meta name="author" content={articleAuthor} />
+    <meta name="keywords" content={pageKeywordsContent} />
+    <meta name="theme-color" content={theme.primary} />
     <meta property="og:site_name" content={siteName} />
     <SEO
       title={makeTitle}
@@ -107,22 +250,15 @@ const schemaGraph = [
           url: canonicalURL,
           type: pageType,
           title: makeTitle,
-          description,
           image: resolvedImageWithDomain,
         },
         image: {
-          alt: `${siteName} page preview`,
+          alt: imageAlt,
         },
-        article:
-          pageType === "article"
-            ? {
-                publishedTime,
-                modifiedTime,
-              }
-            : undefined,
+        article: openGraphArticle,
       }}
     />
-    <script type="application/ld+json" set:html={JSON.stringify(schemaGraph)} />
+    <script is:inline type="application/ld+json" set:html={JSON.stringify(schemaGraph)} />
   </head>
   <body class="bg-background text-foreground">
     {

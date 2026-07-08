@@ -1,8 +1,7 @@
 ---
 draft: false
 title: About
-description: Learn more about the team, the site, and how we approach
-  marketing-focused web projects.
+description: Learn how CCIG supports humane outdoor cat population control through TNR assistance, education, and collaboration in Clarion, Pennsylvania.
 navLabel: About
 showInNav: true
 navOrder: 5
