@@ -8,6 +8,7 @@ const site =
   process.env.PUBLIC_SITE_URL ||
   process.env.SITE_URL ||
   "https://clarioncig.org";
+const sitemapLastModified = new Date();
 
 // https://astro.build/config
 export default defineConfig({
@@ -16,6 +17,7 @@ export default defineConfig({
     mdx(),
     sitemap({
       filter: (page) => !new URL(page).pathname.startsWith("/preview/"),
+      lastmod: sitemapLastModified,
     }),
     icon(),
   ],
