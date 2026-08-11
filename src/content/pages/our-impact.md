@@ -1,7 +1,8 @@
 ---
 draft: false
 title: "Our Impact "
-description: Follow CCIG's early TNR impact, cat rescue stories, and progress toward humane outdoor cat population control in Clarion Borough.
+description: Follow CCIG's early TNR impact, cat rescue stories, and progress
+  toward humane outdoor cat population control in Clarion Borough.
 navLabel: "Our Impact "
 showInNav: true
 navOrder: 50
@@ -22,7 +23,7 @@ sections:
     primaryCtaStyle: outline
     secondaryCtaStyle: outline
   - type: counter
-    label: Cats Spayed & Neutered in Clarion Borough
+    label: Cats Spayed & Neutered by CCIG
     heading: Every number represents a cat no longer contributing to overpopulation
     body: >+
       Stabilizing outdoor cat populations over time is key to lasting impact.
