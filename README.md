@@ -31,6 +31,15 @@ This project builds as a static site. In Cloudflare Pages, use:
 - Build command: `pnpm build`
 - Build output directory: `dist`
 
+For deterministic builds, set these dashboard environment variables in both the **Preview** and **Production** environments:
+
+```bash
+NODE_VERSION=22.19.0
+PNPM_VERSION=8.15.9
+```
+
+`packageManager` and `.node-version` do not reliably select the tools preinstalled by Cloudflare Pages. `NODE_VERSION` may instead be set to a newer compatible Node 22 release.
+
 Set this environment variable in Cloudflare Pages so canonical URLs, sitemap URLs, and `robots.txt` use the correct production domain:
 
 ```bash

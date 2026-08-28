@@ -1,6 +1,7 @@
 {
   "name": "astroship",
   "type": "module",
+  "packageManager": "pnpm@8.15.9",
   "version": "3.0.0",
   "private": true,
   "scripts": {
