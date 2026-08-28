@@ -1,7 +1,8 @@
 ---
 draft: false
 title: Community Heroes
-description: Meet the local sponsors, donors, and partners helping CCIG fund TNR surgeries, vaccinations, supplies, and humane community cat care.
+description: Meet the local donors and partners helping CCIG fund TNR surgeries,
+  vaccinations, supplies, and humane community cat care.
 navLabel: "Community Heroes "
 showInNav: true
 navOrder: 55
