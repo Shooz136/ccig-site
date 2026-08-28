@@ -8,7 +8,7 @@ description: Tri-County Animal Rescue Center rescues needy cats and dogs and
   overpopulation by providing access to low-cost spay/neuter programs, and
   education for the general public.
 type: rescue_and_shelter_partners
-sortOrder: 11
+sortOrder: 5
 website: https://tricounty-arc.org/?page_id=22
 image:
   src: /uploads/IMG_0047.jpeg
