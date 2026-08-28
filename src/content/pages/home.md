@@ -1,7 +1,8 @@
 ---
 draft: false
 title: Home
-description: Volunteer-led TNR help, education, and community resources for outdoor and stray cats in Clarion Borough and Clarion County, Pennsylvania.
+description: Volunteer-led TNR help, education, and community resources for
+  outdoor and stray cats in Clarion Borough and Clarion County, Pennsylvania.
 navLabel: Home
 showInNav: false
 navOrder: 0
@@ -56,7 +57,7 @@ sections:
           the group in a variety of ways!
         stepNumber: 6
   - type: counter
-    label: Cats Spayed & Neutered in Clarion Borough
+    label: Cats Spayed & Neutered by CCIG
     heading: Every number represents a cat no longer contributing to overpopulation
     body: Stabilizing outdoor cat populations over time is key to lasting impact.
       When cats are simply removed, new cats often move in to fill the space- a
